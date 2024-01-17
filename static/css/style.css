@@ -2306,6 +2306,11 @@ ul {
   z-index: 1;
 }
 
+.main_menu .cart-sum  {
+  color: #4B3049;
+  font-size: 16px;
+}
+
 /* line 113, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
 .menu_fixed {
   position: fixed;
@@ -2413,7 +2418,14 @@ ul {
     display: inline-block;
     top: 3px;
   }
-  /* line 223, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
+  @media (max-width: 576px) {
+    .navbar-brand img {
+      max-width: 120px;
+      margin: 0 0 0 50px; !important
+    }
+  }
+
+   /* line 223, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
