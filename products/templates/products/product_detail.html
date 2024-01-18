@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+ <!-- breadcrumb part start-->
+ <section class="breadcrumb_part single_product_breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb part end-->
+
+<!--================Single Product Area =================-->
+<div class="product_image_area">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="product_img_slide owl-carousel">
+        <div class="single_product_img">
+          {% if product.image %}
+          <img src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
+          {% else %}
+          <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
+          {% endif %}
+        </div>      
+      </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="single_product_text text-center">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.category }}</p>
+        <div class="row">
+            <div class="col-lg-4">
+              <div class="single_product_text text-center">
+                  <h4>Dimension:</h4>
+                  <p>{{ product.size }}</p>
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single_product_text text-center">
+                <h4>Painting Technique:</h4>
+                <p>{{ product.technique }}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="single_product_text text-center">
+              <h4>Is painting framed:</h4>
+              <p>{{ product.framed }}</p>
+          </div>
+      </div>
+        </div>
+
+          <div class="add_to_cart">
+            <h4>Price:</h4>             
+                <p>€ {{ product.price }}</p>
+              <a href="#" class="btn_3">Add to cart</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--================End Single Product Area =================-->
+{% endblock %}
