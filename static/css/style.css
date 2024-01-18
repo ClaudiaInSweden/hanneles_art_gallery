@@ -2421,7 +2421,7 @@ ul {
   @media (max-width: 576px) {
     .navbar-brand img {
       max-width: 120px;
-      margin: 0 0 0 50px; !important
+      margin: 0 0 0 50px !important;
     }
   }
 
