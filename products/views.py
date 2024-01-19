@@ -3,12 +3,12 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
 
-
 def all_products (request):
 
     products = Product.objects.all()
     query = None
     categories = None
+    formats = None
 
     if request.GET:
 
@@ -16,6 +16,11 @@ def all_products (request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'format' in request.GET:
+            formats = request.GET['format'].split(',')
+            products = products.filter(format__in=formats)
+            formats = Product.objects.filter(name__in=formats)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -30,12 +35,13 @@ def all_products (request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_format': formats,
     }
 
     return render(request, 'products/products.html', context)
 
 
-def product_detail (request, product_id):
+def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 

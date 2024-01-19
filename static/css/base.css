@@ -17,3 +17,9 @@
 .select_option_bottom {
     margin-bottom: 20px;
 }
+
+.single_product_img img {
+    max-height: 120vh;
+    max-width: 120vh;
+    margin: auto;
+}

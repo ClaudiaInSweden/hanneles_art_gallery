@@ -23,17 +23,12 @@ class Product(models.Model):
         ('No', 'No')
     )
 
-    FORMAT = (
-        ('Portrait', 'Portrait'),
-        ('Landscape', 'Landscape'),
-        ('Square', 'Square')
-    )
-
+ 
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     artist = models.CharField(max_length=254, default='Hannele K.')
     size = models.CharField(max_length=254)
-    format = models.CharField(max_length=254, choices=FORMAT, default='Portrait')
+    format = models.CharField(max_length=20)
     technique = models.CharField(max_length=254)
     framed = models.CharField(max_length=5, choices=FRAMED, default='No')
     sold = models.BooleanField(default=False)

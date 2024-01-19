@@ -33,21 +33,27 @@
     <div class="col-lg-8">
         <div class="single_product_text text-center">
             <h3>{{ product.name }}</h3>
-            <p>{{ product.category }}</p>
+            <p>{{ product.category.friendly_name }}</p>
         <div class="row">
-            <div class="col-lg-4">
+          <div class="col-lg-3">
+            <div class="single_product_text text-center">
+                <h4>Format:</h4>
+                <p>{{ product.format }}</p>
+            </div>
+        </div>
+            <div class="col-lg-3">
               <div class="single_product_text text-center">
                   <h4>Dimension:</h4>
                   <p>{{ product.size }}</p>
               </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <div class="single_product_text text-center">
                 <h4>Painting Technique:</h4>
                 <p>{{ product.technique }}</p>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <div class="single_product_text text-center">
               <h4>Painting framed:</h4>
               <p>{{ product.framed }}</p>
