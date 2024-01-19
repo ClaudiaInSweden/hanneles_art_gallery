@@ -4,16 +4,24 @@ from .models import Product, Category
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'sold',
         'name',
+        'sold',
         'category',
+        'format',
         'size',
         'price',
         'image',
     )
 
-    ordering = ('sold',)
+    ordering = ('name',)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
 
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)

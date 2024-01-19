@@ -17,33 +17,92 @@
 <!-- breadcrumb part end-->
 
 <!-- product list part start-->
-<section class="product_list section_padding">
-    <div class="container">
-        <div class="row">
+<section class="product_list section_padding_small">
+ 
+        <div class="container">
+            <div class="row">
 
-            <div class="col-md-12">
-                <div class="product_list">
-                    <div class="row">
-                        {% for product in products %}
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single_product_item">
-                                {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
-                                {% else %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
-                                {% endif %}
-                                <h3> <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> </h3>
-                                <p>{{ product.size }}</p>
+                <div class="col-md-12">
+                    <div class="product_list">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="single_sedebar">
+                                    <div class="select_option select_option_bottom">
+                                        <div class="select_option_list dropdown_select">Category <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_dropdown">
+                                            <p><a href="{% url 'products' %}?category=flowers">Flowers</a></p>
+                                            <p><a href="{% url 'products' %}?category=animals">Animals</a></p>
+                                            <p><a href="{% url 'products' %}?category=landscape">Landscape</a></p>
+                                            <p><a href="{% url 'products' %}?category=portrait">Portrait</a></p>
+                                            <p><a href="{% url 'products' %}?category=abstract">Abstract</a></p>
+                                            <p><a href="{% url 'products' %}?category=impressionism">Impressionism</a></p>
+                                            <p><a href="{% url 'products' %}?category=still_life">Still Life</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="single_sedebar">
+                                    <div class="select_option">
+                                        <div class="select_option_list dropdown_select">Format <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_dropdown">
+                                            <p><a href="{% url 'products' %}?format=portrait">Portrait</a></p>
+                                            <p><a href="{% url 'products' %}?format=landscape">Landscape</a></p>
+                                            <p><a href="{% url 'products' %}?format=square">Square</a></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="single_sedebar">
+                                    <div class="select_option">
+                                        <div class="select_option_list dropdown_select">Price <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_dropdown">
+                                            <p><a href="#">Type 1</a></p>
+                                            <p><a href="#">Type 2</a></p>
+                                            <p><a href="#">Type 3</a></p>
+                                            <p><a href="#">Type 4</a></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        {% endfor %}
-
                     </div>
 
+
+
+
+                    <div class="product_list">
+                        <div class="row">
+                            {% for product in products %}
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="single_product_item">
+                                    {% if product.image %}
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}"
+                                        class="img-fluid">
+                                    {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
+                                    {% endif %}
+                                    <h3> <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> </h3>
+                                    <p>{{ product.size }}</p>
+                                    {% if product.sold is True %}
+                                    <p class="text-sold">sold</p>
+                                    {% else %}
+                                    <p>€ {{ product.price }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
 </section>
 <!-- product list part end-->
 

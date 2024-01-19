@@ -49,17 +49,20 @@
         </div>
         <div class="col-lg-4">
           <div class="single_product_text text-center">
-              <h4>Is painting framed:</h4>
+              <h4>Painting framed:</h4>
               <p>{{ product.framed }}</p>
           </div>
       </div>
         </div>
-
+        {% if product.sold is True %}
+        <p class="text-sold">sold</p>
+        {% else %}
           <div class="add_to_cart">
             <h4>Price:</h4>             
                 <p>€ {{ product.price }}</p>
               <a href="#" class="btn_3">Add to cart</a>
           </div>
+        {% endif %}  
 
       </div>
     </div>

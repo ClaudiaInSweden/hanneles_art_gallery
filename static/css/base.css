@@ -1,0 +1,19 @@
+.text-sold {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: xx-large;
+    
+}
+
+.section_padding_small {
+
+    padding: 20px;
+}
+
+.dropdown_select {
+    font-size: 16px;
+}
+
+.select_option_bottom {
+    margin-bottom: 20px;
+}

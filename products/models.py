@@ -7,9 +7,13 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
         
     name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 class Product(models.Model):
@@ -19,10 +23,17 @@ class Product(models.Model):
         ('No', 'No')
     )
 
+    FORMAT = (
+        ('Portrait', 'Portrait'),
+        ('Landscape', 'Landscape'),
+        ('Square', 'Square')
+    )
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     artist = models.CharField(max_length=254, default='Hannele K.')
     size = models.CharField(max_length=254)
+    format = models.CharField(max_length=254, choices=FORMAT, default='Portrait')
     technique = models.CharField(max_length=254)
     framed = models.CharField(max_length=5, choices=FRAMED, default='No')
     sold = models.BooleanField(default=False)
