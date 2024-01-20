@@ -28,7 +28,7 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="single_sedebar">
                                     <div class="select_option select_option_bottom">
-                                        <div class="select_option_list dropdown_select">Category <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_list dropdown_select">Select Category <i class="right fas fa-caret-down"></i> </div>
                                         <div class="select_option_dropdown">
                                             <p><a href="{% url 'products' %}?category=flowers">Flowers</a></p>
                                             <p><a href="{% url 'products' %}?category=animals">Animals</a></p>
@@ -44,7 +44,7 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="single_sedebar">
                                     <div class="select_option">
-                                        <div class="select_option_list dropdown_select">Format <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_list dropdown_select">Select Format <i class="right fas fa-caret-down"></i> </div>
                                         <div class="select_option_dropdown">
                                             <p><a href="{% url 'products' %}?format=Portrait">Portrait</a></p>
                                             <p><a href="{% url 'products' %}?format=Landscape">Landscape</a></p>
@@ -56,12 +56,10 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="single_sedebar">
                                     <div class="select_option">
-                                        <div class="select_option_list dropdown_select">Price <i class="right fas fa-caret-down"></i> </div>
+                                        <div class="select_option_list dropdown_select">Sort by Price <i class="right fas fa-caret-down"></i> <i class="right fas fa-caret-up"></i> </div>
                                         <div class="select_option_dropdown">
-                                            <p><a href="#">Type 1</a></p>
-                                            <p><a href="#">Type 2</a></p>
-                                            <p><a href="#">Type 3</a></p>
-                                            <p><a href="#">Type 4</a></p>
+                                            <p><a href="{% url 'products' %}?sort=price&direction=asc">Low to high</a></p>
+                                            <p><a href="{% url 'products' %}?sort=price&direction=desc">High to low</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,6 +83,10 @@
                                         alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
                                     {% endif %}
                                     <h3> <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> </h3>
+                                    {% if product.category %}
+                                    <p><a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
+                                    </p>
+                                    {% endif %}
                                     <p>{{ product.size }}</p>
                                     {% if product.sold is True %}
                                     <p class="text-sold">sold</p>

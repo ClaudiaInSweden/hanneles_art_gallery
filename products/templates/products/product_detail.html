@@ -34,6 +34,7 @@
         <div class="single_product_text text-center">
             <h3>{{ product.name }}</h3>
             <p>{{ product.category.friendly_name }}</p>
+            <hr>
         <div class="row">
           <div class="col-lg-3">
             <div class="single_product_text text-center">
@@ -49,23 +50,24 @@
           </div>
           <div class="col-lg-3">
             <div class="single_product_text text-center">
-                <h4>Painting Technique:</h4>
+                <h4>Technique:</h4>
                 <p>{{ product.technique }}</p>
             </div>
         </div>
         <div class="col-lg-3">
           <div class="single_product_text text-center">
-              <h4>Painting framed:</h4>
+              <h4>Framed:</h4>
               <p>{{ product.framed }}</p>
           </div>
       </div>
         </div>
+        <hr>
         {% if product.sold is True %}
         <p class="text-sold">sold</p>
         {% else %}
           <div class="add_to_cart">
             <h4>Price:</h4>             
-                <p>€ {{ product.price }}</p>
+                <p class="price">€ {{ product.price }}</p>
               <a href="#" class="btn_3">Add to cart</a>
           </div>
         {% endif %}  
