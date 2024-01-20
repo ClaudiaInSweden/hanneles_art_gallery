@@ -124,7 +124,7 @@
                                 <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                             </span>
                             <span>
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <i class="flaticon-shopping-cart-black-shape cart-sum"> 
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
