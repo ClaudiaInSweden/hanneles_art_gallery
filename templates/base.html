@@ -124,12 +124,12 @@
                                 <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                             </span>
                             <span>
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                            <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <i class="flaticon-shopping-cart-black-shape cart-sum"> 
                                     {% if grand_total %}
-                                        € {{ grand_total|floatformat:2 }}
+                                        €{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        € 0.00
+                                        €0.00
                                     {% endif %}
                                 </i>
                             </a>

@@ -57,3 +57,11 @@ hr {
 .price {
     margin-top: 10px !important;
 }
+
+.input-number p {
+    text-align: center;
+}
+
+#number-align-right {
+    text-align: right;
+}
