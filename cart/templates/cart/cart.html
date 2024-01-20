@@ -43,25 +43,39 @@
                   <img src="{{ item.product.image.url }}" alt="{{ item.product.name}} {{ item.product.technique }}" />
                 </div>
                 <div class="media-body">
-                  <p>Title: {{ item.product.name}}</p>
-                  <p>Category: {{ item.product.category.friendly_name}}</p>
-                  <p>Dimension: {{ item.product.size}}</p>
+                  <p>Title: <strong>{{ item.product.name }}</strong></p>
+                  <p>Category: {{ item.product.category.friendly_name }}</p>
+                  <p>Dimension: {{ item.product.size }}</p>
                 </div>
               </div>
             </td>
             <td>
-              <h5>€{{ item.product.price }}</h5>
+              <h5>€ {{ item.product.price }}</h5>
             </td>
             <td>
               <div class="product_count">
-                <p class="input-text qty input-number" title="Quantity">1</p>
-                <!-- <input type="number hidden" value="1" min="0" max="1" title="Quantity:"
-                  class="input-text qty input-number" /> -->
 
+                <form action="" method="POST" class="form update-form">
+                  {% csrf_token %}
+                  <span class="input-number-decrement decrement-qty pointer" data-item_id="{{ item.item_id }}"
+                    id="decrement-qty_{{ item.item_id }}"><i class="ti-minus"> </i></span>
+                  <input class="input-number form-control qty_input" name="quantity" type="number"
+                    value="{{ item.quantity }}" min="0" max="1" data-item_id="{{ item.item_id }}"
+                    id="id_qty_{{ item.item_id }}">
+                  <span class="input-number-increment increment-qty pointer" data-item_id="{{ item.item_id }}"
+                    id="increment-qty_{{ item.item_id }}">
+                    <i class="ti-plus"> </i></span>
+                </form>
+            
               </div>
+              <p class="update-remove">
+                <a class="update-link" aria-label="Update"><i class="fa-solid fa-arrows-rotate">  </i></a>
+                <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}">   <i class="fa-solid fa-trash"></i></a>
+              </p>
             </td>
+            
             <td>
-              <h5 id="number-align-right">€{{ item.product.price }}</h5>
+              <h5 id="number-align-right">€ {{ item.product.price }}</h5>
             </td>
           </tr>
           {% endfor %}
@@ -71,7 +85,7 @@
             <td><h5>Subtotal</h5></td>
             <td></td>
             <td>
-              <h5 id="number-align-right">€{{ total|floatformat:2 }}</h5>
+              <h5 id="number-align-right">€ {{ total|floatformat:2 }}</h5>
             </td>
           </tr>
           <tr>
@@ -79,7 +93,7 @@
             <td><h5>Delivery Flat Rate</h5></td>
             <td></td>
             <td>
-              <h5 id="number-align-right">€40.00</h5>
+              <h5 id="number-align-right">€ 40.00</h5>
             </td>
           </tr>
           <tr>
@@ -88,7 +102,7 @@
               <h5>Grand Total</h5></td>
             <td></td>
             <td>
-              <h5 id="number-align-right">€{{ grand_total|floatformat:2 }}</h5>
+              <h5 id="number-align-right">€ {{ grand_total|floatformat:2 }}</h5>
             </td>
           </tr>
 
@@ -110,3 +124,31 @@
 <!--================End Cart Area =================-->
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'cart/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+  //Update quantity on click
+  $('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+  })
+
+  //Remove item and reload on click
+  $('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${itemId}`;
+    var data = {'csrfmiddlewaretoken': csrfToken};
+
+    $.post(url, data)
+    .done(function() {
+      location.reload();
+    });
+
+  })
+</script>
+{% endblock %}
+

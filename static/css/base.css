@@ -65,3 +65,9 @@ hr {
 #number-align-right {
     text-align: right;
 }
+
+.update-link,
+.remove-item,
+.pointer {
+    cursor: pointer;
+}
