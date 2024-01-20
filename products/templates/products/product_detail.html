@@ -68,7 +68,13 @@
           <div class="add_to_cart">
             <h4>Price:</h4>             
                 <p class="price">€ {{ product.price }}</p>
-              <a href="#" class="btn_3">Add to cart</a>
+                <form class="form" method="POST" action="{% url 'add_to_cart' product.id %}">
+                  {% csrf_token %}
+                  <input class="form-control qty-input" type="number" name="quantity" value="1" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+              <input type="submit" class="btn_3" value="Add to cart">  
+              <a href="{% url 'products' %}" class="btn_3">Continue shopping</a>
+              <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
           </div>
         {% endif %}  
 
