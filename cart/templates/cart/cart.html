@@ -55,7 +55,7 @@
             <td>
               <div class="product_count">
 
-                <form action="" method="POST" class="form update-form">
+                <form action="{% url 'update_cart' item.item_id %}" method="POST" class="form update-form">
                   {% csrf_token %}
                   <span class="input-number-decrement decrement-qty pointer" data-item_id="{{ item.item_id }}"
                     id="decrement-qty_{{ item.item_id }}"><i class="ti-minus"> </i></span>
@@ -140,7 +140,7 @@
   $('.remove-item').click(function(e) {
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr('id').split('remove_')[1];
-    var url = `/cart/remove/${itemId}`;
+    var url = `/cart/remove/${itemId}/`;
     var data = {'csrfmiddlewaretoken': csrfToken};
 
     $.post(url, data)
