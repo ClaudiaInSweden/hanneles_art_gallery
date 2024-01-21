@@ -58,16 +58,33 @@ hr {
     margin-top: 10px !important;
 }
 
-.input-number p {
-    text-align: center;
-}
-
-#number-align-right {
-    text-align: right;
-}
-
+/* Add mouse pointer to category & format dropdown lists and refresh/delete icons in cart */
 .update-link,
 .remove-item,
 .pointer {
     cursor: pointer;
+}
+
+/* Toasts container */
+.message-container {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    z-index: 5000;
+}
+
+.toast-border {
+    border-radius: 20px;
+    border: 2px solid #795376;
+}
+
+.toast-header {
+    padding: 7px;
+    align-items: center;
+}
+
+.toast-header i {
+    padding-right: 7px;
 }
