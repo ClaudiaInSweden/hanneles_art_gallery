@@ -96,3 +96,7 @@ hr {
 .toast-header i {
     padding-right: 7px;
 }
+
+.cart_area section_padding {
+    padding: 50px 0px;
+}
