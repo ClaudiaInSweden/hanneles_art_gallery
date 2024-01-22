@@ -30,8 +30,8 @@
           <tr>
             <th scope="col">Painting</th>
             <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col" id="number-align-right">Total</th>
+            <th scope="col" class="column_centered">Quantity</th>
+            <th scope="col" class="column_right" id="number-align-right">Total</th>
           </tr>
         </thead>
         <tbody>
@@ -51,8 +51,8 @@
             </td>
             <td>
               <h5>€ {{ item.product.price }}</h5>
-            </td>
-            <td>
+            </td>_
+            <td class="column_centered">
               <div class="product_count">
                 <div class="quantity-remove">
                 <a class="quantity" name="quantity" aria-label="Quantity" id="quantity">{{ item.quantity }}</a>
@@ -61,8 +61,8 @@
               </div>
             </td>
             
-            <td>
-              <h5 id="number-align-right">€ {{ item.product.price }}</h5>
+            <td class="column_right">
+              <h5 id="number-align-right">€{{ item.product.price }}</h5>
             </td>
           </tr>
           {% endfor %}
@@ -71,16 +71,16 @@
             <td></td>
             <td><h5>Subtotal</h5></td>
             <td></td>
-            <td>
-              <h5 id="number-align-right">€ {{ total|floatformat:2 }}</h5>
+            <td class="column_right">
+              <h5>€{{ total|floatformat:2 }}</h5>
             </td>
           </tr>
           <tr>
             <td></td>
             <td><h5>Delivery Flat Rate</h5></td>
             <td></td>
-            <td>
-              <h5 id="number-align-right">€ 40.00</h5>
+            <td class="column_right">
+              <h5>€40.00</h5>
             </td>
           </tr>
           <tr>
@@ -88,8 +88,8 @@
             <td>
               <h5>Grand Total</h5></td>
             <td></td>
-            <td>
-              <h5 id="number-align-right">€ {{ grand_total|floatformat:2 }}</h5>
+            <td class="column_right">
+              <h5>€{{ grand_total|floatformat:2 }}</h5>
             </td>
           </tr>
 
