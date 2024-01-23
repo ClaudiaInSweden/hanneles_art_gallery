@@ -31,6 +31,7 @@
             <p>A confirmation email will be sent to {{ order.email }}</p>
           </span>
         </div>
+        <hr>
       </div>
       <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
@@ -73,7 +74,7 @@
             </div>
             <div class="col-3">
               <p class="my-0">€{{ order.order_total | floatformat:2 }}</p>
-              <p class="my-0">€{{ order.delivery | floatformat:2 }}</p>
+              <p class="my-0">€{{ delivery }}</p>
               <p class="my-0"><strong>€{{ order.grand_total | floatformat:2 }}</strong></p>
             </div>
           </div>
@@ -81,16 +82,17 @@
 
         <div class="col-12 col-lg-6">
           <p class="text-muted">
-            <h5>Delivery Information:</h5>
+            <h5>Order Information:</h5>
           </p>
           <div class="single_confirmation_details">
             <ul>
               <li>
-                <span class="mb-1 mt-0 small text-muted">Name:</span><span> {{ order.full_name }}</span>
+                <span class="mb-1 mt-0 small text-muted">Order Number:</span><span> {{ order.order_number }}</span>
               </li>
               <li>
-                <span class="mb-1 mt-0 small text-muted">Name:</span><span> {{ order.full_name }}</span>
+                <span class="mb-1 mt-0 small text-muted">Order Date:</span><span> {{ order.date }}</span>
               </li>
+              <hr>
               <li>
                 <span class="mb-1 mt-0 small text-muted">Phone Number:</span><span> {{ order.phone_number }}</span>
               </li>
