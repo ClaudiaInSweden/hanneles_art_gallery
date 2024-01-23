@@ -36,7 +36,7 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added or removed and add delivery costs
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.grand_total = self.order_total + settings.STANDARD_DELIVERY_COST
         self.save()
 
