@@ -21,19 +21,37 @@
 </section>
 <!-- breadcrumb part end-->
 
-<!--================Checkout Area =================-->
+
 <section class="cart_area section_padding">
-<div class="container">
-    <div class="row">
-        <div class="col-8">
-            <hr>
-            {{ profile }}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">
+                    <h5 id="h5-padding">Your Profile:</h5>
+                </p>
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+                    <div class="checkout_btn_inner float-right">
+                        <button id="submit-button" class="btn_3">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">
+                    <h5 id="h5-padding">Order History:</h5>
+                </p>
+                {{ orders }}
+            </div>
         </div>
-
-
     </div>
-  </div>
 </section>
-<!--================End Checkout Area =================-->
+{% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
