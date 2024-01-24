@@ -101,16 +101,16 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Art Academy
+                                        My Account
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                         {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
                                             <a href="" class="dropdown-item">Administration</a>
                                         {% endif %}
-                                        <a href="" class="dropdown-item">My Membership</a>
+                                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                         <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                     {% else %}
                                         <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

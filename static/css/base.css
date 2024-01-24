@@ -104,6 +104,7 @@ hr {
     padding: 50px 0px;
 }
 
+/* Allauth form formatting */
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
