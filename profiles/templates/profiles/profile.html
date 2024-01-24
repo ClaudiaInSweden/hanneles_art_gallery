@@ -50,7 +50,7 @@
                             <tr>
                             <th>Order Number</th>
                             <th>Date</th>
-                            <th>Painting</th>
+                            <th>Painting Title</th>
                             <th>Order Total</th>
                             </tr>
                         </thead>
@@ -63,8 +63,7 @@
                                 <td>
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
-                                        <li class="small">
-                                            <img class="w-50" src="{{ item.product.image.url }}" alt="{{ product.name }}"> 
+                                        <li class="small">                                          
                                             <p class="my-0">{{ item.product.name }}</p>
                                             <p class="my-0">{{ item.product.size }}</p>
                                         </li>

@@ -122,15 +122,17 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      {% if from_profile %}
-      <a class="btn_1" href="{% url 'profile' %}">Back to Profile</a>
-      {% else %}
-      <a class="btn_1" href="{% url 'products' %}">Back to the Art Gallery</a>
+    <div class="row">
+      <div class="col-lg-12">
+        {% if from_profile %}
+        <a class="btn_1" href="{% url 'profile' %}">Back to Profile</a>
+        {% else %}
+        <a class="btn_1" href="{% url 'products' %}">Back to the Art Gallery</a>
+        {% endif %}
+      </div>
     </div>
   </div>
+
 </section>
 <!--================ confirmation part end =================-->
 
