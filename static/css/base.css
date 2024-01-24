@@ -82,6 +82,10 @@ hr {
     z-index: 5000;
 }
 
+.toast {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+}
 .toast-border {
     border-radius: 20px;
     border: 2px solid #795376;

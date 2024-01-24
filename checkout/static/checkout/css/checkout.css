@@ -45,3 +45,21 @@
     margin: 0;
     height: 100%;
 }
+#id_country {
+  padding: 10px 12px;
+}
+
+select,
+select option {
+  color: #795376;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
+#h5-padding {
+  padding-bottom: 10px;
+}
+
