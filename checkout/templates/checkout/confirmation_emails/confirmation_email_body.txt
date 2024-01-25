@@ -1,0 +1,29 @@
+Hello {{ order.full_name }}!
+
+Thank you for your order!
+
+We have registered your order with the following information:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: € {{ order.order_total }}
+Delivery Flat Rate: € {{ order.delivery }}
+Grand Total: € {{ order.grand_total }}
+
+Your order will be delivered to:
+
+{{ order.full_name }}
+{{ order.phone_number }}
+
+{{ order.street_address1 }}
+{{ order.town }} {{ order.postcode }}
+{{ order.country }}
+
+If you have any questions, please feel free to contact our customer service on telephone 555 00 007 or email {{ contact_email }}.
+
+Sincerely,
+
+HANNELES ART GALLERY
+
+
