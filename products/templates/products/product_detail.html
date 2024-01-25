@@ -84,7 +84,7 @@
         {% if request.user.is_superuser %}
 
             <a href="{% url 'edit_product' product.id %}" class="btn_3" title="Update">Update</a>
-            <a href="{% url 'delete_product' product.id %}" class="btn_3" title="Delete">Delete</a>
+            <a href="{% url 'delete_product' product.id %}" class="btn_3 confirm-delete" title="Delete">Delete</a>
         {% endif %}
       </span>
     </div>
@@ -96,4 +96,12 @@
 </div>
 </div>
 <!--================End Single Product Area =================-->
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+  $(document).on('click', '.confirm-delete', function(){
+    return confirm('Are you sure you want to delete the painting?');
+})
+</script>
 {% endblock %}
