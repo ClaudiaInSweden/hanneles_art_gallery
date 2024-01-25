@@ -99,9 +99,10 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
-  $(document).on('click', '.confirm-delete', function(){
-    return confirm('Are you sure you want to delete the painting?');
-})
-</script>
+    {{ block.super }}
+        <script type="text/javascript">
+        $(document).on('click', '.confirm-delete', function(){
+            return confirm('Are you sure you want to delete the painting?');
+        })
+        </script>
 {% endblock %}
