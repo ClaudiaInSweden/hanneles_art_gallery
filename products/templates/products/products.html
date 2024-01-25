@@ -82,17 +82,24 @@
                                     <img src="{{ MEDIA_URL }}noimage.png"
                                         alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
                                     {% endif %}
-                                    <h3> <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> </h3>
+                                    <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}<span class="float-right" title="Click for details"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a></h3>
                                     {% if product.category %}
-                                    <p><a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
+                                    <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category: {{ product.category.friendly_name }}</a>
                                     </p>
                                     {% endif %}
-                                    <p>{{ product.size }}</p>
+                                    <p>Dimension: {{ product.size }}</p>
                                     {% if product.sold is True %}
-                                    <p class="text-sold">sold</p>
+                                    <p class="text-uppercase"><strong>sold</strong></p>
                                     {% else %}
-                                    <p>€ {{ product.price }}</p>
+                                    <p>Price: € {{ product.price }}
                                     {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <span class="float-right">
+                                            <a href="{% url 'edit_product' product.id %}" title="Update"><i class="fa-regular fa-pen-to-square"></i> </a>
+                                            <a href="{% url 'delete_product' product.id %}" title="Delete"><i class="fa-regular fa-trash-can"></i></a></span>
+                                        {% endif %}
+                                    </p>
+
                                 </div>
                             </div>
                             {% endfor %}

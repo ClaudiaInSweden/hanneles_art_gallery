@@ -108,3 +108,8 @@ hr {
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+
+#edit_delete_details {
+    font-size: 1.75rem;
+    align-items: center;
+}
