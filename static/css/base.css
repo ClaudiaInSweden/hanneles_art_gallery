@@ -19,8 +19,8 @@
 }
 
 .single_product_img img {
-    max-height: 120vh;
-    max-width: 120vh;
+    max-height: 600px;
+    max-width: fit-content;
     margin: auto;
 }
 
