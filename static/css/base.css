@@ -227,12 +227,12 @@ hr {
     padding-left: 10px;
 }
 
-.hide {
+.description_hide {
     display: none;
     font-size: 0.75rem;
   }
       
-  .click-text:hover + .hide {
+  .descriptive_text:hover + .description_hide {
     display: block;
     color: #B08EAD;
   }

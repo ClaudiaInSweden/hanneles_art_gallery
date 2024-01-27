@@ -2,43 +2,6 @@
   "use strict";
 
 
-
-  $('.popup-youtube, .popup-vimeo').magnificPopup({
-    // disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
-  });
-
-  var review = $('.client_review_slider');
-  if (review.length) {
-    review.owlCarousel({
-      items: 1,
-      loop: true,
-      dots: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 5000,
-      nav: true,
-      dots: false,
-      navText: [" <i class='ti-angle-left'></i> ", "<i class='ti-angle-right'></i> "],
-      responsive: {
-        0: {
-          nav: false
-        },
-        768: {
-          nav: false
-        },
-        991: {
-          nav: true
-        }
-      }
-    });
-  }
-
-
   var product_slide = $('.product_img_slide');
   if (product_slide.length) {
     product_slide.owlCarousel({
@@ -107,10 +70,6 @@
     });
   }
 
-  // niceSelect js code
-  $(document).ready(function () {
-    $('select').niceSelect();
-  });
 
   // menu fixed js code
   $(window).scroll(function () {
@@ -166,45 +125,7 @@
     $('#search_input_box').slideUp(500);
   });
 
-  //------- Mailchimp js --------//  
-  function mailChimp() {
-    $('#mc_embed_signup').find('form').ajaxChimp();
-  }
-  mailChimp();
 
-  //------- makeTimer js --------//  
-  function makeTimer() {
-
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
-    var endTime = new Date("27 Sep 2019 12:56:00 GMT+01:00");
-    endTime = (Date.parse(endTime) / 1000);
-
-    var now = new Date();
-    now = (Date.parse(now) / 1000);
-
-    var timeLeft = endTime - now;
-
-    var days = Math.floor(timeLeft / 86400);
-    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
-    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-
-    if (hours < "10") {
-      hours = "0" + hours;
-    }
-    if (minutes < "10") {
-      minutes = "0" + minutes;
-    }
-    if (seconds < "10") {
-      seconds = "0" + seconds;
-    }
-
-    $("#days").html("<span>Days</span>" + days);
-    $("#hours").html("<span>Hours</span>" + hours);
-    $("#minutes").html("<span>Minutes</span>" + minutes);
-    $("#seconds").html("<span>Seconds</span>" + seconds);
-
-  }
 // click counter js
 (function() {
  
