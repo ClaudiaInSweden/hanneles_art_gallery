@@ -82,7 +82,10 @@
                                     <img src="{{ MEDIA_URL }}noimage.png"
                                         alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
                                     {% endif %}
-                                    <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}<span class="float-right" title="Click for details"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a></h3>
+                                    <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}
+                                        <i class="fa-solid fa-arrow-up-right-from-square click-text">
+                                        </i>
+                                    <div class="hide">Click for details</div></a></h3>
                                     {% if product.category %}
                                     <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category: {{ product.category.friendly_name }}</a>
                                     </p>
@@ -95,8 +98,8 @@
                                     {% endif %}
                                         {% if request.user.is_superuser %}
                                         <span class="float-right">
-                                            <a href="{% url 'edit_product' product.id %}" title="Update"><i class="fa-regular fa-pen-to-square"></i> </a>
-                                            <a href="{% url 'delete_product' product.id %}" title="Delete" class="confirm-delete"><i class="fa-regular fa-trash-can"></i></a></span>
+                                            <a href="{% url 'edit_product' product.id %}" title="Update"><i class="fa-regular fa-pen-to-square click-text"></i><span class="hide float-left">Update</span></a>
+                                            <a href="{% url 'delete_product' product.id %}" title="Delete" class="confirm-delete"><i class="fa-regular fa-trash-can click-text"></i><span class="hide">Delete</span></a></span>
                                         {% endif %}
                                     </p>
 
