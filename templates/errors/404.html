@@ -12,16 +12,15 @@
                         <h1>Ooops! Sorry!</h1>
                         <p>This painting has not been painted yet!</p>
                         <p>Why don't you check out one of the other paintings in the meantime!</p>
-                        <p>404</p>
+                        <p>Error 404 Page not found</p>
                         <a href="{% url 'products' %}" class="btn_1">All paintings</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="banner_img">
-        <img src="{% static 'img/404.webp' %}" alt="#" class="img-fluid">
-        <img src="{% static 'img/banner_pattern.png' %}" alt="#" class="pattern_img img-fluid">
+    <div class="error-banner_img">
+        <img src="{% static 'img/404.webp' %}" alt="Error 404 Page does not exist">
     </div>
 </section>
 {% endblock %}

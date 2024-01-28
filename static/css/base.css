@@ -246,7 +246,12 @@ hr {
     color: #B08EAD;
   }
 
-  .page-error {
+/* Banner section 404 Error Page */
+  .banner_text_iner .page-error {
     font-family: 'Finger Paint', sans-serif;
     color: #795376;
+  }
+
+  .error-banner_img {
+    z-index: -500
   }

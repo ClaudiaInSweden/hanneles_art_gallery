@@ -2608,7 +2608,7 @@ ul {
 .banner_part .banner_img {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 100px;
   max-width: 55%;
 }
 
@@ -2616,7 +2616,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: auto;
+    top: 100px;
     bottom: 0;
   }
 }
@@ -2625,7 +2625,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: auto;
+    top: 100px;
     bottom: 0;
   }
 }
@@ -2634,7 +2634,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 75%;
-    top: auto;
+    top: 100px;
     bottom: 0;
   }
 }
@@ -2643,7 +2643,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: auto;
+    top: 100px;
     bottom: 0;
   }
 }
@@ -2652,7 +2652,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: auto;
+    top: 100px;
     bottom: 0;
   }
 }
