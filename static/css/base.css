@@ -1,10 +1,21 @@
+/* Bootstrap 4 Navbar */
+.dropdown-toggle.active-dropdown::after {
+    transform: rotate(-90deg);
+}
+
+.dropdown-menu show {
+    background-color: #795376;
+    color: #fff;
+}
+
+
 .text-sold {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 2rem;
     
 }
-
+/* Product and Product Details Page */
 .section_padding_small {
 
     padding: 20px;
@@ -58,8 +69,7 @@ hr {
     margin-top: 10px !important;
 }
 
-/* Add mouse pointer to category & format dropdown lists and refresh/delete icons in cart */
-
+/* Shopping cart */
 .pointer {
     cursor: pointer;
 }
@@ -163,6 +173,7 @@ hr {
     }
 }
 
+/* Mailchimp Subscribe area */
 #mc-embedded-subscribe {
  
     display: inline-block;
@@ -185,7 +196,6 @@ hr {
     }
 }
 
-
 .container .box_1170 > p {
     font-family: "Rubik", sans-serif;
     line-height: 2;
@@ -194,7 +204,6 @@ hr {
     color: #795376;
     font-weight: 400;
 }
-
 
 .container .box_1170 > h1, h2, h3, h4, h5, h6 {
     color: #4B3049;
@@ -235,4 +244,9 @@ hr {
   .descriptive_text:hover + .description_hide {
     display: block;
     color: #B08EAD;
+  }
+
+  .page-error {
+    font-family: 'Finger Paint', sans-serif;
+    color: #795376;
   }
