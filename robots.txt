@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://hanneles-art-gallery-99fb21934da8.herokuapp.com/sitemap.xml
