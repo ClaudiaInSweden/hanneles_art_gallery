@@ -2920,20 +2920,20 @@ ul {
 
 /* line 133, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_single_product.scss */
 .product_image_area .single_product_text {
-  margin: 100px 0 200px;
+  margin: 50px 0 50px;
 }
 
 @media (max-width: 991px) {
   /* line 133, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_single_product.scss */
   .product_image_area .single_product_text {
-    margin: 40px 0 70px;
+    margin: 30px 0 30px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 133, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_single_product.scss */
   .product_image_area .single_product_text {
-    margin: 50px 0 80px;
+    margin: 30px 0 30px;
   }
 }
 

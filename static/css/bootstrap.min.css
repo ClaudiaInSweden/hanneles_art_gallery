@@ -6197,7 +6197,8 @@ a.close.disabled {
 }
 
 .toast-body {
-    padding: .75rem
+    padding: .75rem;
+    color: #795376;
 }
 
 .modal-open {
