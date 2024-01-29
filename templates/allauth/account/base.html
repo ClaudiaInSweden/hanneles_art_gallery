@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block accountcss %}
+<link rel="stylesheet" href="{% static 'account/css/account.css' %}">
+{% endblock %}
+
 {% block content %}
   <!-- breadcrumb part start-->
   <section class="breadcrumb_part">

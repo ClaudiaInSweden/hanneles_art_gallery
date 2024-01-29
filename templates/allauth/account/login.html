@@ -6,8 +6,8 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
-<hr>
-<h3>{% trans "Sign In" %}</h3>
+<p></p>
+<h2>{% trans "Sign In" %}</h2>
 <hr>
 
 {% get_providers as socialaccount_providers %}
@@ -42,7 +42,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% endif %}
   <button class="primaryAction btn_3" type="submit">{% trans "Sign In" %}</button>
   <a class="btn_3" href="{% url 'home' %}">Home</a>
-  <a class="lost_pass" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <a class="signin-lost_pass" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   
 </form>
 

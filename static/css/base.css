@@ -8,6 +8,10 @@
     color: #fff;
 }
 
+/* Logo image */
+.navbar-brand > img {
+    padding-left: 10px;
+}
 
 .text-sold {
     text-transform: uppercase;
@@ -162,7 +166,7 @@ hr {
     color: #795376 !important;
 }
 
-
+/* Remove cart amount in navbar on small screens */
 @media only screen and (max-width: 350px) {
     .show-total {
         display: none;
@@ -241,17 +245,7 @@ hr {
     font-size: 0.75rem;
   }
       
-  .descriptive_text:hover + .description_hide {
+.descriptive_text:hover + .description_hide {
     display: block;
     color: #B08EAD;
-  }
-
-/* Banner section 404 Error Page */
-  .banner_text_iner .page-error {
-    font-family: 'Finger Paint', sans-serif;
-    color: #795376;
-  }
-
-  .error-banner_img {
-    z-index: -500
   }

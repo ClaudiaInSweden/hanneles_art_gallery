@@ -10,17 +10,15 @@
                 <div class="banner_text">
                     <div class="banner_text_iner">
                         <h1>Hanneles Original Art</h1>
-                        <p>Don't buy commodity prints
-                            when you can have original paintings!</p>
-                        <a href="{% url 'products' %}" class="btn_1">Buy real art</a>
+                        <p>Don't buy commodity prints when you can buy affordable original paintings!</p>
+                        <a href="{% url 'products' %}" aria-label="Visit our paintings page"  class="btn_1">Buy real art</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="banner_img">
-        <img src="{% static 'img/banner.png' %}" alt="#" class="img-fluid">
-        <img src="{% static 'img/banner_pattern.png' %}" alt="#" class="pattern_img img-fluid">
+        <img src="{% static 'img/banner.png' %}" alt="Flower image" class="img-fluid">
     </div>
 </section>
 <!-- banner part start-->
@@ -43,7 +41,7 @@
                                     <div id="mc_embed_signup_scroll">
                                         <div class="mc-field-group">
                                             <input type="email" name="EMAIL" class="required email" id="mce-EMAIL"
-                                                required="" value="" placeholder="Enter your mail"></div>
+                                                required="" value="" placeholder="Enter your Email address"></div>
                                         <div id="mce-responses" class="clear foot">
                                             <div class="response" id="mce-error-response" style="display: none;">
                                             </div>
@@ -62,7 +60,7 @@
                                                     class="button" value="Subscribe">
                                                 <p>Powered by:</p>
                                                 <p style="margin: 0px auto;"><a href="http://eepurl.com/iIUFVE"
-                                                        title="Mailchimp - email marketing made easy and fun">
+                                                        title="Mailchimp - email marketing made easy and fun" target="_blank" rel="noopener" aria-label="Visit our Newsletter cooperation partner Mailchimp">
                                                         <span
                                                             style="display: inline-block; background-color: transparent; border-radius: 4px;">
                                                             <img class="refferal_badge"
@@ -88,10 +86,25 @@
 <footer class="footer_part">
     <div class="footer_iner">
         <div class="container">
-
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6">
+                    <div class="footer_menu">
+                        <div class="footer_logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="social_icon">
+                        <a href="https://www.facebook.com/61555624246656/" aria-label="Visit us on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Visit us on Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" aria-label="Visit us on Linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
     <div class="copyright_part">
         <div class="container">
             <div class="row ">
@@ -102,13 +115,11 @@
                             Copyright &copy;<script>
                                 document.write(new Date().getFullYear());
                             </script> All rights reserved | This template is made with <i class="ti-heart"
-                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </P>
                         <div class="copyright_link">
-                            <a href="{% url 'privacy_policy' %}" target="_blank">Privacy Policy</a>
-                            <a href="https://www.facebook.com/61555624246656/" target="_blank"><i
-                                    class="fab fa-facebook"></i></a>
+                            <a href="{% url 'privacy_policy' %}" target="_blank" aria-label="Have a look at our Privacy Policy">Privacy Policy</a>
                         </div>
                     </div>
                 </div>

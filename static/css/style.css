@@ -2608,15 +2608,15 @@ ul {
 .banner_part .banner_img {
   position: absolute;
   right: 0;
-  top: 100px;
-  max-width: 55%;
+  top: auto;
+  max-width: 53%;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
-    max-width: 55%;
-    top: 100px;
+    max-width: 53%;
+    top: auto;
     bottom: 0;
   }
 }
@@ -2624,8 +2624,8 @@ ul {
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
-    max-width: 55%;
-    top: 100px;
+    max-width: 45%;
+    top: auto;
     bottom: 0;
   }
 }
@@ -2633,8 +2633,8 @@ ul {
 @media (max-width: 576px) {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
-    max-width: 75%;
-    top: 100px;
+    max-width: 55%;
+    top: auto;
     bottom: 0;
   }
 }
@@ -2643,7 +2643,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: 100px;
+    top: auto;
     bottom: 0;
   }
 }
@@ -2652,7 +2652,7 @@ ul {
   /* line 79, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_banner.scss */
   .banner_part .banner_img {
     max-width: 55%;
-    top: 100px;
+    top: auto;
     bottom: 0;
   }
 }
