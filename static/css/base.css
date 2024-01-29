@@ -239,7 +239,7 @@ hr {
 .typography h5 {
     padding-left: 10px;
 }
-
+/* 
 .description_hide {
     display: none;
     font-size: 0.75rem;
@@ -248,4 +248,4 @@ hr {
 .descriptive_text:hover + .description_hide {
     display: block;
     color: #B08EAD;
-  }
+  } */
