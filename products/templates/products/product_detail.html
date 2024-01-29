@@ -106,3 +106,13 @@
         })
         </script>
 {% endblock %}
+{% block jqueryselect %}
+<script type="text/javascript">
+    $('.select_option_dropdown').hide();
+    $(".select_option_list").click(function () {
+    $(this).parent(".select_option").children(".select_option_dropdown").slideToggle('100');
+    $(this).find(".right").toggleClass("fas fa-caret-down, fas fa-caret-up");
+    });
+</script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script> 
+{% endblock %}
