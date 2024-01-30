@@ -1,12 +1,70 @@
 /* Bootstrap 4 Navbar */
-.dropdown-toggle.active-dropdown::after {
-    transform: rotate(-90deg);
+
+i {
+    color: #795376 !important;
 }
 
+a {
+    color: #795376 !important;
+}
+
+a:hover {
+    color: #B08EAD !important;
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+.logo-font {
+    color: #795376;
+    font-size: 1rem;
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+        align-content: left;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+/* 
 .dropdown-menu show {
     background-color: #795376;
     color: #fff;
-}
+} */
 
 /* Logo image */
 .navbar-brand>img {
@@ -26,15 +84,17 @@
 
 .dropdown_select {
     font-size: 16px;
+    text-align: left;
 }
+
 
 /* .select_option_bottom {
     margin-bottom: 20px;
 } */
 
 .single_product_img img {
-    max-height: 600px;
-    max-width: fit-content;
+    max-height: 500px;
+    max-width: auto;
     margin: auto;
 }
 
@@ -149,21 +209,7 @@ i {
     overflow: hidden;
 }
 
-.description_hide {
-    display: none;
-    font-size: 0.75rem;
-}
-
-.descriptive_text:hover+.description_hide {
-    display: block;
-    color: #B08EAD;
-}
-
-#edit_delete_details {
-    font-size: 1.75rem;
-    align-items: center;
-}
-
+/* Add product form */
 .btn-file input[type="file"] {
     position: absolute;
     top: 0;
@@ -179,24 +225,26 @@ i {
     border-color: #dc3545;
 }
 
-
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
 }
-
-/* Navbar remove border */
-.navbar lg {
-    border: 0 !important;
-    z-index: 9999;
-    background-color: #fff;
+.description_hide {
+    display: none;
+    font-size: 0.5rem;
 }
 
-.nav-link {
-    color: #795376 !important;
+.descriptive_text:hover+.description_hide {
+    display: block;
+    color: #B08EAD;
+    font-size: 0.5rem;
 }
 
+#edit_delete_details {
+    font-size: 1.75rem;
+    align-items: center;
+}
 /* Remove cart amount in navbar on small screens */
 @media only screen and (max-width: 350px) {
     .show-total {

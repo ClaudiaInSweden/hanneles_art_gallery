@@ -1,0 +1,55 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Art Gallery
+            </a>
+            <div class="dropdown-menu-sm-right md-right border-0" aria-labelledby="all-products-link">
+                <a class="dropdown-item" href="{% url 'products' %}"><strong>All
+                    Paintings</strong></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=flowers">Flowers</a>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=animals">Animals</a>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=landscape">Landscape</a>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=portrait">Portrait</a>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=abstract">Abstract</a>
+            <a class="dropdown-item"
+                href="{% url 'products' %}?category=impressionism">Impressionism</a>
+            <a class="dropdown-item" 
+                href="{% url 'products' %}?category=still_life">Still Life</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font nav-link mr-5" href="#" id="format-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Formats
+            </a>
+            <div class="dropdown-menu-sm-right md-right" aria-labelledby="format-link">
+                <a class="dropdown-item" href="{% url 'products' %}?format=Portrait">Portrait</a>
+                <a class="dropdown-item" href="{% url 'products' %}?format=Landscape">Landscape</a>
+                <a class="dropdown-item" href="{% url 'products' %}?format=Square">Square</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font nav-link mr-5" href="#" id="format-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort by Price <i
+                class="right fas fa-caret-down"></i> <i class="right fas fa-caret-up"></i>
+            </a>
+        <div class="dropdown-menu-sm-right md-right">
+            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Low to high</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">High to low</a>
+        </div>
+    </li>
+    </ul>
+</div>

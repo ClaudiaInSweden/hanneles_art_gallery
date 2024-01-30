@@ -22,62 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="product_list">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single_sedebar">
-                                <div class="select_option select_option_bottom">
-                                    <div class="select_option_list dropdown_select pointer">Select Category <i
-                                            class="right fas fa-caret-down"></i> </div>
-                                    <div class="select_option_dropdown">
-                                        <p><a href="{% url 'products' %}?category=flowers">Flowers</a></p>
-                                        <p><a href="{% url 'products' %}?category=animals">Animals</a></p>
-                                        <p><a href="{% url 'products' %}?category=landscape">Landscape</a></p>
-                                        <p><a href="{% url 'products' %}?category=portrait">Portrait</a></p>
-                                        <p><a href="{% url 'products' %}?category=abstract">Abstract</a></p>
-                                        <p><a href="{% url 'products' %}?category=impressionism">Impressionism</a></p>
-                                        <p><a href="{% url 'products' %}?category=still_life">Still Life</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single_sedebar">
-                                <div class="select_option">
-                                    <div class="select_option_list dropdown_select pointer">Select Format <i
-                                            class="right fas fa-caret-down"></i> </div>
-                                    <div class="select_option_dropdown">
-                                        <p><a href="{% url 'products' %}?format=Portrait">Portrait</a></p>
-                                        <p><a href="{% url 'products' %}?format=Landscape">Landscape</a></p>
-                                        <p><a href="{% url 'products' %}?format=Square">Square</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single_sedebar">
-                                <div class="select_option">
-                                    <div class="select_option_list dropdown_select pointer">Sort by Price <i
-                                            class="right fas fa-caret-down"></i> <i class="right fas fa-caret-up"></i>
-                                    </div>
-                                    <div class="select_option_dropdown">
-                                        <p><a href="{% url 'products' %}?sort=price&direction=asc">Low to high</a></p>
-                                        <p><a href="{% url 'products' %}?sort=price&direction=desc">High to low</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left single_product_item">
-                        {% if search_term or current_categories != 'None_None' %}
-                        <span><a href="{% url 'products' %}">See all Paintings </a> | </span>
-                        {% endif %}
-                        {{ products|length }} Paintings{% if search_term %} found for
-                        <strong>"{{ search_term }}"</strong>{% endif %}
-                    </p>
-                </div>
+
                 <div class="product_list">
                     <div class="row">
                         {% for product in products %}
@@ -90,11 +35,11 @@
                                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}"
                                     class="img-fluid">
                                 {% endif %}
-                                <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}
+                                <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}</h3>
                                         <i class="fa-solid fa-arrow-up-right-from-square descriptive_text">
                                         </i>
                                         <div class="description_hide">Click for details</div>
-                                    </a></h3>
+                                    </a>
                                 {% if product.category %}
                                 <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category:
                                         {{ product.category.friendly_name }}</a>
