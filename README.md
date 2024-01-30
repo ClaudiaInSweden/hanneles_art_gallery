@@ -4,16 +4,60 @@
 
 ### Project Description
 
-[Hanneles Art Gallery](https://claudiainsweden.github.io/visit-jarbo/) is a site that provides information to travelers about what to expect when coming to Järbo.
+[Hanneles Art Gallery](https://hanneles-art-gallery-99fb21934da8.herokuapp.com/) is a fictional eCommerce website that offers original paintings to affordable prices. 
+The painting images and descriptions are used with kind permission of Hannele Kaarlejärvi, the artist. 
 
-Its vicinity to the ski resort Kungsberget makes the small town of Järbo an ideal place to stay for travelers who want to avoid the overcrowded area of Kungsberget. Järbos surroundings make it an ideal place to stay when visitors want to take a rest from their hectic everyday life.
-
-### Project Purpose
-
-There are are couple of international companies in the area and their employees and business partners are potential visitors who do need information about the place in English.
+The webshop includes a preview of all painings with links to a larger image and more detailed information. The images can also be viewed in full size. Paintings can be added to the shopping cart but as they are unique only a quantity of 1 can be added. In the shopping cart, paintings can be removed, or the user can proceed to the checkout page. For Payment purposes the website is connected with Stripe. Test purchases can be performed with [Stripes test cards](https://stripe.com/docs/testing/).
+User can also register for an account where the order history is stored.  
 
 
-![Responsive image example](assets/readme-docs/amiresponsive.webp)
+
+### Business Model
+
+Hanneles Art Gallery is a B2C (Business to Customer) business even though also businesses can purchase paintings. 
+Target group are users who want to decorate their homes but want to avoid off-the-shelf-prints and instead look for real paintings. 
+
+
+#### Phase 1 (in scope for this project)
+Hanneles Art Gallery sells a limited range of paintings to fair conditions. 
+
+
+#### Phase 2 (out of scope for this project)
+An "Art Academy" will be launched including a membership area where interested users may find tutorials about how to start painting and what tools to use. Beginners level tutorials will be free of charge and a member fee will be charged for more advanced tutorials. 
+
+
+#### Phase 3 (out of scope for this project)
+The webshop will widen its scope and start selling high quality tools for painting. 
+
+
+### Marketing Strategy
+
+#### Target Audience
+According to [Interior Design magazine](https://interiordesign.net/designwire/women-in-design-confronting-the-glass-ceiling/) around 70% of all Interior Designers in the US are women and also in private homes it's often the women who choose the interior decor. Furthermore, many women see painting as an opportunity for self-expression and stress-reduction. For that reason the main target audience of the webshop as well as for phase 2 and 3 are women. 
+
+#### Facebook Business Page
+In the start phase of the business we will concentrate on Facebook as Marketing platform. That way the artist can create a more personal relationship with followers and keep the communication ongoing by answering comments and questions online. This allows also to test different approaches and validation.
+Another pillar is the participation at 2024 ["Gästrike Konst"](https://www.facebook.com/GastrikKonst/), a local, very popular exhibition circle that takes place in a number of locations (partly even in private homes) around Gästrikland, close to the artists home town Gävle in Sweden. 
+
+By the time of writing this ReadMe file (2024-01-30) the businesses [Facebook Page Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
+![Facebook screenshot01](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook01.jpg)
+![Facebook screenshot02](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook02.jpg)
+![Facebook screenshot03](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook03.jpg)
+
+#### Newsletter
+A monthly newsletter will be created using Mailchimp services. The newsletter will contain information about new paintings available in the shop but also act as "appetizer" as we will tell some background stories about the making of the paintings and the inspiration behind it. 
+It will also include information about exhibitions and other events. 
+
+Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address and password are necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
+
+xxx SCREENSHOT 
+
+
+### SEO - Search Engine Optimization
+
+
+
+
 
 
 ## User stories
