@@ -54,7 +54,39 @@ xxx SCREENSHOT
 
 
 ### SEO - Search Engine Optimization
+Prior to project start some brainstorming resultad in a number of short and long-tail keywords. Using three different browsers and a mobile, resulted in a couple of keyword volume and competition analysis results from [Wordtracker](https://www.wordtracker.com/).
+Also Google search with suggested search phrases as well as related searches was used. However, original paintings seem to be a niche product and Googles suggestions were a little dissapointing. 
+The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
 
+<details>
+<summary>Keyword Research Wordtracker</summary>
+
+Screenshots Wordtracker Results:
+![Keywords Wordtracker1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research01.jpg)
+![Keywords Wordtracker2](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research02.jpg)
+![Keywords Wordtracker3](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research03.jpg)
+![Keywords Wordtracker4](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research04.jpg)
+![Keywords Wordtracker5](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research05.jpg)
+![Keywords Wordtracker6](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research06.jpg)
+![Keywords Wordtracker7](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research07.jpg)
+![Keywords Wordtracker8](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research08.jpg)
+
+</details>
+<details>
+<summary>Keyword Research Google</summary>
+
+Screenshots Wordtracker Results:
+![Keywords Google1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research01.jpg)
+![Keywords Google2](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research02.jpg)
+![Keywords Google3](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research03.jpg)
+![Keywords Google4](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research04.jpg)
+![Keywords Google5](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research05.jpg)
+![Keywords Google6](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research06.jpg)
+
+</details>
+
+
+ 
 
 
 
