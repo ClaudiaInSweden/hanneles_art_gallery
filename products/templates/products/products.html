@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-  <!-- breadcrumb part start-->
-  <section class="breadcrumb_part">
+<!-- breadcrumb part start-->
+<section class="breadcrumb_part">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -18,16 +18,57 @@
 <!-- breadcrumb part end-->
 
 <!-- product list part start-->
-<section class="product_list section_padding_small">
+<section class="product_list">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <div class="product_list">
+        <div class="row py-3">
+            <div class="col-lg-4 col-sm-4">
+                <div class="dropdown select_option">
+                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories 
+                      </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{% url 'products' %}?category=flowers">Flowers</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=animals">Animals</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=landscape">Landscape</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=portrait">Portrait</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=abstract">Abstract</a>
+                            <a class="dropdown-item"
+                                href="{% url 'products' %}?category=impressionism">Impressionism</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=still_life">Still Life</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="dropdown select_option">
+                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Formats 
+                      </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Portrait">Portrait</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Landscape">Landscape</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Square">Square</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="dropdown select_option">
+                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by price
+                      </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Low to high</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">High to low</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            <div class="row">
+                <div class="col-md-12">
                     <div class="row">
                         {% for product in products %}
                         <div class="col-lg-4 col-sm-4">
-                            <div class="single_product_item">
+                            <div class="single_product_item align-item-flex-end">
                                 {% if product.image %}
                                 <img src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}"
                                     class="img-fluid">
@@ -35,11 +76,12 @@
                                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}"
                                     class="img-fluid">
                                 {% endif %}
-                                <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}</h3>
-                                        <i class="fa-solid fa-arrow-up-right-from-square descriptive_text">
-                                        </i>
-                                        <div class="description_hide">Click for details</div>
-                                    </a>
+                                <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}
+                                </h3>
+                                <i class="fa-solid fa-arrow-up-right-from-square descriptive_text float-right">
+                                </i>
+                                <div class="description_hide">Click for details</div>
+                                </a>
                                 {% if product.category %}
                                 <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category:
                                         {{ product.category.friendly_name }}</a>
@@ -68,7 +110,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
 </section>
 <!-- product list part end-->
@@ -76,21 +118,20 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-        <script type="text/javascript">
-        $(document).on('click', '.confirm-delete', function(){
-            return confirm('Are you sure you want to delete the painting?');
-        })
-        </script>
+{{ block.super }}
+<script type="text/javascript">
+    $(document).on('click', '.confirm-delete', function () {
+        return confirm('Are you sure you want to delete the painting?');
+    })
+</script>
 {% endblock %}
 {% block jqueryselect %}
 <script type="text/javascript">
     $('.select_option_dropdown').hide();
     $(".select_option_list").click(function () {
-    $(this).parent(".select_option").children(".select_option_dropdown").slideToggle('100');
-    $(this).find(".right").toggleClass("fas fa-caret-down, fas fa-caret-up");
+        $(this).parent(".select_option").children(".select_option_dropdown").slideToggle('100');
+        $(this).find(".right").toggleClass("fas fa-caret-down, fas fa-caret-up");
     });
 </script>
-<script src="{% static 'js/jquery.nice-select.min.js' %}"></script> 
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
 {% endblock %}
-

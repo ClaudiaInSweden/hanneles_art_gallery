@@ -1,11 +1,20 @@
 /* Bootstrap 4 Navbar */
-.dropdown-toggle.active-dropdown::after {
+/* .dropdown-toggle.active-dropdown::after {
     transform: rotate(-90deg);
-}
+} */
 
 
 i {
     color: #795376 !important;
+}
+a {
+    color: #795376 !important;
+}
+a:hover {
+    color: #B08EAD !important;
+}
+a .btn_1 {
+    color: #fff;
 }
 
 /* Navigation bar */
@@ -17,6 +26,7 @@ i {
     font-weight: 400;
     line-height: 0.7;
     padding-left: 50px;
+    margin-top: 10px;
 }
 .navbar-toggler {
     font-size: 1.5rem;
@@ -35,6 +45,10 @@ i {
     letter-spacing: normal;
     font-size: 1.3rem;
 }
+.dropdown-item:active {
+    background-color: #4B3049 !important;
+    color: #fff;
+}
 
 /* Search form */
 .search-container {
@@ -49,9 +63,10 @@ i {
     height: 100%;
     display: block;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 16px;
     padding: 8px 40px 8px 20px;
     border: none;
+    margin-top: 8px;
 }
 .search-input:focus {
     outline: none;
@@ -101,7 +116,7 @@ i {
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
-
+}
 /* 
 .dropdown-menu show {
     background-color: #795376;
@@ -120,33 +135,42 @@ i {
 }
 
 /* Product and Product Details Page */
-.section_padding_small {
-    padding: 20px;
-}
-
-.dropdown_select {
+.dropdown .select_option {
     font-size: 16px;
     text-align: left;
 }
-
-
-/* .select_option_bottom {
-    margin-bottom: 20px;
-} */
-
+.dropdown-button-fullwidth {
+    width: 100% !important;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+.genric-btn.primary {
+    font-size: 1em;
+    font-weight: 400;
+}
+.genric-btn.circle {
+    border-radius: 50px;
+    width: auto;
+}
+.genric-btn.e-large {
+    padding: 0 10px !important;
+}
+/* 
 .single_product_img img {
     max-height: 500px;
     max-width: auto;
     margin: auto;
-}
+} */
 
-.single_product_item a {
+/* .single_product_item > a {
     color: #795376 !important;
     line-height: 1;
-}
+} */
 
 .single_product_item p {
-    line-height: 1.7;
+    line-height: 1.2;
+    font-size: 16px;
 }
 
 .btn-3 {
@@ -237,7 +261,7 @@ i {
 
 /* Social Media Icons */
 .social_icon i {
-    color: #fff;
+    color: #fff !important;
 }
 
 /* Allauth form formatting */
@@ -273,7 +297,7 @@ i {
     border-radius: 0;
 }
 .description_hide {
-    display: none;
+    display: none !important;
     font-size: 0.5rem;
 }
 
