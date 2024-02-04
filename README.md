@@ -59,7 +59,7 @@ Also Google search with suggested search phrases as well as related searches was
 The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
 
 <details>
-<summary>Keyword Research Wordtracker</summary>
+<summary>#### Keyword Research Wordtracker</summary>
 
 Screenshots Wordtracker Results:
 ![Keywords Wordtracker1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research01.jpg)
@@ -73,7 +73,7 @@ Screenshots Wordtracker Results:
 
 </details>
 <details>
-<summary>Keyword Research Google</summary>
+<summary>#### Keyword Research Google</summary>
 
 Screenshots Wordtracker Results:
 ![Keywords Google1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research01.jpg)
@@ -84,6 +84,23 @@ Screenshots Wordtracker Results:
 ![Keywords Google6](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research06.jpg)
 
 </details>
+
+#### sitemap.xml
+To further improve searchability of the website a sitemap.xml file was included, using [XML Sitemaps.xml](https://www.xml-sitemaps.com/).
+
+
+#### robots.txt
+The robots.txt file allowes crawl access to all parts of the website but the accounts and checkout pages.
+
+
+#### Privacy Policy
+To comply with GDPR a Privacy Policy has been created using the [Privacy Policy Generator](https://www.privacypolicygenerator.info/) and added to the footer of the Home Page.
+
+xxx SCREENSHOT
+
+
+
+
 
 
  
