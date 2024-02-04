@@ -44,8 +44,11 @@ a:hover {
     background-color: #4B3049 !important;
     color: #fff;
 }
-@media (max-width: 768px) {
-    .navbar-brand {
+@media (max-width: 991px) {
+    .logo {
+        display: none;
+    }
+    .logo-text a {
         display: none;
     }
 }
@@ -105,9 +108,13 @@ a:hover {
 .search-button:hover {
     color: #B08EAD;
 }
-
 .search-input[type="text"]::placeholder {
     color: #B08EAD;
+}
+@media (max-width: 576px) {
+    .search-container {
+        min-width: 100px;
+        max-width: 200px;
 }
 
 

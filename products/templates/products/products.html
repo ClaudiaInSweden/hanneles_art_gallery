@@ -23,7 +23,8 @@
         <div class="row py-3">
             <div class="col-lg-4 col-sm-4">
                 <div class="dropdown select_option">
-                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth" type="button" 
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories 
                       </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -77,11 +78,11 @@
                                     class="img-fluid">
                                 {% endif %}
                                 <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}
+                                    <i class="fa-solid fa-arrow-up-right-from-square descriptive_text float-right pr-3">
+                                    </i></a>
                                 </h3>
-                                <i class="fa-solid fa-arrow-up-right-from-square descriptive_text float-right">
-                                </i>
                                 <div class="description_hide">Click for details</div>
-                                </a>
+                                
                                 {% if product.category %}
                                 <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category:
                                         {{ product.category.friendly_name }}</a>
