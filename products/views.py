@@ -136,5 +136,5 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Painting "{product.name}" has been deleted!')
+    messages.success(request, 'The painting has been deleted!')
     return redirect(reverse('products'))

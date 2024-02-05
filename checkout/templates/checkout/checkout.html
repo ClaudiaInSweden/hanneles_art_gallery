@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block extra_css %}
+{{ block.super }}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
-
 <!-- breadcrumb part start-->
 <section class="breadcrumb_part">
     <div class="container">
@@ -20,7 +20,7 @@
     </div>
 </section>
 <!-- breadcrumb part end-->
-
+<!-- Spinning overlay section  -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
@@ -28,7 +28,7 @@
         </span>
     </h1>
 </div>
-
+<!-- Spinning overlay end -->
 <!--================Checkout Area =================-->
 <section class="cart_area section_padding">
 <div class="container">
@@ -37,7 +37,7 @@
             <p class="text-muted"><h5 id="h5-padding">Order Summary:</h5></p>
             <div class="row">
                 <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small text-muted">Item</p>
+                    <p class="mb-1 mt-0 small text-muted">Title</p>
                 </div>
                 <div class="col-3 text-right">
                     <p class="mb-1 mt-0 small text-muted">Subtotal</p>
@@ -100,8 +100,8 @@
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                <a class="text-info" href="{% url 'account_signup' %}"><strong>Create an account</strong></a> or 
+                                <a class="text-info" href="{% url 'account_login' %}"><strong> login</strong></a> to save this information
                             </label>
                         {% endif %}
                     </div>
@@ -119,9 +119,9 @@
                     <a class="btn_1" href="{% url 'view_cart' %}"><span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="font-weight-bold"> Update Cart</span></a>
+                    <span> Update Cart</span></a>
 
-                    <button id="submit-button" class="btn_1 checkout_btn_1"><span class="font-weight-bold">Complete Order </span>
+                    <button id="submit-button" class="btn_1 checkout_btn_1"><span>Complete Order </span>
                         <span class="icon"><i class="fas fa-lock"></i></span>
                     </button>
                     <p class="small text-secondary float-right my-0">

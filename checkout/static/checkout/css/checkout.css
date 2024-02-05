@@ -5,9 +5,9 @@
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: 0px;
   background-color: white;
-  box-shadow: 0 1px 3px 0 #B08EAD;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
@@ -25,7 +25,11 @@
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
+.text-info {
+  color: #B08EAD!important;
+}
 
+/* Loading overlay */
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -36,7 +40,6 @@
     background: rgba(176, 142, 173, .85);
     z-index: 9999;
 }
-
 .loading-spinner {
 	display: flex;
     align-items: center;
@@ -46,20 +49,25 @@
 }
 #id_country {
   padding: 10px 12px;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
 }
-
 select,
 select option {
   color: #795376;
 }
-
 select:invalid,
 select option[value=""] {
   color: #aab7c4 !important;
 }
-
 #h5-padding {
   padding-bottom: 20px;
   padding-left: 20px;
 }
-
+.form-control {
+  font-size: 15px;
+}
+.fas fa-lock,
+.fas fa-chevron-left {
+  color: #fff !important;
+}

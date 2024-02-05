@@ -2284,7 +2284,7 @@ ul {
 
 /* line 89, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
 .main_menu a i {
-  color: #4B3049 !important;
+  color: #795376 !important;
   position: relative;
   z-index: 1;
   font-size: 20px;
@@ -2339,7 +2339,7 @@ ul {
 
 /* line 135, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
 .dropdown .dropdown-menu .dropdown-item {
-  font-size: 14px;
+  font-size: 12px;
   padding: 8px 20px !important;
   color: #fff !important;
   background-color: #B08EAD;
@@ -2433,7 +2433,7 @@ ul {
   }
   /* line 230, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
   .menu_icon i {
-    color: #000;
+    color: #795376;
   }
   /* line 235, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
   .main_menu a i {

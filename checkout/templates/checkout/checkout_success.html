@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
+{{ block.super }}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
@@ -82,7 +83,7 @@
 
         <div class="col-12 col-lg-6">
           <p class="text-muted">
-            <h5>Order Information:</h5>
+            <h5>Order Summary:</h5>
           </p>
           <div class="single_confirmation_details">
             <ul>

@@ -1,15 +1,21 @@
 /* Base formatting */
-i {
+body {
     color: #795376 !important;
 }
-a {
+i, p, a {
     color: #795376 !important;
+}
+h1, h2, h3, h4 {
+    color: #795376;
 }
 a:hover {
     color: #B08EAD !important;
 }
-.banner_text_iner .btn_1 {
+.btn_1 {
     color: #fff !important;
+}
+.btn_3 {
+    color: #B08EAD !important;
 }
 
 /* Navigation bar */
@@ -20,11 +26,16 @@ a:hover {
     color: #795376;
     font-weight: 400;
     line-height: 0.7;
-    padding-left: 50px;
     margin-top: 10px;
+}
+.main_menu .main-menu-item ul li .nav-link {
+    text-transform: uppercase !important;
 }
 .navbar-toggler {
     font-size: 1.5rem;
+}
+.navbar-brand>img {
+    padding-left: 10px;
 }
 .logo-font {
     color: #795376;
@@ -51,19 +62,29 @@ a:hover {
     .logo-text a {
         display: none;
     }
-}
-
-@media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
-
     body {
         height: calc(100vh - 116px);
     }
-
     .display-4.logo-font.text-black {
         font-size: 2rem;
+    }
+    .navbar-collapse {
+        border-radius: 25px;
+    }
+    .main_menu .main-menu-item ul li .nav-link {
+        text-transform: capitalize !important;
+        font-size: 12px !important;
+        line-height: 10px !important;
+    }
+    .nav-item + .dropdown + .show {
+        font-size: 12px !important;
+        line-height: 7px !important;
+    }
+    .dropdown .dropdown-menu .dropdown-item {
+        font-size: 12px;
     }
 }
 
@@ -115,24 +136,13 @@ a:hover {
     .search-container {
         min-width: 100px;
         max-width: 200px;
-}
-
-
-/* 
-.dropdown-menu show {
-    background-color: #795376;
-    color: #fff;
-} */
-
-/* Logo image */
-.navbar-brand>img {
-    padding-left: 10px;
+    }
 }
 
 
 /* Product and Product Details Page */
-.dropdown .select_option {
-    font-size: 16px;
+.dropdown.select_option {
+    font-size: 1em;
     text-align: left;
 }
 .dropdown-button-fullwidth {
@@ -150,19 +160,9 @@ a:hover {
     width: auto;
 }
 .genric-btn.e-large {
-    padding: 0 10px !important;
+    padding-left: 10px !important;
 }
-/* 
-.single_product_img img {
-    max-height: 500px;
-    max-width: auto;
-    margin: auto;
-} */
 
-/* .single_product_item > a {
-    color: #795376 !important;
-    line-height: 1;
-} */
 /* Product details page */
 .single_product_item p {
     line-height: 1.2;
@@ -223,7 +223,7 @@ i {
 }
 .toast {
     font-family: "Rubik", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #4B3049;
 }
 .toast-border {
@@ -303,30 +303,14 @@ i {
     }
 }
 
-/* .container .box_1170>p {
-    font-family: "Rubik", sans-serif;
-    line-height: 2;
-    font-size: 15px;
-    margin-bottom: 0px;
-    color: #795376;
-    font-weight: 400;
+/* Index Page Image area */
+.banner_part .btn_1 {
+    margin-top: 50px;
+    color: #fff !important;
 }
-
-.container .box_1170>h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #4B3049;
-    font-family: "Poppins", sans-serif;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    margin-bottom: 0.5rem;
-} */
-
-
-
+.banner_part:after {
+    display: none;
+}
 
 /* Mailchimp subscription form  */
 .subscribe_form_mailchimp {
@@ -365,28 +349,29 @@ h6 {
     border-radius: 4px;
 }
 #mc-embedded-subscribe {
-
     display: inline-block;
     margin-top: 1em;
     margin-bottom: 1em;
-    max-width: fit-content;
-    padding: 17px 50px;
+    max-width: 150px;
     border-radius: 50px;
     background-color: #B08EAD;
     border: 0;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     text-transform: capitalize;
-    color: #fff;
+    color: #fff !important;
 
     &:hover {
         background-color: #fff;
         color: #795376;
     }
 }
-
+.subscribe_part .subscribe_part_content p {
+    color: #fff !important;
+    font-size: 12px;
+}
 /* Privacy Policy */
 .btn-link {
     color: #795376;
