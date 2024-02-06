@@ -78,11 +78,9 @@
                                     class="img-fluid">
                                 {% endif %}
                                 <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}
-                                    <i class="fa-solid fa-arrow-up-right-from-square descriptive_text float-right pr-3">
-                                    </i></a>
-                                </h3>
-                                <div class="description_hide">Click for details</div>
-                                
+                                    <span class="descriptive_text"><i class="fa-solid fa-arrow-up-right-from-square float-right pr-3" title="Click for details">
+                                    </i></span></a>
+                                </h3>                              
                                 {% if product.category %}
                                 <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category:
                                         {{ product.category.friendly_name }}</a>
@@ -96,13 +94,13 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <span class="float-right">
-                                        <a href="{% url 'edit_product' product.id %}" title="Update"><i
-                                                class="fa-regular fa-pen-to-square descriptive_text"></i><span
-                                                class="description_hide float-left">Update</span></a>
+                                        <a href="{% url 'edit_product' product.id %}">
+                                            <i class="fa-regular fa-pen-to-square" title="Update"></i>
+                                        </a>
                                         <a href="{% url 'delete_product' product.id %}" title="Delete"
-                                            class="confirm-delete"><i
-                                                class="fa-regular fa-trash-can descriptive_text"></i><span
-                                                class="description_hide">Delete</span></a></span>
+                                            class="confirm-delete">
+                                            <i class="fa-regular fa-trash-can" title="Delete"></i>
+                                        </a></span>
                                     {% endif %}
                                 </p>
                             </div>

@@ -11,12 +11,7 @@ h1, h2, h3, h4 {
 a:hover {
     color: #B08EAD !important;
 }
-.btn_1 {
-    color: #fff !important;
-}
-.btn_3 {
-    color: #B08EAD !important;
-}
+
 
 /* Navigation bar */
 .navbar {
@@ -243,6 +238,11 @@ i {
 .cart_area section_padding {
     padding: 50px 0px;
 }
+@media  (max-width: 576px) {
+    .message-container {
+        width: 280px;
+    }
+}
 
 /* Social Media Icons */
 .social_icon i {
@@ -253,7 +253,6 @@ i {
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
-
 /* Product File Upload Form */
 .btn-file {
     position: relative;
@@ -280,10 +279,10 @@ i {
 
 /* Hover effect for details/edit/delete icons */
 .description_hide {
-    display: none !important;
+    display: none;
     font-size: 0.5rem;
 }
-.descriptive_text:hover+.description_hide {
+.descriptive_text:hover + .description_hide {
     display: block;
     color: #B08EAD;
     font-size: 0.5rem;
@@ -306,10 +305,14 @@ i {
 /* Index Page Image area */
 .banner_part .btn_1 {
     margin-top: 50px;
-    color: #fff !important;
 }
 .banner_part:after {
     display: none;
+}
+@media (max-width: 576px) {
+    .banner_text_iner {
+        width: 80%;
+    }
 }
 
 /* Mailchimp subscription form  */
@@ -361,7 +364,6 @@ i {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     text-transform: capitalize;
-    color: #fff !important;
 
     &:hover {
         background-color: #fff;
@@ -371,7 +373,7 @@ i {
 .subscribe_part .subscribe_part_content p {
     color: #fff !important;
     font-size: 12px;
-}
+
 /* Privacy Policy */
 .btn-link {
     color: #795376;

@@ -1,11 +1,9 @@
-
 .login_part_form_iner p > a {
     color: #828bb2 !important;
     font-weight: 700;
     line-height: 25px;
-  }
-
-  .signin-lost_pass {
+}
+.signin-lost_pass {
     text-decoration: none;
     color: #795376;
-  }
+}
