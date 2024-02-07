@@ -7,7 +7,7 @@ var style = {
         color: '#795376',
         fontFamily: '"Rubik", sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '14px',
         '::placeholder': {
             color: '#aab7c4'
         }

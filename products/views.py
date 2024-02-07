@@ -110,7 +110,7 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'The painting was updated successfully!')
+            messages.info(request, 'The painting was updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update painting! Please ensure that the form is valid!')
@@ -136,5 +136,5 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'The painting has been deleted!')
+    messages.info(request, 'The painting has been deleted!')
     return redirect(reverse('products'))
