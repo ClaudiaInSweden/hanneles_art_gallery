@@ -29,17 +29,16 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-claudiainsw-hannelesart-iymndyakwsg.ws-eu108.gitpod.io/',
-    'https://8000-claudiainsw-hannelesart-iymndyakwsg.ws-eu107.gitpod.io',
-    'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/',
-    'https://8000-claudiainsw-hannelesart-iymndyakwsg.ws-eu108.gitpod.io/accounts/signup/',
-    'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/accounts/signup/',
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io/',
+#     'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/',
+#     'https://claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io/accounts/signup/',
+#     'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/accounts/signup/',
+# ]
 
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-iymndyakwsg.ws-eu107.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-iymndyakwsg.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com']
 
 
 # Application definition
@@ -69,9 +68,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -170,7 +167,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = False
+USE_L10N = True
 
 USE_TZ = True
 
