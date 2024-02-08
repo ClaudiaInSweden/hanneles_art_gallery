@@ -8,6 +8,15 @@ i, p, a {
 h1, h2, h3, h4 {
     color: #795376;
 }
+.btn_3 {
+	background-color: transparent;
+	border: 1px solid #B08EAD;
+	color: #B08EAD;
+}
+.btn_3:hover {
+	background-color: #B08EAD;
+	color: #fff;
+}
 a:hover {
     color: #B08EAD !important;
 }
@@ -106,7 +115,9 @@ a:hover {
     margin-top: 8px;
 }
 .search-input:focus {
-    outline: none;
+    outline: none !important;
+    border-color: #B08EAD;
+    
 }
 .search-form {
     background: #fff;
@@ -294,11 +305,10 @@ i {
 	background-color: transparent;
 	border: 1px solid #B08EAD;
 	color: #B08EAD;
-	@include transform_time(0.5s);
-	&:hover{
-		background-color: #B08EAD;
-		color: #fff;
-	}
+}
+.cart-notification-wrapper > .btn_3:hover {
+	background-color: #B08EAD;
+	color: #fff;
 }
 @media  (max-width: 576px) {
     .message-container {

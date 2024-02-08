@@ -2145,7 +2145,7 @@ pre code {
     background-color: #fff;
     border-color: #795376;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2716,7 +2716,7 @@ textarea.form-control.is-invalid {
 .btn.focus,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .btn.disabled,
@@ -4016,11 +4016,11 @@ input[type=submit].btn-block {
 }
 
 .custom-control-input:focus~.custom-control-label::before {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-control-input:focus:not(:checked)~.custom-control-label::before {
-    border-color: #80bdff
+    border-color: #B08EAD
 }
 
 .custom-control-input:not(:disabled):active~.custom-control-label::before {
@@ -4163,9 +4163,9 @@ input[type=submit].btn-block {
 }
 
 .custom-select:focus {
-    border-color: #80bdff;
+    border-color: #B08EAD;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-select:focus::-ms-value {
@@ -4223,8 +4223,8 @@ input[type=submit].btn-block {
 }
 
 .custom-file-input:focus~.custom-file-label {
-    border-color: #80bdff;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    border-color: #B08EAD;
+    box-shadow: 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-file-input:disabled~.custom-file-label {
@@ -4287,15 +4287,15 @@ input[type=submit].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-range:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-range:focus::-ms-thumb {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba(176, 142, 173, .25)
 }
 
 .custom-range::-moz-focus-outer {
