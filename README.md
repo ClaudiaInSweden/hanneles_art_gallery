@@ -30,14 +30,13 @@ An "Art Academy" will be launched including a membership area where interested u
 The webshop will widen its scope and start selling high quality tools for painting. 
 
 
-### Marketing Strategy
+### Web Marketing Strategy
 
 #### Target Audience
 According to [Interior Design magazine](https://interiordesign.net/designwire/women-in-design-confronting-the-glass-ceiling/) around 70% of all Interior Designers in the US are women and also in private homes it's often the women who choose the interior decor. Furthermore, many women see painting as an opportunity for self-expression and stress-reduction. For that reason the main target audience of the webshop as well as for phase 2 and 3 are women. 
 
 #### Facebook Business Page
 In the start phase of the business we will concentrate on Facebook as Marketing platform. That way the artist can create a more personal relationship with followers and keep the communication ongoing by answering comments and questions online. This allows also to test different approaches and validation.
-Another pillar is the participation at 2024 ["Gästrike Konst"](https://www.facebook.com/GastrikKonst/), a local, very popular exhibition circle that takes place in a number of locations (partly even in private homes) around Gästrikland, close to the artists home town Gävle in Sweden. 
 
 By the time of writing this ReadMe file (2024-01-30) the businesses [Facebook Page Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
 ![Facebook screenshot01](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook01.jpg)
@@ -55,7 +54,7 @@ xxx SCREENSHOT
 
 ### SEO - Search Engine Optimization
 Prior to project start some brainstorming resultad in a number of short and long-tail keywords. Using three different browsers and a mobile, resulted in a couple of keyword volume and competition analysis results from [Wordtracker](https://www.wordtracker.com/).
-Also Google search with suggested search phrases as well as related searches was used. However, original paintings seem to be a niche product and Googles suggestions were a little dissapointing. 
+Also Google search with suggested search phrases as well as related searches was used. However, original paintings seem to be a niche product and Googles suggestions were not comprehensive. 
 The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
 
 <details>
@@ -94,13 +93,16 @@ The robots.txt file allowes crawl access to all parts of the website but the acc
 
 
 #### Privacy Policy
-To comply with GDPR a Privacy Policy has been created using the [Privacy Policy Generator](https://www.privacypolicygenerator.info/) and added to the footer of the Home Page.
+To comply with GDPR a Privacy Policy has been created using the [Privacy Policy Generator](https://www.privacypolicygenerator.info/). The layout was adapted to the style of the webshop and added to the footer of the Home Page. However, I noticed that the English in the auto-generated file is quite bad but as it was suggested to use this website during the course I used it anyway. 
 
 xxx SCREENSHOT
 
 
+### UX
 
-
+As the webshop only sells paintings the focus in the design was on presenting the paintings. This was achieved with an overview page that allows for a good overview of all paintings (including filtering and sorting by price) and a large image of the painting when clicking on the "Click for details" button under each image. The user than can see a large image and can "study" the painting in detail before scrolling down to see short descriptions. As users usually don't buy a lot of paintings but take their time to choose one I concluded that a good picture is more important than size, format or price. 
+The color scheme was chosen after the mostly female target group and is therefore in soft pinkish/lila colors, mixed with a darker nuance for better readability. 
+Some of the images are unfortunately not well fotographed and have an ugly, lopsided frame around the actual painting but as I didn't had access to the original paintings to take new pictures I left it as it is. 
 
 
  
