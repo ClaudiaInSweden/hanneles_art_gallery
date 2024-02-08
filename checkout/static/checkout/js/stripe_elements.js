@@ -1,13 +1,14 @@
+
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
-        color: '#795376',
+        color: '#000',
         fontFamily: '"Rubik", sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '14px',
+        fontSize: '16px',
         '::placeholder': {
             color: '#aab7c4'
         }
@@ -20,7 +21,7 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
-//Handle realtime validation errors on the card element
+// Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -47,7 +48,7 @@ form.addEventListener('submit', function(ev) {
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    // From using csrf_token in the form
+    // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
@@ -64,13 +65,13 @@ form.addEventListener('submit', function(ev) {
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
-                    address:{
+                    address: {
                         line1: $.trim(form.street_address1.value),
                         line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town.value),
                         country: $.trim(form.country.value),
                     }
-                }
+                },
             },
             shipping: {
                 name: $.trim(form.full_name.value),
@@ -103,7 +104,7 @@ form.addEventListener('submit', function(ev) {
             }
         });
     }).fail(function () {
-        // The error will be in Django messages
+        // Reload the page, the error will be in Django messages
         location.reload();
-    }); 
+    });
 });
