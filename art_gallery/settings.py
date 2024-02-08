@@ -29,17 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io/',
-#     'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/',
-#     'https://claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io/accounts/signup/',
-#     'https://hanneles-art-gallery-99fb21934da8.herokuapp.com/accounts/signup/',
-# ]
-
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-
 ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com']
-
 
 # Application definition
 INSTALLED_APPS = [

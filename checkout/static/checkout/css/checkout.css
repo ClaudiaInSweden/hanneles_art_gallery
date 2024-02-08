@@ -29,6 +29,7 @@
   color: #B08EAD!important;
 }
 
+
 /* Loading overlay */
 #loading-overlay {
 	display: none;
@@ -47,6 +48,7 @@
     margin: 0;
     height: 100%;
 }
+/* Form */
 #id_country {
   padding: 10px 12px;
   font-family: "Rubik", sans-serif;
