@@ -102,67 +102,77 @@ xxx SCREENSHOT
 
 As the webshop only sells paintings the focus in the design was on presenting the paintings. This was achieved with an overview page that allows for a good overview of all paintings (including filtering and sorting by price) and a large image of the painting when clicking on the "Click for details" button under each image. The user than can see a large image and can "study" the painting in detail before scrolling down to see short descriptions. As users usually don't buy a lot of paintings but take their time to choose one I concluded that a good picture is more important than size, format or price. 
 The color scheme was chosen after the mostly female target group and is therefore in soft pinkish/lila colors, mixed with a darker nuance for better readability. 
-Some of the images are unfortunately not well fotographed and have an ugly, lopsided frame around the actual painting but as I didn't had access to the original paintings to take new pictures I left it as it is. 
+Some of the images are unfortunately not well fotographed and have lopsided frame around the actual painting but as I didn't had access to the original paintings to take new pictures I left it as it is. 
+
+A free Bootstrap 4 template was used to save time but it turned out that this was a bad decision. Only when almost finished I realized that the specific design of the template interferes with both the crispy form and stripe form. Also the button design was inconsistent which resulted in countless hours of trying to fix the design but due to time restraints I had to skip this, see section bugs. 
+XXX
+
+#### Wireframes
+
+Balsamiq was used to create wireframes which can be viewed below:
+
+XXX
+
+Home
+
+Paintings
+
+Paintings Details
+
+Shopping Cart
+
+Checkout
+
+Checkout success
+
+Profile / My Account
 
 
- 
+## Agile 
+
+XXX
 
 
 
-
-
-## User stories
-
-User story: As a visitor, I want to know what I can expect in Järbo so that I can decide if I travel there or not.
-
-End user goal: Visitor finds information about Järbo.
-
-End business goal: The visitor travels to Järbo.
-<hr>
-
-User story: As a visitor, I want to see images from the area so that I get a feeling if I would enjoy a stay there or not.
-
-End user goal: Visitor can look at images from the area.
-
-End business goal: The visitor travels to Järbo.
-<hr>
-
-User story: As a visitor, I want to know what I can do during my stay there so that I can plan my trip.
-
-End user goal: Visitor finds information about activities that can be done in the area.
-
-End business goal: The visitor travels to Järbo.
-<hr>
-
-User story: As a visitor, I want to know where I can find more information about the location.
-
-End user goal: The visitor can get more information via external links or request more information via the contact us form.
-
-End business goal: The visitor travels to Järbo.
 <hr>
 
 ## Features
 
 ### Navigation
 
-- The responsive navigation bar on top of the page includes links to the Home, Nature, Activities, Gallery and Contact us page. The Visit Järbo logo is linked to the Start page. The navigation bar is identical on each page to enable easy navigation.
-- It allows users to navigate between pages on all devices without the need to use the "back" button.
+The responsive navigation bar on top of the page includes links to the Home Page, a dropdown list to select either all paintings or filtered by category as well as a dropdown list with "My Account" which shows different options depending if the user is logged in and/or a superuser/admin. See details below.
+Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to an icon, to allow a reasonable size of the search field.
+The navigation bar is identical on each page to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
 
-### Home
+XXX
 
-The Home page is the starting point for users. It provides a short overview of what Järbo has to offer
+### Home Page
 
-![Home Page](assets/readme-docs/home.webp)
-
-
-### Nature
-
-The Nature page describe in short what the user can expect being outdoors in the area.
-
-![Nature Page](assets/readme-docs/nature.webp)
+The Home page is the starting point for users. It includes one of the paintings and informs the users about the purpose of the website. Concise keywords and phrases are used in the short intro text and the button to improve searchability. 
+In the middle part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
+Further down are links to selected social media accounts of which the link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
+On bottom of the page I had to put a link to the template origin as requested in the license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
 
 
-### Activities
+
+
+### All Paintings
+
+The All Paintings / Products page lists all paintings with an image and short information. On this page the price is not included on purpose as the main focus should be on the art. The details button leads to a product detail page with a large image of the painting and some more information. 
+
+
+### Painting details
+
+Again, the focus is on the painting and the user has to scroll down to see the price.
+To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price or "Add to cart" button available. 
+At the time of project submission there is not yet an automatically function available to change the status of a painting. This should be implemented in phase 2.
+
+XXX
+
+
+### Checkout
+
+
 
 The Activities page describes in short what kind of outdoor activities the user can enjoy.
 There are also links to external information pages and service providers. The links open in a new tab to allow easy navigation without the need to use the back-button.

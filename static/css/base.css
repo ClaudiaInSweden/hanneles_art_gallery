@@ -117,7 +117,6 @@ a:hover {
 .search-input:focus {
     outline: none !important;
     border-color: #B08EAD;
-    
 }
 .search-form {
     background: #fff;
@@ -172,6 +171,19 @@ a:hover {
 }
 .genric-btn.e-large {
     padding-left: 10px !important;
+}
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 20px;
+    border: 2px solid #795376;
+    color: #795376;
+}
+.btt-link, {
+    cursor: pointer;
 }
 
 
