@@ -172,18 +172,13 @@ a:hover {
 .genric-btn.e-large {
     padding-left: 10px !important;
 }
-.btt-button {
-    height: 42px;
-    width: 42px;
+.back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 20px;
-    border: 2px solid #795376;
-    color: #795376;
+    bottom: 25px;
+    right: 25px;
 }
-.btt-link {
-    cursor: pointer;
+.back-to-top i {
+    font-size: 40px;
 }
 
 

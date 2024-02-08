@@ -1,4 +1,3 @@
-
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -65,13 +64,14 @@ form.addEventListener('submit', function(ev) {
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
-                    address: {
+                    address:{
                         line1: $.trim(form.street_address1.value),
                         line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town.value),
                         country: $.trim(form.country.value),
+                        state: $.trim(form.county.value),
                     }
-                },
+                }
             },
             shipping: {
                 name: $.trim(form.full_name.value),
@@ -82,6 +82,7 @@ form.addEventListener('submit', function(ev) {
                     city: $.trim(form.town.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
+                    state: $.trim(form.county.value),
                 }
             },
         }).then(function(result) {
@@ -104,7 +105,7 @@ form.addEventListener('submit', function(ev) {
             }
         });
     }).fail(function () {
-        // Reload the page, the error will be in Django messages
+        // Error will be in Django messages
         location.reload();
     });
 });
