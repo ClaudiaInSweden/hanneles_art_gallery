@@ -141,66 +141,69 @@ XXX
 ### Navigation
 
 The responsive navigation bar on top of the page includes links to the Home Page, a dropdown list to select either all paintings or filtered by category as well as a dropdown list with "My Account" which shows different options depending if the user is logged in and/or a superuser/admin. See details below.
-Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to an icon, to allow a reasonable size of the search field.
-The navigation bar is identical on each page to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
+Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
+The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and a link back to the overview page.  
+The navigation bar is identical on each page (includes method is used) to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
 
 XXX
 
 ### Home Page
 
-The Home page is the starting point for users. It includes one of the paintings and informs the users about the purpose of the website. Concise keywords and phrases are used in the short intro text and the button to improve searchability. 
+The Home page is the starting point for users. It displays one of the paintings and informs the user about the purpose of the website. Keywords and phrases are used in the short intro text and the button for improved SEO. 
 In the middle part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
 Further down are links to selected social media accounts of which the link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
-On bottom of the page I had to put a link to the template origin as requested in the license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
-
-
+On bottom of the page I had to put a link to the template origin as requested in the template license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
 
 
 ### All Paintings
 
-The All Paintings / Products page lists all paintings with an image and short information. On this page the price is not included on purpose as the main focus should be on the art. The details button leads to a product detail page with a large image of the painting and some more information. 
+The All Paintings / Products page lists all paintings with an image and short information. On this page the price is not included on purpose as the main focus should be on the art. The details button leads to a product detail page with a large image of the painting and some information about the size and the used technique. 
+A button in the bottom right corner enables a fast return to the top of the page at any moment.
 
 
 ### Painting details
 
 Again, the focus is on the painting and the user has to scroll down to see the price.
 To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price or "Add to cart" button available. 
-At the time of project submission there is not yet an automatically function available to change the status of a painting. This should be implemented in phase 2.
+At the time of project submission there is not yet an automatically function implemented to change the status of a painting. This is possible through the product management page which is available for superusers. However, an automated function should be implemented in phase 2.
 
 XXX
 
 
 ### Shopping cart
 
-On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for all deliveries. 
-Here the user also has the possibility to delete a painting or go back to the paintings overview page. If the user deletes all items in the shopping cart a info box will be displayed telling the user that the shopping cart is empty and a button to the paintings overview page. 
+On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including a delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for deliveries. 
+Here the user also has the possibility to remove a painting from the cart or go back to the paintings overview page. If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button to the paintings overview page. 
 
-If the user clicks on Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
+If the user clicks the Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
 
-The Activities page describes in short what kind of outdoor activities the user can enjoy.
-There are also links to external information pages and service providers. The links open in a new tab to allow easy navigation without the need to use the back-button.
+### Checkout
 
-![Activities Page](assets/readme-docs/activities.webp)
+On the checkout page the user can see a short summary of the order on the right side and a form on the left side. 
+The form asks for name, email and the delivery address. When the user is already registered and logged in, the address will be pre-populated. As the location for the webshop is in Sweden, it was decided to use only the address fields that are common in Sweden, so state/county has not been used. 
+On the bottom of the page you can find the Stripe credit card section for the user to fill in credit card number, valid date, CVV and zip code.
+As only a Stripe test account is used, an error will be displayed when a credit card number other than the test card number 4242 ... is entered.
+Also here the user can still choose to interrupt the checkout process and go back to the paintings page. 
 
-
-### Gallery
-
-The Gallery page shows images of the area as well as wild animals that the user might be able to see during the stay.
-The images include alt-tags to provide relevant information when screen readers are used.
-
-![Gallery Page](assets/readme-docs/gallery.webp)
+When the user completes the form and clicks on Complete Order the Checkout Success/Order confirmation page is opened. 
 
 
-### Contact us
+### Order confirmation
 
-The Contact us page enables users to request more information about outdoor activities, listed on the activities page. It includes fields for name, email, and radio buttons to select.
+While the payment transfer is ongoing a spinning overlay is displayed to inform the user that the transaction is ongoing.
+Once the transaction is completed successfully an order confirmation page is displayed informing the user that a confirmation email has been sent to the provided email address. Also an order summary with the delivery address is visible as well as a button back to the paintings page. 
 
-![Contact us Page](assets/readme-docs/contact.webp)
+
+### My Account
+
+Under the My Account menu tab in the navigation the user will see different options depending on the log-in status:
+- When the user is not logged in a Registration and a Log-in Option are available. They open Allauth templates which are Bootstrap-styled to match the rest of the website. The log-in page offers also the possibility to restore the password in case it's been forgotten.
+- When the user is already loggeg in, a Log-out option will be visible instead. 
+- When a user is logged in as a superuser, the Product Management link is available that leads to a page that enables to add another painting. Contrary to the Walkthrough project the image upload is mandatory as we cannot sell paintings without being able to show them to the user. 
 
 
-### Footer
 
-The footer area contains links to relevant social media sites (Facebook, X (Twitter), and Instagram) to encourage users to keep connected. The icons include alternative text to provide relevant information when screen readers are used. All links open in a new tab to allow easy navigation for the user.
+
 
 ## Future Features
 
