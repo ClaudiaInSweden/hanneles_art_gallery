@@ -170,9 +170,12 @@ At the time of project submission there is not yet an automatically function ava
 XXX
 
 
-### Checkout
+### Shopping cart
 
+On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for all deliveries. 
+Here the user also has the possibility to delete a painting or go back to the paintings overview page. If the user deletes all items in the shopping cart a info box will be displayed telling the user that the shopping cart is empty and a button to the paintings overview page. 
 
+If the user clicks on Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
 
 The Activities page describes in short what kind of outdoor activities the user can enjoy.
 There are also links to external information pages and service providers. The links open in a new tab to allow easy navigation without the need to use the back-button.
