@@ -109,31 +109,21 @@ Some of the images are unfortunately not well fotographed and have lopsided fram
 A free Bootstrap 4 template was used to save time but it turned out that this was a bad decision. Only when almost finished I realized that the specific design of the template interferes with both the crispy form and stripe form. Also the button design was inconsistent which resulted in countless hours of trying to fix the design but due to time restraints I had to skip this, see section bugs. 
 XXX
 
-#### Wireframes
-
-Balsamiq was used to create wireframes which can be viewed below:
-
-XXX
-
-Home
-
-Paintings
-
-Paintings Details
-
-Shopping Cart
-
-Checkout
-
-Checkout success
-
-Profile / My Account
 
 
 ## Agile 
 
-XXX
+Agile Methodology was used during the project.
+User stories were created at project start, and prioritized according to MOSCOW way of working. 
+Github was used to document the user stories by using the build in Issues resp. project functionality.
+For each user story a list of tasks and acceptance criterias was created.
+Working progress was illustrated in a canban board.
+All user stories labelled "Must have" have been closed. 
+Open user stories have been collected in the backlog section. 
 
+The project is open for public access and can be visited here.
+![Agile Project](https://github.com/users/ClaudiaInSweden/projects/11)
+![Project User Stories](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Agile.jpg)
 
 
 <hr>
@@ -278,11 +268,17 @@ As already mentioned, the color scheme was selected to meet the taste of a mostl
 
 #### HTML
 
-No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+A lot of errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+However, this must be due to the fact that the templates are rendered differently. When I compare the errors with the actual code they do not correspond at all. This is the products page so the error repeats for the whole loop of 24 products. 
+See example below.
+![HTML Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/HTML+Validator-errors.jpg)
+![HTML Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/HTML+Validator.jpg)
+
 
 #### CSS
 
 No errors were found when passing through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator
+![CSS Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/CSS_Validator.jpg)
 
 #### Google Chrome Lighthouse Reports
 
@@ -301,118 +297,34 @@ ADetails for each page can be found by clicking the expand button.
 
 
 
+## Manual Testing
 
-### Manual Testing
-
-#### Features Testing
-
-| Feature  | Action |Result|
-| ------------- | ------------- |-------------|
-|Header|
-| Logo	  | Click  | Links to Home Page|
-| Navigation icon  | Click  | Opens Navigation menu |
-|Navigation bar  | Click on Home  | Opens Home page |
-|Navigation bar  | Click on Nature  | Opens Nature page |
-|Navigation bar  | Click on Activities | Opens Activities page |
-|Navigation bar| Click on Gallery  | Opens Gallery page |
-|Navigation bar| Click on Contact us| Opens Contact us page |
-|  |  | |
-| Footer  | | |
-| Social Media Section	| Click on Facebook icon |Opens Facebook in a new tab |
-| Social Media Section	| Click on X icon |Opens Twitter in a new tab |
-| Social Media Section	| Click on Instagram icon |Opens Instagram in a new tab |
-| Pages |  |
-| Activities page  | Click on Links in text  | Open links in new tab|
-| Contact us page  | Click Send  |Error message if field is empty|
-| Contact us page | Click on input field	|Green border and green input text |
-| Contact us page  | Click on Email field and write text only |Error message to enter email address|
-| Contact us page  | Click on Reset |Empties all fields |
-|Contact us page  | Click on Send |Redirects to confirmation page |
 
 
 ## Browser Testing
 
-Functionality, links, layout, and responsiveness were tested with the following browsers without any issues:
+Functionality, links, layout, and responsiveness were tested with the following browsers without any major issues:
 
 - Microsoft Edge Version 117.0.2045.47
 - Firefox Version 118.0.1
 - Brave Version 1.58.135
 - Google Chrome Version 116.0.5845.188
   
-## Device Testing
 
-Functionality, links, layout, and responsiveness were tested on the following devices without any issues:
-
-- Dell Laptop 14" / 1920px x 1080px
-- HP Laptop 17" / 1920px x 1080px
-- Dell Screen 24" / 1920px x 1080px
-- Samsung Galaxy 22S Ultra / 3088px x 1440px
-- iPhone 8 / 1334px × 750px
 
 ### Findings under testing
 
-- As users might want to receive information about more than one topic, checkboxes were initially used on the Contact us page. However, after some trials and Google research it turned out that this feature requires Javascript which was not part of the course so far.
+
 
 ## Deployment
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-- In the GitHub repository, navigate to the Settings tab
-- From the source section drop-down menu, select the Main Branch
-- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-  
-The live link can be found here - <https://claudiainsweden.github.io/visit-jarbo/>
+
+
 
 ## Credits
 
-### Content
-
-Idea, content and text are developed by myself.
-
-Inspiration for the layout from walkthrough project "Love Running" and default SharePoint page layouts.
-
-- Detailed information about what kind of fish there is to catch from [iFiske](https://www.ifiske.se/en/fishing-harnen-holmsjon-langsjon-m-fl-vatten.htm).
-- Information about percentage of forest in Sweden taken from [Visit Sweden](https://visitsweden.com/what-to-do/nature-outdoors/forest-bathing/).
-- Information about percentage of lakes in Sweden taken from [Skogskunskap/Forest knowledge](https://www.skogskunskap.se/hansyn/vatten-och-mark/om-hansyn-till-vatten-och-mark/vatten-i-sverige/)
-- Information about what animals can be seen at Wild Nordic taken from [Wild Nordic](https://wildnordic.se/en/home/)
-- Icons from [Font Awesome](https://fontawesome.com/)
-- Vector graphic for Favicon from [Vecteezy](https://www.vecteezy.com/)
-- Fonts from [Google Fonts](https://fonts.google.com/)
-- Images converted to webp with [Birme](https://www.birme.net/)
-
-### Media
-
-All images showing "nature only" are photos taken by myself.
-Images including animals are from free sources as listed below:
-
-- Bear images: Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zdeněk Macháček</a> on <a href="https://unsplash.com/photos/Pt3asvL65Mg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Lynx image: Photo by <a href="https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Glen Hooper</a> on <a href="https://unsplash.com/photos/8LWtpfhGP4U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Fox image: Photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vincent van Zalinge</a> on <a href="https://unsplash.com/photos/cHhPjhOe8LA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Moose image: Photo by <a href="https://unsplash.com/@thejohnnyme?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nikola Johnny Mirkovic</a> on <a href="https://unsplash.com/photos/VFgxrL65zNI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Deer image: Photo by <a href="https://unsplash.com/@lassenystedtfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lasse Nystedt</a> on <a href="https://unsplash.com/photos/FftpQKKGxOc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-### Code
-
-Initially, a lot of the code was copied from the Walkthrough project "Love Running" and changed during the project to fit this site.
-
-- Copied Asterisk wildcard selector from the Walkthrough project "Love Running"
-- Header & navigation copied from the Walkthrough project "Love Running"
-- Footer copied from the Walkthrough project "Love Running"
-- Gallery copied from the Walkthrough project "Love Running"
-- Contact us page copied from the Walkthrough project "Love Running"
-- Index page copied from the Walkthrough project "Love Running"
-  
-  #### Inspiration and tutorials used from
-
-  - [W3Schools](https://www.w3schools.com/)
-  - [Mdn Web Docs](<https://developer.mozilla.org/en-US/>)
-  - [Stack overflow](https://stackoverflow.com/)
-  - Code Institute Slack Channel
-    - Special thanks to Craig Hudson, my fellow student Niclas Hugdahl, and my mentor Rohit Sharma
-
-
-  #### Templates and tutorial for creating the readme-file
-
-  - [bezebee - My First Project](https://github.com/bezebee/My-First-Project/blob/main/README.md)
-  - [Drupal Wiki](https://www.drupal.org/docs/develop/managing-a-drupalorg-theme-module-or-distribution-project/documenting-your-project/readmemd-template)
-  - [GitHub Docs](https://docs.github.com/en)
+All painting images belong to Hannele Hannele Kaarlejärvi
+![404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
+![Bootstrap-4-multi-dropdown-navbar:]
+![Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)

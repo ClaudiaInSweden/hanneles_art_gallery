@@ -342,48 +342,6 @@ i {
 }
 
 
-/* Allauth form formatting */
-/* form label:not([for='id-save-info']) {
-    display: none !important;
-}
-.add_painting .form-group label {
-    display: inline;
-}
-.form-control {
-    font-size: 1rem;
-    padding-left: 10px;
-    border-radius: 5px;
-}
-input:focus {
-    border-color: #795376 !important;
-    box-shadow: 0 1px 3px 0 #795376 !important;
-}
-textarea:focus {
-    border-color: #795376 !important;
-    box-shadow: 0 1px 3px 0 #795376 !important;
-}
-select:focus {
-    border-color: #795376 !important;
-    box-shadow: 0 1px 3px 0 #795376 !important;
-}
-form input:not(.search-form, [type='checkbox']) {
-    margin-top: 1rem;
-}
-.login_part_form_iner p > a {
-    color: #B08EAD !important;
-    font-weight: 700;
-    line-height: 25px;
-}
-.signin-lost_pass {
-    text-decoration: none;
-    color: #795376;
-    font-size: 1rem;
-    padding-left: 10px;
-}
-.login_part_form_iner h2 {
-    margin-top: 20px;
-} */
-
 
 /* Product File Upload Form */
 .btn-file {
@@ -405,7 +363,6 @@ form input:not(.search-form, [type='checkbox']) {
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
     border-radius: 0;
 }
 
@@ -420,6 +377,7 @@ form input:not(.search-form, [type='checkbox']) {
     }
 }
 
+
 /* Index Page Image area */
 .banner_part .btn_1 {
     margin-top: 50px;
@@ -432,6 +390,7 @@ form input:not(.search-form, [type='checkbox']) {
         width: 80%;
     }
 }
+
 
 /* Mailchimp subscription form  */
 .subscribe_form_mailchimp {
@@ -482,11 +441,10 @@ form input:not(.search-form, [type='checkbox']) {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     text-transform: capitalize;
-
-    &:hover {
-        background-color: #fff;
-        color: #795376;
-    }
+}
+#mc-embedded-subscribe:hover {
+    background-color: #fff;
+    color: #795376;
 }
 .subscribe_part .subscribe_part_content p {
     color: #fff !important;
