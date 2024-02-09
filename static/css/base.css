@@ -166,7 +166,7 @@ a:hover {
     margin-bottom: 3px;
 }
 .genric-btn.circle {
-    border-radius: 50px;
+    border-radius: 10px;
     width: auto;
 }
 .genric-btn.e-large {
@@ -185,7 +185,7 @@ a:hover {
 /* Product details page */
 .single_product_item p {
     line-height: 1.2;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .btn-3 {
     padding: 12px;
@@ -218,8 +218,13 @@ hr {
     margin: 5px;
 }
 .product_image_area .single_product_text p {
-    margin-top: 30px;
-    color: #707070;
+    margin-top: 30px !important;
+}
+.single_product_img img {
+    max-height: 500px !important;
+}
+.product_image_area .single_product_text {
+    margin: 10px 0 10px !important;
 }
 .price {
     margin-top: 10px !important;
@@ -244,6 +249,13 @@ i {
 }
 .column_right {
     text-align: right;
+}
+.fa-solid .fa-trash {
+    font-size: 20px !important;
+}
+.cart_inner .table tbody tr td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 @media (max-width: 768px) {
     .cart_inner .table tbody tr td {
@@ -331,11 +343,42 @@ i {
 
 
 /* Allauth form formatting */
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
+form label:not([for='id_remember']) {
+    display: none !important;
 }
 .form-control {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+textarea:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+select:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+form input:not(.search-form, [type='checkbox']) {
+    margin-top: 1rem;
+}
+.login_part_form_iner p > a {
+    color: #B08EAD !important;
+    font-weight: 700;
+    line-height: 25px;
+}
+.signin-lost_pass {
+    text-decoration: none;
+    color: #795376;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+.login_part_form_iner h2 {
+    margin-top: 20px;
 }
 
 

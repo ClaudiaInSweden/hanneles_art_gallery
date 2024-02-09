@@ -16,7 +16,6 @@
     </div>
 </section>
 <!-- breadcrumb part end-->
-
 <!--================Cart Area =================-->
 <section class="cart_area section_padding">
 <div class="container">
@@ -54,8 +53,8 @@
               <div class="product_count">
                 <div class="quantity-remove">
                 <a class="quantity" name="quantity" aria-label="Quantity" id="quantity">{{ item.quantity }}</a>
-                <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash descriptive_text"></i>
-                <div class="description_hide">Remove item</div></a>
+                <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash pl-2"></i>
+                </a>
                 </div>
               </div>
             </td>
@@ -95,9 +94,9 @@
         </tbody>
       </table>
       <div class="btn-group float-right">
-      <div class="checkout_btn_inner">      
+      <div class="checkout_btn_inner ">      
         <a class="btn_1 checkout_btn_1 text-white m-2 float-right" href="{% url 'checkout' %}">Proceed to checkout</a>
-        <a class="btn_1 text-white m-2 float-right" href="{% url 'products' %}">Continue Shopping</a>
+        <a class="btn_1 text-white float-right" href="{% url 'products' %}">Continue Shopping</a>
       </div>
     </div>
     
