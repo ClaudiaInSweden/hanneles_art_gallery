@@ -294,10 +294,12 @@ ADetails for each page can be found by clicking the expand button.
 ![My Profile](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_myprofile.jpg)
 ![Product Management](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_product_management.jpg)
 
+#### JavaScript validation
+Due to lack of time this step could not be performed.
 
 
-
-## Manual Testing
+#### Python validation
+Due to lack of time this step could not be performed.
 
 
 
@@ -311,14 +313,9 @@ Functionality, links, layout, and responsiveness were tested with the following 
 - Google Chrome Version 116.0.5845.188
   
 
-
-### Findings under testing
-
-
-
-## Deployment
-
-
+## Bugs
+Due to a bug regarding Stripe webhooks hours of research were spent and finally solved with help from Rebecca from Tutor Service.
+However, due to this major issue, the project could not be finalized on time.
 
 
 
