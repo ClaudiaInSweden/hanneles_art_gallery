@@ -7,6 +7,8 @@
 [Hanneles Art Gallery](https://hanneles-art-gallery-99fb21934da8.herokuapp.com/) is a fictional eCommerce website that offers original paintings to affordable prices. 
 The painting images and descriptions are used with kind permission of Hannele Kaarlejärvi, the artist. 
 
+![Hanneles Art Gallery](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/2024-02-09_03-04-04.jpg)
+
 The webshop includes a preview of all painings with links to a larger image and more detailed information. The images can also be viewed in full size. Paintings can be added to the shopping cart but as they are unique only a quantity of 1 can be added. In the shopping cart, paintings can be removed, or the user can proceed to the checkout page. For Payment purposes the website is connected with Stripe. Test purchases can be performed with [Stripes test cards](https://stripe.com/docs/testing/).
 User can also register for an account where the order history is stored.  
 
@@ -49,7 +51,7 @@ It will also include information about exhibitions and other events.
 
 Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address and password are necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
 
-xxx SCREENSHOT 
+![Newsletter subscription](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Subscribe.jpg)
 
 
 ### SEO - Search Engine Optimization
@@ -95,7 +97,7 @@ The robots.txt file allowes crawl access to all parts of the website but the acc
 #### Privacy Policy
 To comply with GDPR a Privacy Policy has been created using the [Privacy Policy Generator](https://www.privacypolicygenerator.info/). The layout was adapted to the style of the webshop and added to the footer of the Home Page. However, I noticed that the English in the auto-generated file is quite bad but as it was suggested to use this website during the course I used it anyway. 
 
-xxx SCREENSHOT
+![Privacy Policy](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/privacy_policy.jpg)
 
 
 ### UX
@@ -141,18 +143,30 @@ XXX
 ### Navigation
 
 The responsive navigation bar on top of the page includes links to the Home Page, a dropdown list to select either all paintings or filtered by category as well as a dropdown list with "My Account" which shows different options depending if the user is logged in and/or a superuser/admin. See details below.
+
+![Navbar categories](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_categories.jpg)
+![Navbar when logged in](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_logged-in.jpg)
+![Navbar when not logged in](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_not-logged-in.jpg)
+
 Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
-The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and a link back to the overview page.  
+The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and a link back to the overview page.
+
+![Search results](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_search.jpg
+)
 The navigation bar is identical on each page (includes method is used) to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
 
-XXX
 
 ### Home Page
 
 The Home page is the starting point for users. It displays one of the paintings and informs the user about the purpose of the website. Keywords and phrases are used in the short intro text and the button for improved SEO. 
+
+![Home Page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Homepage.jpg)
+
 In the middle part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
 Further down are links to selected social media accounts of which the link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
 On bottom of the page I had to put a link to the template origin as requested in the template license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
+
+![Bottom part of home page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Subscribe.jpg)
 
 
 ### All Paintings
@@ -160,20 +174,27 @@ On bottom of the page I had to put a link to the template origin as requested in
 The All Paintings / Products page lists all paintings with an image and short information. On this page the price is not included on purpose as the main focus should be on the art. The details button leads to a product detail page with a large image of the painting and some information about the size and the used technique. 
 A button in the bottom right corner enables a fast return to the top of the page at any moment.
 
+![All Paintings page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/paintings.jpg)
+
 
 ### Painting details
 
 Again, the focus is on the painting and the user has to scroll down to see the price.
-To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price or "Add to cart" button available. 
+To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price and no "Add to cart" button available. 
 At the time of project submission there is not yet an automatically function implemented to change the status of a painting. This is possible through the product management page which is available for superusers. However, an automated function should be implemented in phase 2.
 
-XXX
+![Painting details](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/painting_detail.jpg)
+![Confirmation window](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/add_to_cart.jpg)
 
 
 ### Shopping cart
 
-On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including a delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for deliveries. 
-Here the user also has the possibility to remove a painting from the cart or go back to the paintings overview page. If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button to the paintings overview page. 
+On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including a delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for delivery. 
+Here the user also has the possibility to remove a painting from the cart or go back to the paintings overview page. 
+
+![Shopping cart](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/shopping_cart.jpg)
+
+If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button to the paintings overview page. 
 
 If the user clicks the Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
 
@@ -185,12 +206,17 @@ On the bottom of the page you can find the Stripe credit card section for the us
 As only a Stripe test account is used, an error will be displayed when a credit card number other than the test card number 4242 ... is entered.
 Also here the user can still choose to interrupt the checkout process and go back to the paintings page. 
 
+![Checkout Page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/checkout.jpg)
+
 When the user completes the form and clicks on Complete Order the Checkout Success/Order confirmation page is opened. 
 
 
 ### Order confirmation
 
 While the payment transfer is ongoing a spinning overlay is displayed to inform the user that the transaction is ongoing.
+
+![Checkout overlay](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/checkout_overlay.jpg)
+
 Once the transaction is completed successfully an order confirmation page is displayed informing the user that a confirmation email has been sent to the provided email address. Also an order summary with the delivery address is visible as well as a button back to the paintings page. 
 
 
@@ -201,29 +227,24 @@ Under the My Account menu tab in the navigation the user will see different opti
 - When the user is already loggeg in, a Log-out option will be visible instead. 
 - When a user is logged in as a superuser, the Product Management link is available that leads to a page that enables to add another painting. Contrary to the Walkthrough project the image upload is mandatory as we cannot sell paintings without being able to show them to the user. 
 
+![Not logged in](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/account_logged_out.jpg)
+![Logged in as administrator(https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/account_logged_in.jpg)]
 
 
 
-
-## Future Features
-
-While the current version is fully functional, there are some ideas for future development:
-
-- Include map and directions
-- Add more information about the location
-- Add customer review connectivity (Tripadvisor, Google, or similar)
-- Add accommodation information & booking possibility
-- Add more service providers
-- Add live view & live weather conditions
 
 ## Typography and color scheme
 
-The color scheme was selected to represent the prominent colors in nature: brown and green, which also harmonize very well with the images used on the site. These colors are often associated with warmth, comfort, and steadiness and are therefore well suited for a site that aims to attract people who seek recreation and nature experiences.
+As already mentioned, the color scheme was selected to meet the taste of a mostly female target group. I also tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. 
 
-Typography was chosen because of its soft and rounded letters that reflect a more calm or even old-fashioned style but are easy readable.
-Fonts Capriola and Merriweather from [Fontawesom](https://fontawesome.com/).
 
-## Technology
+
+
+
+
+
+
+## Technology used
 
 - IDE: Code Anywhere
 - Repository: GitHub

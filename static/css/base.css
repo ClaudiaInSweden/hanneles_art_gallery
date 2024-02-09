@@ -343,8 +343,11 @@ i {
 
 
 /* Allauth form formatting */
-form label:not([for='id_remember']) {
+/* form label:not([for='id-save-info']) {
     display: none !important;
+}
+.add_painting .form-group label {
+    display: inline;
 }
 .form-control {
     font-size: 1rem;
@@ -379,7 +382,7 @@ form input:not(.search-form, [type='checkbox']) {
 }
 .login_part_form_iner h2 {
     margin-top: 20px;
-}
+} */
 
 
 /* Product File Upload Form */
