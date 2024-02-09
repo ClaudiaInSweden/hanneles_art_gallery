@@ -46,7 +46,7 @@
             {% for item in cart_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
-                        <a href="{% url 'product_detail' item.product.id %}">
+                        <a href="{% url 'product_detail' item.product.id %}" aria-label="Product details">
                             {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             {% else %}
@@ -105,7 +105,7 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}"><strong>Create an
+                            <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create an account"><strong>Create an
                                     account</strong></a> or
                             <a class="text-info" href="{% url 'account_login' %}"><strong> login</strong></a> to save
                             this information
@@ -125,11 +125,11 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="btn-group" role="group">
-                    <a class="btn_1 text-white text-center btn-responsive" role="button" href="{% url 'view_cart' %}"><span class="icon">
+                    <a class="btn_1 text-white text-center btn-responsive" role="button" aria-label="View cart" href="{% url 'view_cart' %}"><span class="icon">
                             <i class="fas fa-chevron-left text-white pr-1"></i>
                         </span>
                         <span> Update Cart</span></a>
-                    <button id="submit-button" class="btn_1 btn-responsive" role="button"><span>Complete Order </span>
+                    <button id="submit-button" class="btn_1 btn-responsive" role="button" aria-label="Complete the order"><span>Complete Order </span>
                         <span class="icon"><i class="fas fa-lock pl-1 text-white"></i></span>
                     </button>
                 </div>

@@ -25,17 +25,17 @@
                 <div class="dropdown select_option">
                     <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth"
                         type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
+                        aria-expanded="false" aria-label="Filter by categories">
                         Categories
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{% url 'products' %}?category=flowers">Flowers</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=animals">Animals</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=landscape">Landscape</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=portrait">Portrait</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=abstract">Abstract</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=impressionism">Impressionism</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=still_life">Still Life</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=flowers" aria-label="Filter by category flowers">Flowers</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=animals" aria-label="Filter by category animals">Animals</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=landscape" aria-label="Filter by category landscape">Landscape</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=portrait" aria-label="Filter by category portrait">Portrait</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=abstract" aria-label="Filter by category abstract">Abstract</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=impressionism" aria-label="Filter by category impressionism">Impressionism</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=still_life" aria-label="Filter by category still life">Still Life</a>
                     </div>
                 </div>
             </div>
@@ -47,9 +47,9 @@
                         Formats
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Portrait">Portrait</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Landscape">Landscape</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Square">Square</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Portrait" aria-label="Filter by portrait format">Portrait</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Landscape" aria-label="Filter by landscape format">Landscape</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?format=Square" aria-label="Filter by square format">Square</a>
                     </div>
                 </div>
             </div>
@@ -57,12 +57,12 @@
                 <div class="dropdown select_option">
                     <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth"
                         type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
+                        aria-expanded="false" aria-label="Sort by price">
                         Sort by price
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Low to high</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">High to low</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc" aria-label="Sort from low to high">Low to high</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc" aria-label="Sort from high to low">High to low</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <div class="col-12 col-md-6 order-md-first">
                 <p class="text-muted mt-3 text-center text-md-left">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}"><strong>Show all Paintings </strong></a> |
+                    <span class="small"><a href="{% url 'products' %}" aria-label="All Paintings"><strong>Show all Paintings </strong></a> |
                     </span>
                     {% endif %}
                     {{ products|length }} Painting(s){% if search_term %} found for
@@ -90,10 +90,10 @@
                             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}"
                                 class="img-fluid">
                             {% endif %}
-                            <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
+                            <h3><a href="{% url 'product_detail' product.id %}" aria-label="Product Name">{{ product.name }}</a>
                             </h3>
                             {% if product.category %}
-                            <p><a href="{% url 'products' %}?category={{ product.category.name }}">Category:
+                            <p><a href="{% url 'products' %}?category={{ product.category.name }}" aria-label="Product Category">Category:
                                     {{ product.category.friendly_name }}</a>
                             </p>
                             {% endif %}
@@ -106,15 +106,15 @@
                                 <div class="button-group area mt-2">
                                     <span><a href="{% url 'product_detail' product.id %}"
                                             class="btn_1 text-white small primary-border px-3 py-1"
-                                            role="button">Details
+                                            role="button" aria-label="Details">Details
                                         </a>
                                         {% if request.user.is_superuser %}
                                         <a href="{% url 'edit_product' product.id %}"
-                                            class="btn_1 text-white small primary-border px-3 py-1" role="button">Update
+                                            class="btn_1 text-white small primary-border px-3 py-1" role="button" aria-label="Update">Update
                                         </a>
                                         <a href="{% url 'delete_product' product.id %}"
                                             class="btn_1 text-white small primary-border px-3 py-1 confirm-delete"
-                                            role="button">Delete
+                                            role="button" aria-label="Delete">Delete
                                         </a></span>
                                     {% endif %}
                                 </div>
@@ -129,7 +129,7 @@
     <div class="back-to-top">
         <p>
             <a class="btt-link h-100">
-                <i class="fa-regular fa-circle-up"></i>
+                <i class="fa-regular fa-circle-up" aria-label="back to top"></i>
             </a>
         </p>    	
     </div>

@@ -222,6 +222,8 @@ While the payment transfer is ongoing a spinning overlay is displayed to inform 
 
 Once the transaction is completed successfully an order confirmation page is displayed informing the user that a confirmation email has been sent to the provided email address. Also an order summary with the delivery address is visible as well as a button back to the paintings page. 
 
+![Order confirmation](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/order_confirmation.jpg)
+
 
 ### My Account
 
@@ -238,23 +240,36 @@ Under the My Account menu tab in the navigation the user will see different opti
 
 ## Typography and color scheme
 
-As already mentioned, the color scheme was selected to meet the taste of a mostly female target group. I also tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. 
+As already mentioned, the color scheme was selected to meet the taste of a mostly female target group. I also tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
 
 
+## Technologies used
 
+### Languages
+- HTML5
+- CSS
+- JavaScript
+- jQuery
+- Python
+- Django
 
-
-
-
-
-## Technology used
-
-- IDE: Code Anywhere
+### Technologies and programs
+- IDE: Gitpod/VS Code
 - Repository: GitHub
-- Image editor: SnagIt
-- Image converter: [Birme](<https://www.birme.net/>)
-- Favicon generator:[Favicon Generator](https://favicon.io/)
-  
+- Database: ElephantSQL
+- Payment solution: Stripe
+- Storage: AWS S3 for storing media and static files
+- Deployment: Heroku
+
+### Software and frameworks
+![Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+![Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+![Fontawsome Icons](https://fontawesome.com/icons)
+![Favicon](https://favicon.io/)
+![Birme](https://www.birme.net/)
+![Snagit Editor](https://www.techsmith.com/screen-capture.html)
+
+
 
 
 ## Testing
@@ -271,37 +286,21 @@ No errors were found when passing through the [W3C CSS Validator](https://jigsaw
 
 #### Google Chrome Lighthouse Reports
 
-These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of [Visit Järbo](https://claudiainsweden.github.io/visit-jarbo/index.html).
+These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of Hanneles Art Gallery.
 
 The tests were executed using the Google Chrome browser's DevTools.
-All pages score very high in all areas. Details for each page can be found by clicking the expand button.
-![Lighthouse score](assets/readme-docs/Lighthouse-score.webp)
+ADetails for each page can be found by clicking the expand button.
+![Home](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_home.jpg)
+![Paintings](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_products.jpg)
+![Paintings Details](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_product_detail.jpg)
+![Shopping Cart](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_cart.jpg)
+![Checkout](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_checkout.jpg)
+![My Profile](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_myprofile.jpg)
+![Product Management](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_product_management.jpg)
 
-<details>
-<summary>Lighthouse Report for page Home</summary>
 
-![Performance Home](assets/readme-docs/lighthouse_home.webp)
-</details>
 
-<details>
-<summary>Lighthouse Report for page Nature</summary>
-![Performance Nature](assets/readme-docs/lighthouse_nature.webp)
-</details>
 
-<details>
-<summary>Lighthouse Report for page Activities</summary>
-![Performance Activities](assets/readme-docs/lighthouse_activities.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Gallery</summary>
-![Performance Gallery](assets/readme-docs/lighthouse_gallery.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Contact us</summary>
-![Performance Contact us](assets/readme-docs/lighthouse_contact.webp)
-</details>
 
 ### Manual Testing
 

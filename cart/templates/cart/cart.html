@@ -2,115 +2,118 @@
 {% load static %}
 
 {% block content %}
-
 <!-- breadcrumb part start-->
 <section class="breadcrumb_part">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb_iner">
-                    <h2>Your shopping cart</h2>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <h2>Your shopping cart</h2>
         </div>
-    </div>
-</section>
-<!-- breadcrumb part end-->
-<!--================Cart Area =================-->
-<section class="cart_area section_padding">
-<div class="container">
-  <div class="cart_inner">
-    {% if cart_items %}
-    <div class="table-responsive">    
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Painting</th>
-            <th scope="col">Price</th>
-            <th scope="col" class="column_centered">Quantity</th>
-            <th scope="col" class="column_right" id="number-align-right">Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for item in cart_items %}
-          <tr>
-            <td>
-              <div class="media">
-                <div class="d-flex">
-                  <img src="{{ item.product.image.url }}" alt="{{ item.product.name}} {{ item.product.technique }}" />
-                </div>
-                <div class="media-body">
-                  <p>Title: <strong>{{ item.product.name }}</strong></p>
-                  <p>Category: {{ item.product.category.friendly_name }}</p>
-                  <p>Dimension: {{ item.product.size }}</p>
-                </div>
-              </div>
-            </td>
-            <td>
-              <p>€ {{ item.product.price }}</p>
-            </td>
-            <td class="column_centered">
-              <div class="product_count">
-                <div class="quantity-remove">
-                <a class="quantity" name="quantity" aria-label="Quantity" id="quantity">{{ item.quantity }}</a>
-                <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash pl-2"></i>
-                </a>
-                </div>
-              </div>
-            </td>
-            
-            <td class="column_right">
-              <p id="number-align-right">€{{ item.product.price }}</p>
-            </td>
-          </tr>
-          {% endfor %}
-
-          <tr>
-            <td></td>
-            <td><h5>Subtotal</h5></td>
-            <td></td>
-            <td class="column_right">
-              <h5>€{{ total|floatformat:2 }}</h5>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><h5>Delivery Flat Rate</h5></td>
-            <td></td>
-            <td class="column_right">
-              <h5>€40.00</h5>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <h5>Grand Total</h5></td>
-            <td></td>
-            <td class="column_right">
-              <h5>€{{ grand_total|floatformat:2 }}</h5>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-      <div class="btn-group float-right">
-      <div class="checkout_btn_inner ">      
-        <a class="btn_1 checkout_btn_1 text-white m-2 float-right" href="{% url 'checkout' %}">Proceed to checkout</a>
-        <a class="btn_1 text-white float-right" href="{% url 'products' %}">Continue Shopping</a>
       </div>
-    </div>
-    
-    {% else %}
-        <p><h6>Your shopping cart is empty.</h6></p>
-        <p></p>
-        <a href="{% url 'products' %}" class="btn_1 text-white mt-5">Buy real art</a>
-        
-    {% endif %}
-
     </div>
   </div>
 </section>
-<!--================End Cart Area =================-->
+<!-- breadcrumb part end-->
+<!--Cart Area -->
+<section class="cart_area section_padding">
+  <div class="container">
+    <div class="cart_inner">
+      {% if cart_items %}
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Painting</th>
+              <th scope="col">Price</th>
+              <th scope="col" class="column_centered">Quantity</th>
+              <th scope="col" class="column_right" id="number-align-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in cart_items %}
+            <tr>
+              <td>
+                <div class="media">
+                  <div class="d-flex">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name}} {{ item.product.technique }}" />
+                  </div>
+                  <div class="media-body">
+                    <p>Title: <strong>{{ item.product.name }}</strong></p>
+                    <p>Category: {{ item.product.category.friendly_name }}</p>
+                    <p>Dimension: {{ item.product.size }}</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <p>€ {{ item.product.price }}</p>
+              </td>
+              <td class="column_centered">
+                <div class="product_count">
+                  <div class="quantity-remove">
+                    <a class="quantity" name="quantity" aria-label="Quantity" id="quantity">{{ item.quantity }}</a>
+                    <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}"><i
+                        class="fa-solid fa-trash pl-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td class="column_right">
+                <p id="number-align-right">€{{ item.product.price }}</p>
+              </td>
+            </tr>
+            {% endfor %}
+            <tr>
+              <td></td>
+              <td>
+                <h5>Subtotal</h5>
+              </td>
+              <td></td>
+              <td class="column_right">
+                <h5>€{{ total|floatformat:2 }}</h5>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <h5>Delivery Flat Rate</h5>
+              </td>
+              <td></td>
+              <td class="column_right">
+                <h5>€40.00</h5>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <h5>Grand Total</h5>
+              </td>
+              <td></td>
+              <td class="column_right">
+                <h5>€{{ grand_total|floatformat:2 }}</h5>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-group float-right">
+          <div class="checkout_btn_inner ">
+            <a class="btn_1 checkout_btn_1 text-white m-2 float-right" href="{% url 'checkout' %}"
+              aria-label="Proceed to checkout">Proceed to checkout</a>
+            <a class="btn_1 text-white float-right" href="{% url 'products' %}" aria-label="Continue shopping">Continue
+              Shopping</a>
+          </div>
+        </div>
+        {% else %}
+        <p>
+          <h6>Your shopping cart is empty.</h6>
+        </p>
+        <p></p>
+        <a href="{% url 'products' %}" class="btn_1 text-white mt-5" aria-label="Buy real art">Buy real art</a>
+        {% endif %}
+      </div>
+    </div>
+</section>
+<!--End Cart Area -->
 
 {% endblock %}
 

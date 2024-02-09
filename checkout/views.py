@@ -3,8 +3,8 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .models import OrderLineItem
-from .forms import OrderForm, Order
+from .models import OrderLineItem, Order
+from .forms import OrderForm
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile

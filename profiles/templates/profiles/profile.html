@@ -21,8 +21,6 @@
     </div>
 </section>
 <!-- breadcrumb part end-->
-
-
 <section class="cart_area section_padding">
     <div class="container">
         <div class="row">
@@ -31,16 +29,13 @@
                     <h5 id="h5-padding">Your Profile:</h5>
                 </p>
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-
                     {% csrf_token %}
                     {{ form|crispy }}
-
                     <div class="checkout_btn_inner float-right">
-                        <button id="submit-button" class="btn_3">Update Profile</button>
+                        <button id="submit-button" class="btn_3" aria-label="Update profile">Update Profile</button>
                     </div>
                 </form>
             </div>
-
             <div class="col-12 col-lg-7 order-lg-last mb-5">
                 <p class="text-muted">
                     <h5 id="h5-padding">Order History:</h5>
@@ -78,8 +73,7 @@
                         </tbody>
                     </table>
                 </div>
-
-        </div>
+            </div>
         </div>
     </div>
 </section>

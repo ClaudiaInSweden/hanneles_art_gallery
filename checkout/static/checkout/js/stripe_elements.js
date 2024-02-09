@@ -1,6 +1,10 @@
+console.log('IN STRIPE ELEMENTS JS FILE')
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
+console.log('stripePublicKey: ', stripePublicKey)
+console.log('clientSecret: ', clientSecret)
 var stripe = Stripe(stripePublicKey);
+console.log('stripe: ', stripe)
 var elements = stripe.elements();
 var style = {
     base: {
