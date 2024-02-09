@@ -49,7 +49,7 @@ By the time of writing this ReadMe file (2024-01-30) the businesses [Facebook Pa
 A monthly newsletter will be created using Mailchimp services. The newsletter will contain information about new paintings available in the shop but also act as "appetizer" as we will tell some background stories about the making of the paintings and the inspiration behind it. 
 It will also include information about exhibitions and other events. 
 
-Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address and password are necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
+Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address is necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
 
 ![Newsletter subscription](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Subscribe.jpg)
 
@@ -60,7 +60,7 @@ Also Google search with suggested search phrases as well as related searches was
 The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
 
 <details>
-<summary>#### Keyword Research Wordtracker</summary>
+<summary>Keyword Research Wordtracker</summary>
 
 Screenshots Wordtracker Results:
 ![Keywords Wordtracker1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/keyword-research01.jpg)
@@ -74,7 +74,7 @@ Screenshots Wordtracker Results:
 
 </details>
 <details>
-<summary>#### Keyword Research Google</summary>
+<summary>Keyword Research Google</summary>
 
 Screenshots Wordtracker Results:
 ![Keywords Google1](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/google-research01.jpg)
@@ -176,10 +176,13 @@ A button in the bottom right corner enables a fast return to the top of the page
 
 ![All Paintings page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/paintings.jpg)
 
+The buttons "Update" and "Delete" are only visible for logged in administrators of the page. 
+
 
 ### Painting details
 
-Again, the focus is on the painting and the user has to scroll down to see the price.
+Again, the focus is on the painting and the user might need to scroll down to see the price.
+
 To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price and no "Add to cart" button available. 
 At the time of project submission there is not yet an automatically function implemented to change the status of a painting. This is possible through the product management page which is available for superusers. However, an automated function should be implemented in phase 2.
 
