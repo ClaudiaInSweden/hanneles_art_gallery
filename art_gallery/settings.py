@@ -30,7 +30,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 
 
-ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com']
+ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-v09itxc0mb1.ws-eu110.gitpod.io']
 
 # Application definition
 INSTALLED_APPS = [
