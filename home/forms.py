@@ -4,6 +4,8 @@ from .models import Review
 
 
 class ReviewForm(forms.ModelForm):
+    review_body = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Write your review here...'}))
+    
     class Meta:
         model = Review 
-        fields = ['show_name', 'rating', 'review_title', 'review_body']
+        fields = ['display_name', 'rating', 'review_title', 'review_body']

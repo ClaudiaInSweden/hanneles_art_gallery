@@ -1,1 +1,450 @@
-[{"model": "products.category", "pk": 1, "fields": {"name": "landscape", "friendly_name": "Landscape"}}, {"model": "products.category", "pk": 2, "fields": {"name": "animals", "friendly_name": "Animals"}}, {"model": "products.category", "pk": 3, "fields": {"name": "portrait", "friendly_name": "Portrait"}}, {"model": "products.category", "pk": 4, "fields": {"name": "flowers", "friendly_name": "Flowers"}}, {"model": "products.category", "pk": 5, "fields": {"name": "abstract", "friendly_name": "Abstract"}}, {"model": "products.category", "pk": 6, "fields": {"name": "impressionism", "friendly_name": "Impressionism"}}, {"model": "products.category", "pk": 7, "fields": {"name": "still_life", "friendly_name": "Still Life"}}, {"model": "products.product", "pk": 1, "fields": {"category": 2, "name": "Reindeer", "artist": "Hannele K.", "size": "50 x 61 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "reindeer_cl8DxOx.jpg", "image_url": null}}, {"model": "products.product", "pk": 2, "fields": {"category": 7, "name": "Stew Pan", "artist": "Hannele K.", "size": "46 x 38 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "grytan_sPcseON.jpg", "image_url": null}}, {"model": "products.product", "pk": 3, "fields": {"category": 7, "name": "Kåsa", "artist": "Hannele K.", "size": "48 x 38 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "Kasan.jpg", "image_url": null}}, {"model": "products.product", "pk": 4, "fields": {"category": 4, "name": "Longing for Spring", "artist": "Hannele K.", "size": "24 x 33 m", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "400.00", "image": "varlangtan.jpg", "image_url": null}}, {"model": "products.product", "pk": 5, "fields": {"category": 3, "name": "Blind Date", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "780.00", "image": "blinddate.jpg", "image_url": null}}, {"model": "products.product", "pk": 6, "fields": {"category": 5, "name": "Fragment", "artist": "Hannele K.", "size": "33 x 41 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "450.00", "image": "fragment.jpg", "image_url": null}}, {"model": "products.product", "pk": 7, "fields": {"category": 4, "name": "Flowers", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "blomster.jpg", "image_url": null}}, {"model": "products.product", "pk": 8, "fields": {"category": 2, "name": "Cat", "artist": "Hannele K.", "size": "40 x 33 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "450.00", "image": "misse.jpg", "image_url": null}}, {"model": "products.product", "pk": 9, "fields": {"category": 3, "name": "Liisa in the Sauna", "artist": "Hannele K.", "size": "40 x 30 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "liisa.jpg", "image_url": null}}, {"model": "products.product", "pk": 10, "fields": {"category": 3, "name": "Irma in the Sauna", "artist": "Hannele K.", "size": "30 x 30 cm", "format": "Square", "technique": "Acryl on Canvas", "framed": "No", "sold": true, "price": "450.00", "image": "irma.jpg", "image_url": null}}, {"model": "products.product", "pk": 11, "fields": {"category": 3, "name": "Akka", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "akka.jpg", "image_url": null}}, {"model": "products.product", "pk": 12, "fields": {"category": 3, "name": "Squaw", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "squaw.jpg", "image_url": null}}, {"model": "products.product", "pk": 13, "fields": {"category": 3, "name": "Grace", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "grace.jpg", "image_url": null}}, {"model": "products.product", "pk": 14, "fields": {"category": 3, "name": "Geisha", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "geisha.jpg", "image_url": null}}, {"model": "products.product", "pk": 15, "fields": {"category": 5, "name": "Shimmer", "artist": "Hannele K.", "size": "40 x 33 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "skimmer.jpg", "image_url": null}}, {"model": "products.product", "pk": 16, "fields": {"category": 4, "name": "Summer", "artist": "Hannele K.", "size": "40 x 33 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": true, "price": "500.00", "image": "sommar.jpg", "image_url": null}}, {"model": "products.product", "pk": 17, "fields": {"category": 2, "name": "On the Mountain", "artist": "Hannele K.", "size": "46 x 37 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "fjallet.jpg", "image_url": null}}, {"model": "products.product", "pk": 18, "fields": {"category": 3, "name": "Beauty", "artist": "Hannele K.", "size": "50 x 70 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "750.00", "image": "beauty.jpg", "image_url": null}}, {"model": "products.product", "pk": 19, "fields": {"category": 6, "name": "Dining out", "artist": "Hannele K.", "size": "45 x 55 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "650.00", "image": "dining-out.jpg", "image_url": null}}, {"model": "products.product", "pk": 20, "fields": {"category": 4, "name": "Water Lilies", "artist": "Hannele K.", "size": "24 x 30 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "400.00", "image": "nackrosor.jpg", "image_url": null}}, {"model": "products.product", "pk": 21, "fields": {"category": 5, "name": "Structures", "artist": "Hannele K.", "size": "38 x 46 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "500.00", "image": "strukturer.jpg", "image_url": null}}, {"model": "products.product", "pk": 22, "fields": {"category": 1, "name": "Gårdskär", "artist": "Hannele K.", "size": "50 x 70 cm", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "650.00", "image": "gardskär.jpg", "image_url": null}}, {"model": "products.product", "pk": 23, "fields": {"category": 6, "name": "The Cafe", "artist": "Hannele K.", "size": "46 x 55 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "550.00", "image": "the-cafe.jpg", "image_url": null}}, {"model": "products.product", "pk": 24, "fields": {"category": 1, "name": "First Wave", "artist": "Hannele K.", "size": "61 x 50 cm", "format": "Landscape", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "600.00", "image": "first-wave.jpg", "image_url": null}}, {"model": "products.product", "pk": 25, "fields": {"category": 3, "name": "Cat Test", "artist": "Claudia", "size": "15 x 30", "format": "Portrait", "technique": "Acryl on Canvas", "framed": "No", "sold": false, "price": "123.00", "image": "nackrosor_Sf4LJ3e.jpg", "image_url": null}}]
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "landscape",
+        "friendly_name": "Landscape"
+    }
+}, {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "animals",
+        "friendly_name": "Animals"
+    }
+}, {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "portrait",
+        "friendly_name": "Portrait"
+    }
+}, {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "flowers",
+        "friendly_name": "Flowers"
+    }
+}, {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "abstract",
+        "friendly_name": "Abstract"
+    }
+}, {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+        "name": "impressionism",
+        "friendly_name": "Impressionism"
+    }
+}, {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+        "name": "still_life",
+        "friendly_name": "Still Life"
+    }
+}, {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 2,
+        "name": "Reindeer",
+        "artist": "Hannele K.",
+        "size": "50 x 61 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "reindeer.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 7,
+        "name": "Stew Pan",
+        "artist": "Hannele K.",
+        "size": "46 x 38 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "grytan.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 7,
+        "name": "Kåsa",
+        "artist": "Hannele K.",
+        "size": "48 x 38 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "Kasan.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 4,
+        "name": "Longing for Spring",
+        "artist": "Hannele K.",
+        "size": "24 x 33 m",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "400.00",
+        "image": "varlangtan.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "category": 3,
+        "name": "Blind Date",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "780.00",
+        "image": "blinddate.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "category": 5,
+        "name": "Fragment",
+        "artist": "Hannele K.",
+        "size": "33 x 41 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "450.00",
+        "image": "fragment.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "category": 4,
+        "name": "Flowers",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "blomster.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "category": 2,
+        "name": "Cat",
+        "artist": "Hannele K.",
+        "size": "40 x 33 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "450.00",
+        "image": "misse.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "category": 3,
+        "name": "Liisa in the Sauna",
+        "artist": "Hannele K.",
+        "size": "40 x 30 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "liisa.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "category": 3,
+        "name": "Irma in the Sauna",
+        "artist": "Hannele K.",
+        "size": "30 x 30 cm",
+        "format": "Square",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": true,
+        "price": "450.00",
+        "image": "irma.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "category": 3,
+        "name": "Akka",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "akka.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "category": 3,
+        "name": "Squaw",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "squaw.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "category": 3,
+        "name": "Grace",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "grace.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "category": 3,
+        "name": "Geisha",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "geisha.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "category": 5,
+        "name": "Shimmer",
+        "artist": "Hannele K.",
+        "size": "40 x 33 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "skimmer.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "category": 4,
+        "name": "Summer",
+        "artist": "Hannele K.",
+        "size": "40 x 33 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": true,
+        "price": "500.00",
+        "image": "sommar.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "category": 2,
+        "name": "On the Mountain",
+        "artist": "Hannele K.",
+        "size": "46 x 37 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "fjallet.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "category": 3,
+        "name": "Beauty",
+        "artist": "Hannele K.",
+        "size": "50 x 70 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "750.00",
+        "image": "beauty.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "category": 6,
+        "name": "Dining out",
+        "artist": "Hannele K.",
+        "size": "45 x 55 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "650.00",
+        "image": "dining-out.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "category": 4,
+        "name": "Water Lilies",
+        "artist": "Hannele K.",
+        "size": "24 x 30 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "400.00",
+        "image": "nackrosor.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "category": 5,
+        "name": "Structures",
+        "artist": "Hannele K.",
+        "size": "38 x 46 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "500.00",
+        "image": "strukturer.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "category": 1,
+        "name": "Gårdskär",
+        "artist": "Hannele K.",
+        "size": "50 x 70 cm",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "650.00",
+        "image": "gardskär.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "category": 6,
+        "name": "The Cafe",
+        "artist": "Hannele K.",
+        "size": "46 x 55 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "550.00",
+        "image": "the-cafe.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "category": 1,
+        "name": "First Wave",
+        "artist": "Hannele K.",
+        "size": "61 x 50 cm",
+        "format": "Landscape",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "600.00",
+        "image": "first-wave.webp",
+        "image_url": null
+    }
+}, {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+        "category": 3,
+        "name": "Cat Test",
+        "artist": "Claudia",
+        "size": "15 x 30",
+        "format": "Portrait",
+        "technique": "Acryl on Canvas",
+        "framed": "No",
+        "sold": false,
+        "price": "123.00",
+        "image": "nackrosor.webp",
+        "image_url": null
+    }
+}]
