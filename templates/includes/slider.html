@@ -1,0 +1,26 @@
+<section class="cart_area section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row owl-carousel owl-theme border-0">
+          {% for r in reviews %}
+          <div class="item mx-2">
+            <div class="card owl-card text-center border-0">
+              <div class="card-body border-0">
+                <h6 class="yellow_star">
+                  {% if r.rating == 5 %}★★★★★{% elif r.rating == 4 %}★★★★☆{% elif r.rating == 3 %}★★★☆☆{% elif r.rating == 2 %}★★☆☆☆{% else %}★☆☆☆☆{% endif %}
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{ r.rating }}</h6>
+                <h5 class="card-title">{{ r.review_title }}</h5>
+                <p class="card-text font-italic">"{{ r.review_body }}"</p>
+                <br>
+                <p class="card-text text-muted">- {{ r.display_name }} -</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

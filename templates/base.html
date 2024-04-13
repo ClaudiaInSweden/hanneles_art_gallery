@@ -38,6 +38,7 @@
     <!-- Pillowmart Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
@@ -53,6 +54,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/aec9602b9e.js" crossorigin="anonymous"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static '/js/owl.carousel.min.js' %}"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -96,6 +99,24 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+    </script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            }
+        })
     </script>
     {% endblock %}
 

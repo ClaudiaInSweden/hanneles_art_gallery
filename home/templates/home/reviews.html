@@ -16,32 +16,10 @@
   </div>
 </section>
 <!-- breadcrumb part end-->
-<section class="cart_area section_padding">
-<div class="container">
-  <div class="carousel carousel-slider" data-ride="carousel">
-    <div class="carousel-inner">
-          {% for review in reviews|slice:":3" %}
-          {% if forloop.first %}
-            <div class="carousel-item active">
-          {% else %}
-            <div class="carousel-item">
-          {% endif %}
-              <div class="card">
-                <div class="card-title">
-                  {{ review.review_title }}
-                </div>
-                <p>{{ review.review_body }}</p>
-                <hr>
-                <p>{{ review.display_name }}</p>
-                <p>{{ review.rating }}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-    </div>
-  </div>
-</div>
-</section>
+
+{% include 'includes/slider.html' %}
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-8">

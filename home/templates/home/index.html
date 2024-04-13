@@ -25,6 +25,19 @@
 <!-- Banner Part End-->
 <hr>
 
+<!-- Review Slider Start -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="breadcrumb_iner text-center ">
+                <h2 class="review_heading">What our customers say</h2>
+                <h3 class="review_heading">{{ average_rating.rating|floatformat:1 }} out of 5.0</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/slider.html' %}
+<!-- Review Slider End -->
 <!-- Subscribe Part Start -->
 <section class="subscribe_part section_padding">
     <div class="container">

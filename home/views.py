@@ -10,30 +10,20 @@ from profiles.models import UserProfile
 
 
 def index(request):
+    reviews = Review.objects.all()
+    average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
+    context = {
+    'reviews': reviews,
+    'average_rating': average_rating,
+    }
 
-    return render(request, 'home/index.html')
+    return render(request, 'home/index.html', context)
 
 
 def privacy_policy(request):
 
     return render(request, 'home/privacy_policy.html')
 
-
-# def reviews(request):
-
-#     # Getting all reviews
-#     reviews = Review.objects.all()
-
-#     # Getting average rating
-#     average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
-
-#     context = {
-#     'reviews': reviews,
-#     'average_rating': average_rating,
-#     'review_form': review_form,
-#     }
-
-#     return render(request, 'home/reviews.html', context)
 
 
 def reviews(request):

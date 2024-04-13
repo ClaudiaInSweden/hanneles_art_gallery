@@ -62,6 +62,14 @@ a:hover {
     background-color: #4B3049 !important;
     color: #fff;
 }
+
+/* Review part */
+.owl-card {
+    border: 0  !important;
+}
+.review_heading {
+    color: #795376;
+}
 @media (max-width: 991px) {
     .logo {
         display: none;
