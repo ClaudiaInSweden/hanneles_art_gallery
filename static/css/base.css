@@ -24,9 +24,6 @@ a:hover {
     width: 100%;
     display: block;
 }
-.toast-icon {
-
-}
 
 /* Navigation bar */
 .navbar {
@@ -66,13 +63,6 @@ a:hover {
     color: #fff;
 }
 
-/* Review part */
-.owl-card {
-    border: none !important;
-}
-.review_heading {
-    color: #795376;
-}
 @media (max-width: 991px) {
     .logo {
         display: none;
@@ -105,7 +95,6 @@ a:hover {
         font-size: 12px;
     }
 }
-
 
 /* Search form */
 .search-container {
@@ -159,7 +148,6 @@ a:hover {
     }
 }
 
-
 /* Product and Product Details Page */
 .dropdown.select_option {
     font-size: 1em;
@@ -191,7 +179,6 @@ a:hover {
 .back-to-top i {
     font-size: 40px;
 }
-
 
 /* Product details page */
 .single_product_item p {
@@ -245,7 +232,6 @@ hr {
     font-weight: 500;
     font-size: 2rem;
 }
-
 
 /* Shopping cart */
 .pointer {
@@ -346,13 +332,10 @@ i {
     }
 }
 
-
 /* Social Media Icons */
 .social_icon i {
     color: #fff !important;
 }
-
-
 
 /* Product File Upload Form */
 .btn-file {
@@ -377,7 +360,6 @@ i {
     border-radius: 0;
 }
 
-
 /* Remove shopping cart total in navbar on small screens */
 @media (max-width: 350px) {
     .show-total {
@@ -387,7 +369,6 @@ i {
         padding: 0.5rem 0.5rem;
     }
 }
-
 
 /* Index Page Image area */
 .banner_part .btn_1 {
@@ -402,6 +383,13 @@ i {
     }
 }
 
+/* Review slider */
+.owl-card {
+    border: none !important;
+}
+.review_heading {
+    color: #795376;
+}
 
 /* Mailchimp subscription form  */
 .subscribe_form_mailchimp {
@@ -461,7 +449,6 @@ i {
     color: #fff !important;
     font-size: 12px;
 }
-
 
 /* Privacy Policy */
 .btn-link {
