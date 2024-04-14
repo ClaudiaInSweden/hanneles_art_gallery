@@ -3,18 +3,28 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.db.models import Avg
 from django.contrib import messages
+from django.contrib.auth.models import User
 from .models import Review
 from .forms import ReviewForm
-from profiles.models import UserProfile
+# from profiles.models import UserProfile
 
 
 
 def index(request):
     reviews = Review.objects.all()
     average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
+    add_review = True
+
+    if request.user.is_authenticated:
+        user_review_count = Review.objects.filter(user=request.user).count()
+
+        if user_review_count > 0:
+            add_review = False
+
     context = {
     'reviews': reviews,
     'average_rating': average_rating,
+    'add_review': add_review,
     }
 
     return render(request, 'home/index.html', context)
@@ -30,7 +40,8 @@ def reviews(request):
 
     # Getting all reviews
     reviews = Review.objects.all()
-    user = UserProfile.objects.get(user=request.user)
+    user = User.objects.get(username=request.user)
+    
     new_review = None
 
     # Getting average rating
@@ -44,7 +55,7 @@ def reviews(request):
             new_review.save()
 
             messages.info(request, 'Thank you for your review!')
-            return redirect(reverse('reviews'))
+            return redirect(reverse('home'))
     else:
         review_form = ReviewForm()
 
