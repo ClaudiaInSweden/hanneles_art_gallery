@@ -24,6 +24,9 @@ a:hover {
     width: 100%;
     display: block;
 }
+.toast-icon {
+
+}
 
 /* Navigation bar */
 .navbar {
@@ -65,7 +68,7 @@ a:hover {
 
 /* Review part */
 .owl-card {
-    border: 0  !important;
+    border: none !important;
 }
 .review_heading {
     color: #795376;

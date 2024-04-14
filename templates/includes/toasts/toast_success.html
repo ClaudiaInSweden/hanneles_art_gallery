@@ -39,14 +39,14 @@
             <span class="float-right pr-2">€{{ total|floatformat:2 }}</span>
           </p>
         </strong>
-        <a href="{% url 'view_cart' %}" class="btn_3 btn-block rounded-0">
+        <a href="{% url 'view_cart' %}" class="btn_1 btn-block rounded-0 text-white">
           <span class="text-uppercase">Go To Checkout</span>
-          <span class="icon">
-            <i class="fas fa-lock ml-2"></i>
+          <span class="toast-icon">
+            <i class="fas fa-lock ml-2 text-white"></i>
           </span>
         </a>
         <a href="{% url 'products' %}" class="btn_1 btn-block rounded-0 text-white">
-          <span class="icon">
+          <span class="toast-icon">
             <i class="fa-solid fa-cart-shopping mr-2 text-white"></i>
           </span>
           <span class="text-uppercase">Continue Shopping</span>
