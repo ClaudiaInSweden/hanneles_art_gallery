@@ -384,11 +384,11 @@ i {
 }
 
 /* Review slider */
-.owl-card {
-    border: none !important;
-}
 .review_heading {
     color: #795376;
+}
+.card {
+    border: none !important;
 }
 
 /* Mailchimp subscription form  */

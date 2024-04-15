@@ -28,7 +28,4 @@ class Review(models.Model):
         ordering: ('-date_created')
 
     def __str__(self):
-        return self.review_title
-
-    def get_rating(self):
         return f'Rating: {self.rating} Review: {self.review_title}'
