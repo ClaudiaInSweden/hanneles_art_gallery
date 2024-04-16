@@ -6,7 +6,8 @@
 .owl-carousel,
 .owl-carousel .owl-item {
     -webkit-tap-highlight-color: transparent;
-    position: relative
+    position: relative;
+    border: none;
 }
 
 .owl-carousel {
@@ -216,3 +217,4 @@
     height: 100%;
     width: 100%
 }
+

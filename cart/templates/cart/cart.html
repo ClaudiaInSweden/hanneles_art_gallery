@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<!-- breadcrumb part start-->
+<!-- Breadcrumb part start-->
 <section class="breadcrumb_part">
   <div class="container">
     <div class="row">
@@ -14,8 +14,9 @@
     </div>
   </div>
 </section>
-<!-- breadcrumb part end-->
-<!--Cart Area -->
+<!-- Breadcrumb part end-->
+
+<!--Cart Area start -->
 <section class="cart_area section_padding">
   <div class="container">
     <div class="cart_inner">
@@ -36,7 +37,7 @@
               <td>
                 <div class="media">
                   <div class="d-flex">
-                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name}} {{ item.product.technique }}" />
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name}} {{ item.product.technique }}"/>
                   </div>
                   <div class="media-body">
                     <p>Title: <strong>{{ item.product.name }}</strong></p>
@@ -52,8 +53,8 @@
                 <div class="product_count">
                   <div class="quantity-remove">
                     <a class="quantity" name="quantity" aria-label="Quantity" id="quantity">{{ item.quantity }}</a>
-                    <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}"><i
-                        class="fa-solid fa-trash pl-2"></i>
+                    <a class="remove-item" aria-label="Remove" id="remove_{{ item.item_id }}">
+                      <i class="fa-solid fa-trash pl-2"></i>
                     </a>
                   </div>
                 </div>
@@ -103,25 +104,21 @@
               Shopping</a>
           </div>
         </div>
-        {% else %}
-        <p>
-          <h6>Your shopping cart is empty.</h6>
-        </p>
-        <p></p>
+      {% else %}
+        <h6>Your shopping cart is empty.</h6>
         <a href="{% url 'products' %}" class="btn_1 text-white mt-5" aria-label="Buy real art">Buy real art</a>
-        {% endif %}
-      </div>
+      {% endif %}
     </div>
-</section>
-<!--End Cart Area -->
-
+  </div>
+  </section>
+<!--Cart Area end -->
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'cart/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
   //Remove item and reload on click
   $('.remove-item').click(function(e) {
     var csrfToken = "{{ csrf_token }}";

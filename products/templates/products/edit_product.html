@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<!-- breadcrumb part start-->
+<!-- Breadcrumb part start -->
 <section class="breadcrumb_part">
     <div class="container">
         <div class="row">
@@ -15,40 +15,37 @@
         </div>
     </div>
 </section>
-<!-- breadcrumb part end-->
-
-
-<!--================Checkout Area =================-->
+<!-- Breadcrumb part end -->
+<!-- Checkout Area Start -->
 <section class="cart_area section_padding">
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <h2 class="mt-20">Update a painting</h2>
-            <hr>          
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <h2 class="mt-20">Update a painting</h2>
+                <hr>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
+        <div class="row">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
                     {% if field.name != 'image' %}
                         {{ field | as_crispy_field }}
                     {% else %}
                         {{ field }}
                     {% endif %}
-                {% endfor %}
-                <div class="text-right">
-                    <a class="btn_1 text-white" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn_1" type="submit">Update Painting</button>
-                </div>
-            </form>
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn_1 text-white" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn_1" type="submit">Update Painting</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </section>
-<!--================End Checkout Area =================-->
-
+<!-- End Checkout Area -->
 {% endblock %}
 
 {% block postloadjs %}

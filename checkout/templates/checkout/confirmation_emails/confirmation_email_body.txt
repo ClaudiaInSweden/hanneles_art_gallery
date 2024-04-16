@@ -14,15 +14,19 @@ Grand Total: € {{ order.grand_total }}
 Your order will be delivered to:
 
 {{ order.full_name }}
-{{ order.phone_number }}
 
 {{ order.street_address1 }}
 {{ order.town }} {{ order.postcode }}
 {{ order.country }}
 
+
+We'd be happy if you take a minute to tell us what you think about your shopping experience at Hanneles Art Gallery.
+<a href="{% url 'reviews' %}">Leave your review here!</a>
+
 If you have any questions, please feel free to contact our customer service on telephone 555 00 007 or email {{ contact_email }}.
 
-Sincerely,
+
+We hope to see you soon again,
 
 HANNELES ART GALLERY
 

@@ -1,5 +1,4 @@
 <section class="p-2">
-
   <div class="container mb-2">
     <div class="row">
       <div class="col-md-12">
@@ -8,11 +7,11 @@
           <div class="item mx-2 border-0">
             <div class="card text-center border-0">
               <div class="card-body">
-                <h6>{% for s in r.rating|ljust:r.rating %}<i class="fas fa-star"></i> {% endfor %}</h6>
+                <p>{% for s in r.rating|ljust:r.rating %}<i class="fas fa-star"></i> {% endfor %}</p>
                 <h5 class="card-title">{{ r.review_title }}</h5>
                 <p class="card-text font-italic">"{{ r.review_body }}"</p>
                 <br>
-                <p class="card-text text-muted">- {{ r.display_name }} -</p>
+                <p class="card-text text-muted">- {% if r.display_name is None %}Anonymous -{% else %}{{ r.display_name }} -{% endif %}</p>
               </div>
             </div>
           </div>

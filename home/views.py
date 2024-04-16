@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 from .models import Review
 from .forms import ReviewForm
-# from profiles.models import UserProfile
 
 
 
@@ -33,7 +32,7 @@ def reviews(request):
 
     # Getting all reviews
     reviews = Review.objects.all()
-        
+            
     # Getting average rating
     average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
 
@@ -45,17 +44,18 @@ def reviews(request):
     """
     if request.user.is_authenticated:
         user_review_count = Review.objects.filter(user=request.user).count()
-
+        
         if user_review_count > 0:
             add_review = False
     """
-    If user is not logged in, user will be set to none 
+    If user does not exist, user will be set to none 
     """
     try:
         user = User.objects.get(username=request.user)
     except User.DoesNotExist:
         user = None
-    
+
+
     if request.method == 'POST':
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():

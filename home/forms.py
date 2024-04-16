@@ -9,3 +9,8 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review 
         fields = ['display_name', 'rating', 'review_title', 'review_body']
+        labels = {
+            'display_name': 'Your name',
+            'review_title': 'Review title',
+            'review_body': ''
+        }

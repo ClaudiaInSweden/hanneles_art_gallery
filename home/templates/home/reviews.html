@@ -2,53 +2,52 @@
 {% load static %}
 {% block content %}
 
-<!-- breadcrumb part start-->
+<!-- Breadcrumb part start-->
 <section class="breadcrumb_part">
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="breadcrumb_iner">
-                  <h2>What our customers say</h2>
-                  <h3>Average customer rating: {{ average_rating.rating|floatformat:1 }} out of 5.0</h3>
-              </div>
-          </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <h2>What our customers say</h2>
+          <h3>Average customer rating: {{ average_rating.rating|floatformat:1 }} out of 5.0</h3>
+        </div>
       </div>
+    </div>
   </div>
 </section>
-<!-- breadcrumb part end-->
+<!-- Breadcrumb part end-->
 
-
+<!-- Review Slider Start -->
 {% include 'includes/slider.html' %}
+<!-- Review Slider End -->
 
 <!-- Add Review option start -->
 <div class="container p-3 mt-2">
-  <div class="col text-center">
+  <div class="col">
     {% if user.is_anonymous %}
-    <h5 class="review_heading">Please <a href="{% url 'account_login' %}">Log in</a> to add a review.</h5>
+    <h5 class="review_heading">Please <a href="{% url 'account_login' %}"><strong>log in</strong></a> to add a review.
+    </h5>
     {% endif %}
     {% if request.user.is_authenticated %}
-      {% if add_review %}
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Add your review</h3>
-            <form method="POST">
-              {% csrf_token %}
-              <p>{{ review_form|crispy }}</p>
-              <button class="btn_1" type="submit">Submit</button>
-            </form>      
-          </div>
+    {% if add_review %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3>Add your review</h3>
+          <form method="POST">
+            {% csrf_token %}
+            <p>{{ review_form|crispy }}</p>
+            <button class="btn_1" type="submit">Submit</button>
+          </form>
         </div>
       </div>
-      {% else %}
-      <hr>
-      <p><strong>{{ user.username }}</strong>, you have already submitted a review!</p>
-      {% endif %}
+    </div>
+    {% else %}
+    <hr>
+    <p><strong>{{ user.username }}</strong>, you have already submitted your review and only one review is permitted!</p>
+    {% endif %}
     {% endif %}
   </div>
 </div>
-  <!-- Add Review option end -->
-
-
-
+<!-- Add Review option end -->
 {% endblock content %}

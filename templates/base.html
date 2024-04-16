@@ -51,7 +51,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/aec9602b9e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aec9602b9e.js"></script>
     <!-- Owl Carousel -->
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <!-- Stripe -->
@@ -95,7 +95,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     <script>
@@ -117,7 +117,5 @@
         })
     </script>
     {% endblock %}
-
 </body>
-
 </html>
