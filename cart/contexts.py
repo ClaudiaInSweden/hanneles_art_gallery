@@ -10,7 +10,7 @@ def cart_contents(request):
     total = 0
     item_count = 0
     delivery = 0
-    
+
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():

@@ -101,8 +101,8 @@
                             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}"
                                 class="img-fluid">
                             {% endif %}
-                            <h3><a href="{% url 'product_detail' product.id %}" aria-label="Product Name">{{
-                                    product.name }}</a>
+                            <h3><a href="{% url 'product_detail' product.id %}" aria-label="Product Name">
+                                {{ product.name }}</a>
                             </h3>
                             {% if product.category %}
                             <p><a href="{% url 'products' %}?category={{ product.category.name }}"

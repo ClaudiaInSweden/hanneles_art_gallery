@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from profiles.models import UserProfile
 
 
-
 # Create your models here.
 class Review(models.Model):
 
@@ -16,7 +15,7 @@ class Review(models.Model):
         (4, "★★★★☆"),
         (5, "★★★★★"),
     )
-   
+
     user = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     rating = models.IntegerField(choices=RATING, default=None)
     display_name = models.CharField(max_length=100, null=True, blank=True)

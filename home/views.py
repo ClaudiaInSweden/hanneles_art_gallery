@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import (
+    render, redirect, get_object_or_404, HttpResponseRedirect
+)
 from django.urls import reverse
 from django.http import HttpResponse
 from django.db.models import Avg
@@ -9,14 +11,13 @@ from .models import Review
 from .forms import ReviewForm
 
 
-
 def index(request):
     reviews = Review.objects.all()
     average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
-    
+
     context = {
-    'reviews': reviews,
-    'average_rating': average_rating,
+        'reviews': reviews,
+        'average_rating': average_rating,
     }
 
     return render(request, 'home/index.html', context)
@@ -27,12 +28,11 @@ def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
 
 
-
 def reviews(request):
 
     # Getting all reviews
     reviews = Review.objects.all()
-            
+
     # Getting average rating
     average_rating = Review.objects.all().aggregate(rating=Avg('rating'))
 
@@ -44,17 +44,16 @@ def reviews(request):
     """
     if request.user.is_authenticated:
         user_review_count = Review.objects.filter(user=request.user).count()
-        
+
         if user_review_count > 0:
             add_review = False
     """
-    If user does not exist, user will be set to none 
+    If user does not exist, user will be set to none
     """
     try:
         user = User.objects.get(username=request.user)
     except User.DoesNotExist:
         user = None
-
 
     if request.method == 'POST':
         review_form = ReviewForm(data=request.POST)
@@ -74,11 +73,10 @@ def reviews(request):
     template_name = 'home/reviews.html'
 
     context = {
-    'reviews': reviews,
-    'average_rating': average_rating,
-    'review_form': review_form,
-    'add_review': add_review,
+        'reviews': reviews,
+        'average_rating': average_rating,
+        'review_form': review_form,
+        'add_review': add_review,
     }
 
     return render(request, template_name, context)
-

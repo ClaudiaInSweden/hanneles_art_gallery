@@ -7,7 +7,7 @@ from .models import Product, Category
 from .forms import ProductForm
 
 
-def all_products (request):
+def all_products(request):
 
     products = Product.objects.all()
     query = None
@@ -43,10 +43,13 @@ def all_products (request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Please enter a keyword to search through the catalogue!")
+                messages.error(request, "Please enter a keyword to search \
+                    through the catalogue!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(technique__icontains=query) | Q(size__icontains=query) | Q(category__name__icontains=query)
+            queries = (Q(name__icontains=query) |
+            Q(technique__icontains=query) |
+            Q(size__icontains=query) | Q(category__name__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -87,7 +90,8 @@ def add_product(request):
             messages.success(request, 'The painting was added successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add painting! Please ensure that the form is valid!')
+            messages.error(request, 'Failed to add painting! Please ensure \
+                that the form is valid!')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -113,11 +117,12 @@ def edit_product(request, product_id):
             messages.info(request, 'The painting was updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update painting! Please ensure that the form is valid!')
+            messages.error(request, 'Failed to update painting! Please ensure \
+                that the form is valid!')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing painting "{product.name}"')
-    
+
     template = 'products/edit_product.html'
     context = {
         'form': form,

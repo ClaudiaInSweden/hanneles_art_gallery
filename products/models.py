@@ -5,7 +5,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -23,8 +23,8 @@ class Product(models.Model):
         ('No', 'No')
     )
 
- 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     artist = models.CharField(max_length=254, default='Hannele K.')
     size = models.CharField(max_length=254)
