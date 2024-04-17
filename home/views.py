@@ -1,8 +1,7 @@
 from django.shortcuts import (
-    render, redirect, get_object_or_404, HttpResponseRedirect
+    render, redirect
 )
 from django.urls import reverse
-from django.http import HttpResponse
 from django.db.models import Avg
 from django.contrib import messages
 from django.contrib.auth.models import User

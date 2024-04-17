@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -48,8 +49,9 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = (Q(name__icontains=query) |
-            Q(technique__icontains=query) |
-            Q(size__icontains=query) | Q(category__name__icontains=query))
+                       Q(technique__icontains=query) |
+                       Q(size__icontains=query) |
+                       Q(category__name__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'

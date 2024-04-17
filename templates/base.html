@@ -34,14 +34,9 @@
 
     {% block extra_css %}
     <!-- Pillowmart Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
-    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
@@ -51,9 +46,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/aec9602b9e.js"></script>
+    <script defer src="https://kit.fontawesome.com/aec9602b9e.js"></script>
     <!-- Owl Carousel -->
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script defer src="{% static 'js/owl.carousel.min.js' %}"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -63,6 +58,7 @@
 
     <title>Hanneles Art Gallery & Academy</title>
 </head>
+
 <body>
     <!-- Navigation start -->
     {% include 'includes/navigation.html' %}
@@ -98,24 +94,10 @@
     <script>
         $('.toast').toast('show');
     </script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop:false,
-            margin:20,
-            nav:false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:4
-                }
-            }
-        })
-    </script>
+    {% endblock %}
+
+    {% block carousel%}
     {% endblock %}
 </body>
+
 </html>
