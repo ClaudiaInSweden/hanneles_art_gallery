@@ -70,8 +70,8 @@
                     </div>
                     <span>
                         <a href="{% url 'view_cart' %}">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="mx-2 show-total">
+                            <i class="fa-solid fa-cart-shopping pr-1"></i>
+                            <span class="show-total">
                                 {% if grand_total %}
                                 €{{ grand_total|floatformat:2 }}
                                 {% else %}
