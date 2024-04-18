@@ -223,14 +223,52 @@ Under the My Account menu tab in the navigation the user will see different opti
 - When a user is logged in as a superuser, the Product Management link is available that leads to a page that enables to add another painting. Contrary to the Walkthrough project the image upload is mandatory as we cannot sell paintings without being able to show them to the user. 
 
 ![Not logged in](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/account_logged_out.jpg)
-![Logged in as administrator(https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/account_logged_in.jpg)]
-
+![Logged in as administrator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/account_logged_in.jpg)
 
 
 
 ## Typography and color scheme
 
 As already mentioned, the color scheme was selected to meet the taste of a mostly female target group. I also tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
+
+
+## Wireframes
+
+Wireframes for desktop and smartphone have been created with ![Balsamiq](https://balsamiq.com/wireframes/)
+
+### Homepage
+
+![Homepage](static/readme-docs/wireframes/home.png)
+
+
+### Reviews
+
+![Reviews](static/readme-docs/wireframes/reviews.png)
+
+
+### Products
+
+![Products](static/readme-docs/wireframes/products.png)
+
+
+### Product Details
+
+![Product Details](static/readme-docs/wireframes/product-detail.png)
+
+
+### Shopping Cart
+
+![Shopping Cart](static/readme-docs/wireframes/shopping-cart.png)
+
+
+### Checkout
+
+![Checkout](static/readme-docs/wireframes/checkout.png)
+
+
+### Profile
+
+![Profile](static/readme-docs/wireframes/profile.png)
 
 
 ## Technologies used
