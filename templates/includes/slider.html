@@ -6,7 +6,7 @@
           {% for r in reviews %}
           <div class="item mx-2 border-0">
             <div class="card text-center border-0">
-              <div class="card-body">
+              <div class="card-body border-0">
                 <p>{% for s in r.rating|ljust:r.rating %}<i class="fas fa-star"></i> {% endfor %}</p>
                 <h5 class="card-title">{{ r.review_title }}</h5>
                 <p class="card-text font-italic">"{{ r.review_body }}"</p>

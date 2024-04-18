@@ -268,38 +268,291 @@ As already mentioned, the color scheme was selected to meet the taste of a mostl
 
 #### HTML
 
-A lot of errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
-However, this must be due to the fact that the templates are rendered differently. When I compare the errors with the actual code they do not correspond at all. This is the products page so the error repeats for the whole loop of 24 products. 
-See example below.
-![HTML Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/HTML+Validator-errors.jpg)
-![HTML Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/HTML+Validator.jpg)
+ No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+Details for each page can be found by clicking the expand button.
+ 
+
+<details>
+
+<summary>HTML Validation </summary>
+
+**Homepage**
+
+![Home Page](static/readme-docs/validation-html/home.png)
+
+
+**Reviews**
+
+![Reviews](static/readme-docs/validation-html/reviews.png)
+
+
+**Products**
+
+![Products](static/readme-docs/validation-html/products.png)
+
+
+**Product Details**
+
+![Product Details](static/readme-docs/validation-html/product_detail.png)
+
+
+**Edit Product**
+
+![Edit Product Form](static/readme-docs/validation-html/product_edit.png)
+
+
+**Add Product**
+
+![Add Product](static/readme-docs/validation-html/product_add.png)
+
+
+**Cart**
+
+![Cart](static/readme-docs/validation-html/cart.png)
+
+
+**Checkout**
+
+![Checkout](static/readme-docs/validation-html/checkout.png)
+
+
+**Checkout success**
+
+![Checkout success](static/readme-docs/validation-html/checkout_success.png)
+
+
+**Login**
+
+![Login](static/readme-docs/validation-html/login.png)
+
+
+**Logout**
+
+![Logout](static/readme-docs/validation-html/logout.png)
+
+
+**Signup**
+
+![Signup](static/readme-docs/validation-html/signup.png)
+
+
+**Profile**
+
+![Profile](static/readme-docs/validation-html/profile.png)
+
+
+**Privacy Policy**
+
+![Privacy Policy](static/readme-docs/validation-html/privacy.png)
+
+</details>
+
 
 
 #### CSS
 
 No errors were found when passing through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator
-![CSS Validator](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/CSS_Validator.jpg)
+
+**base.css**
+
+![base.css](static/readme-docs/validation-css/base_css.png)
+
+
+**checkout.css**
+
+![checkout.css](static/readme-docs/validation-css/checkout_css.png)
+
 
 #### Google Chrome Lighthouse Reports
 
 These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of Hanneles Art Gallery.
 
 The tests were executed using the Google Chrome browser's DevTools.
-ADetails for each page can be found by clicking the expand button.
-![Home](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_home.jpg)
-![Paintings](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_products.jpg)
-![Paintings Details](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_product_detail.jpg)
-![Shopping Cart](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_cart.jpg)
-![Checkout](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_checkout.jpg)
-![My Profile](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_myprofile.jpg)
-![Product Management](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/lighthouse_product_management.jpg)
+performanceDetails for each page can be found by clicking the expand button.
+<details>
+
+<summary>Lighthouse Performance </summary>
+
+**Homepage**
+
+![Home Page](static/readme-docs/performance/index.png)
+
+
+**Reviews**
+
+![Reviews](static/readme-docs/performance/reviews.png)
+
+
+**Products**
+
+![Products](static/readme-docs/performance/products.png)
+
+
+**Product Details**
+
+![Product Details](static/readme-docs/performance/product_detail.png)
+
+
+**Edit Product**
+
+![Edit Product Form](static/readme-docs/performance/edit_product.png)
+
+
+**Add Product**
+
+![Add Product](static/readme-docs/performance/add_product.png)
+
+
+**Cart**
+
+![Cart](static/readme-docs/performance/cart.png)
+
+
+**Checkout**
+
+![Checkout](static/readme-docs/performance/checkout.png)
+
+
+**Checkout success**
+
+![Checkout success](static/readme-docs/performance/checkout_success.png)
+
+
+**Login**
+
+![Login](static/readme-docs/performance/login.png)
+
+
+**Logout**
+
+![Logout](static/readme-docs/performance/logout.png)
+
+
+**Signup**
+
+![Signup](static/readme-docs/performance/signup.png)
+
+
+**Profile**
+
+![Profile](static/readme-docs/performance/profile.png)
+
+
+**Privacy Policy**
+
+![Privacy Policy](static/readme-docs/performance/privacy.png)
+
+</details>
 
 #### JavaScript validation
 Due to lack of time this step could not be performed.
 
 
 #### Python validation
-Due to lack of time this step could not be performed.
+No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
+Details for each part can be found by clicking the expand button.
+ 
+
+<details>
+
+<summary>Home </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/home_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docsdocs/validation-python/home_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docsdocs/validation-python/home_views.png)
+
+</details>
+
+<details>
+
+<summary>Products </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/products_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/products_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/products_views.png)
+
+</details>
+
+
+<details>
+
+<summary>Cart </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/cart_views.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/cart_contexts.png)
+
+</details>
+
+
+<details>
+
+<summary>Checkout </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/checkout_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/checkout_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/checkout_views.png)
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/checkout_signals.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/checkout_webhooks.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/checkout_webhook_handler.png)
+
+</details>
+
+
+<details>
+
+<summary>Profiles </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/profiles_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/profiles_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/profilesdocsdocs_views.png)
+
+</details>
 
 
 
