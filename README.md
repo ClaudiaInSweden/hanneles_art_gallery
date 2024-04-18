@@ -126,6 +126,10 @@ The project is open for public access and can be visited here.
 ![Project User Stories](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Agile.jpg)
 
 
+
+## Relationship Diagram
+
+![Diagram](static/readme-docs/others/Hanneles_Diagram.png)
 <hr>
 
 ## Features
@@ -152,11 +156,36 @@ The Home page is the starting point for users. It displays one of the paintings 
 
 ![Home Page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Homepage.jpg)
 
-In the middle part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
+
+The middle part of the page shows reviews that have been given from users. Both the heading and the review text are linked to the review page.
+
+![Homepage middle](static/readme-docs/others/home_middle.png)
+
+In the lower part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
 Further down are links to selected social media accounts of which the link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
 On bottom of the page I had to put a link to the template origin as requested in the template license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
 
-![Bottom part of home page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Subscribe.jpg)
+![Homepage lower](static/readme-docs/others/home_lower.png)
+
+
+### Reviews
+
+The reviews page displays given reviews including star rating. Also the average customer rating is visible. Depending on the log in status, a user will be prompted to log in to write a review or will see a personalized notification that a review has already been given.  
+
+
+#### User not logged in
+
+![Review_login](static/readme-docs/others/review_login.png)
+
+
+#### User is logged in
+
+![Review_form](static/readme-docs/others/review_form.png)
+
+
+#### User has already submitted a review
+
+![Review_added](static/readme-docs/others/review_given.png)
 
 
 ### All Paintings
