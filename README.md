@@ -40,7 +40,7 @@ According to [Interior Design magazine](https://interiordesign.net/designwire/wo
 #### Facebook Business Page
 In the start phase of the business we will concentrate on Facebook as Marketing platform. That way the artist can create a more personal relationship with followers and keep the communication ongoing by answering comments and questions online. This allows also to test different approaches and validation.
 
-By the time of writing this ReadMe file (2024-01-30) the businesses [Facebook Page Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
+By the time of writing this ReadMe file (2024-04-18) the Facebook Page [Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
 ![Facebook screenshot01](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook01.jpg)
 ![Facebook screenshot02](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook02.jpg)
 ![Facebook screenshot03](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook03.jpg)
@@ -51,12 +51,13 @@ It will also include information about exhibitions and other events.
 
 Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address is necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
 
-![Newsletter subscription](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Subscribe.jpg)
+![Newsletter subscription](static/readme-docs/others/home_lower.png)
 
 
 ### SEO - Search Engine Optimization
 Prior to project start some brainstorming resultad in a number of short and long-tail keywords. Using three different browsers and a mobile, resulted in a couple of keyword volume and competition analysis results from [Wordtracker](https://www.wordtracker.com/).
 Also Google search with suggested search phrases as well as related searches was used. However, original paintings seem to be a niche product and Googles suggestions were not comprehensive. 
+
 The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
 
 <details>
@@ -106,8 +107,7 @@ As the webshop only sells paintings the focus in the design was on presenting th
 The color scheme was chosen after the mostly female target group and is therefore in soft pinkish/lila colors, mixed with a darker nuance for better readability. 
 Some of the images are unfortunately not well fotographed and have lopsided frame around the actual painting but as I didn't had access to the original paintings to take new pictures I left it as it is. 
 
-A free Bootstrap 4 template was used to save time but it turned out that this was a bad decision. Only when almost finished I realized that the specific design of the template interferes with both the crispy form and stripe form. Also the button design was inconsistent which resulted in countless hours of trying to fix the design but due to time restraints I had to skip this, see section bugs. 
-XXX
+A free Bootstrap 4 template was used to save time but it turned out that this was a bad decision. Only when almost finished I realized that the specific design of the template interferes with both the crispy form and stripe form. Also the button design was inconsistent which resulted in countless hours of trying to fix the design.
 
 
 
@@ -122,12 +122,16 @@ All user stories labelled "Must have" have been closed.
 Open user stories have been collected in the backlog section. 
 
 The project is open for public access and can be visited here.
+
 ![Agile Project](https://github.com/users/ClaudiaInSweden/projects/11)
-![Project User Stories](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Agile.jpg)
+
+![Project User Stories](static/readme-docs/others/kanban.png)
 
 
 
 ## Relationship Diagram
+
+The relationship diagram illustrates the relation between the models used in the project.
 
 ![Diagram](static/readme-docs/others/Hanneles_Diagram.png)
 <hr>
@@ -145,8 +149,9 @@ The responsive navigation bar on top of the page includes links to the Home Page
 Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
 The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and a link back to the overview page.
 
-![Search results](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_search.jpg
-)
+![Search results](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Navbar_search.jpg)
+
+
 The navigation bar is identical on each page (includes method is used) to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
 
 
@@ -154,7 +159,7 @@ The navigation bar is identical on each page (includes method is used) to enable
 
 The Home page is the starting point for users. It displays one of the paintings and informs the user about the purpose of the website. Keywords and phrases are used in the short intro text and the button for improved SEO. 
 
-![Home Page](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/Homepage.jpg)
+![Home Page](static/readme-docs/others/amiresponsive.png)
 
 
 The middle part of the page shows reviews that have been given from users. Both the heading and the review text are linked to the review page.
@@ -162,7 +167,7 @@ The middle part of the page shows reviews that have been given from users. Both 
 ![Homepage middle](static/readme-docs/others/home_middle.png)
 
 In the lower part of the page a subscription form for the newsletter is prominently placed. Mailchimp is used as provider.
-Further down are links to selected social media accounts of which the link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
+Further down address, phone number and email address are displayed as well as links to Facebook and Instagram. The link to Facebook directs to an actual Facebook page dedicated to Hanneles Art Gallery. 
 On bottom of the page I had to put a link to the template origin as requested in the template license agreement and to the right the user can find a link to the Privacy Policy page that opens in a new tab. 
 
 ![Homepage lower](static/readme-docs/others/home_lower.png)
@@ -202,7 +207,7 @@ The buttons "Update" and "Delete" are only visible for logged in administrators 
 
 Again, the focus is on the painting and the user might need to scroll down to see the price.
 
-To keep the interest alive and display a full collection of the artwork it's decided to leave the sold paintings in the shop but with a "SOLD" label and no price and no "Add to cart" button available. 
+To keep the interest alive and display a full collection of the artwork it was decided to leave the sold paintings in the shop but with a "SOLD" label and no price and no "Add to cart" button available. 
 At the time of project submission there is not yet an automatically function implemented to change the status of a painting. This is possible through the product management page which is available for superusers. However, an automated function should be implemented in phase 2.
 
 ![Painting details](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/painting_detail.jpg)
@@ -216,7 +221,7 @@ Here the user also has the possibility to remove a painting from the cart or go 
 
 ![Shopping cart](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/shopping_cart.jpg)
 
-If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button to the paintings overview page. 
+If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button directing to the paintings overview page. 
 
 If the user clicks the Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
 
@@ -263,7 +268,7 @@ As already mentioned, the color scheme was selected to meet the taste of a mostl
 
 ## Wireframes
 
-Wireframes for desktop and smartphone have been created with ![Balsamiq](https://balsamiq.com/wireframes/)
+Wireframes for desktop and smartphone have been created with [Balsamiq](https://balsamiq.com/wireframes/)
 
 ### Homepage
 
@@ -319,12 +324,12 @@ Wireframes for desktop and smartphone have been created with ![Balsamiq](https:/
 - Deployment: Heroku
 
 ### Software and frameworks
-![Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
-![Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-![Fontawsome Icons](https://fontawesome.com/icons)
-![Favicon](https://favicon.io/)
-![Birme](https://www.birme.net/)
-![Snagit Editor](https://www.techsmith.com/screen-capture.html)
+[Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+[Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+[Fontawsome Icons](https://fontawesome.com/icons)
+[Favicon](https://favicon.io/)
+[Birme](https://www.birme.net/)
+[Snagit Editor](https://www.techsmith.com/screen-capture.html)
 
 
 
@@ -335,7 +340,7 @@ Wireframes for desktop and smartphone have been created with ![Balsamiq](https:/
 
 #### HTML
 
- No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
 Details for each page can be found by clicking the expand button.
  
 
@@ -432,10 +437,10 @@ No errors were found when passing through the [W3C CSS Validator](https://jigsaw
 
 #### Google Chrome Lighthouse Reports
 
-These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of Hanneles Art Gallery.
+These reports present the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of Hanneles Art Gallery.
 
 The tests were executed using the Google Chrome browser's DevTools.
-performanceDetails for each page can be found by clicking the expand button.
+Performance details for each page can be found by clicking the expand button.
 <details>
 
 <summary>Lighthouse Performance </summary>
@@ -511,8 +516,6 @@ performanceDetails for each page can be found by clicking the expand button.
 
 </details>
 
-#### JavaScript validation
-Due to lack of time this step could not be performed.
 
 
 #### Python validation
@@ -530,11 +533,11 @@ Details for each part can be found by clicking the expand button.
 
 
 **forms.py**
-![forms.py](static/readme-docsdocs/validation-python/home_forms.png)
+![forms.py](static/readme-docs/validation-python/home_forms.png)
 
 
 **views.py**
-![views.py](static/readme-docsdocs/validation-python/home_views.png)
+![views.py](static/readme-docs/validation-python/home_views.png)
 
 </details>
 
@@ -589,15 +592,15 @@ Details for each part can be found by clicking the expand button.
 ![views.py](static/readme-docs/validation-python/checkout_views.png)
 
 
-**model.py**
+**signals.py**
 ![models.py](static/readme-docs/validation-python/checkout_signals.png)
 
 
-**forms.py**
+**webhooks.py**
 ![forms.py](static/readme-docs/validation-python/checkout_webhooks.png)
 
 
-**views.py**
+**webhook_handler.py**
 ![views.py](static/readme-docs/validation-python/checkout_webhook_handler.png)
 
 </details>
@@ -634,14 +637,27 @@ Functionality, links, layout, and responsiveness were tested with the following 
   
 
 ## Bugs
-Due to a bug regarding Stripe webhooks hours of research were spent and finally solved with help from Rebecca from Tutor Service.
-However, due to this major issue, the project could not be finalized on time.
+
+
 
 
 
 ## Credits
 
-All painting images belong to Hannele Hannele Kaarlejärvi
 ![404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
 ![Bootstrap-4-multi-dropdown-navbar:]
 ![Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+
+
+## Tutorials & Support
+
+[Icon inside Search Input Field](https://youtu.be/3Y0_DcOYPlw?si=TOaj9_GEYQpPt2So)
+[Reviews & star rating](https://www.youtube.com/watch?v=TIDldj2BDuY&t=428s)
+
+[stack overflow](https://stackoverflow.com/)
+[mdn web docs_](https://developer.mozilla.org/en-US/)
+[W3Schools](https://www.w3schools.com/)
+Rebecca and John from Code Institute Tutor Service
+
+
+## Special Thank to Hannele Kaarlejärvi who allowed me to use her paintings for the project.
