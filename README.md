@@ -123,7 +123,7 @@ Open user stories have been collected in the backlog section.
 
 The project is open for public access and can be visited here.
 
-![Agile Project](https://github.com/users/ClaudiaInSweden/projects/11)
+[Agile Project](https://github.com/users/ClaudiaInSweden/projects/11)
 
 ![Project User Stories](static/readme-docs/others/kanban.png)
 
@@ -655,7 +655,6 @@ When a logged in user opens the Profile page and there is no saved data, it is p
 ## Credits
 
 - [404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
-- [Bootstrap-4-multi-dropdown-navbar:]
 - [Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
 
 
