@@ -324,12 +324,12 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 - Deployment: Heroku
 
 ### Software and frameworks
-[Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
-[Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-[Fontawsome Icons](https://fontawesome.com/icons)
-[Favicon](https://favicon.io/)
-[Birme](https://www.birme.net/)
-[Snagit Editor](https://www.techsmith.com/screen-capture.html)
+- [Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Fontawsome Icons](https://fontawesome.com/icons)
+- [Favicon](https://favicon.io/)
+- [Birme](https://www.birme.net/)
+- [Snagit Editor](https://www.techsmith.com/screen-capture.html)
 
 
 
@@ -625,6 +625,11 @@ Details for each part can be found by clicking the expand button.
 </details>
 
 
+## Manual Testing
+
+As the manual testing file is too extensive to add directly here in the Readme it's saved in a separate file.
+
+[Manual Testing](static/readme-docs/others/manual-testing.pdf)
 
 ## Browser Testing
 
@@ -638,26 +643,31 @@ Functionality, links, layout, and responsiveness were tested with the following 
 
 ## Bugs
 
+Unfortunately there is a bug concerning the number of times the user can add a painting into the shopping cart. This was working perfectly fine until the day before submission but one of the validation tools throw an error that an input element cannot have a min & max value so I removed it.... and now you can click a couple of times and it adds the painting each time to the cart. I'm afraid I won't be able to fix this problem before submission.
+
+When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This needs to be solved by updating the form. 
+
+
 
 
 
 
 ## Credits
 
-![404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
-![Bootstrap-4-multi-dropdown-navbar:]
-![Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+- [404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
+- [Bootstrap-4-multi-dropdown-navbar:]
+- [Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
 
 
 ## Tutorials & Support
 
-[Icon inside Search Input Field](https://youtu.be/3Y0_DcOYPlw?si=TOaj9_GEYQpPt2So)
-[Reviews & star rating](https://www.youtube.com/watch?v=TIDldj2BDuY&t=428s)
+- [Icon inside Search Input Field](https://youtu.be/3Y0_DcOYPlw?si=TOaj9_GEYQpPt2So)
+- [Reviews & star rating](https://www.youtube.com/watch?v=TIDldj2BDuY&t=428s)
 
-[stack overflow](https://stackoverflow.com/)
-[mdn web docs_](https://developer.mozilla.org/en-US/)
-[W3Schools](https://www.w3schools.com/)
-Rebecca and John from Code Institute Tutor Service
+- [stack overflow](https://stackoverflow.com/)
+- [mdn web docs_](https://developer.mozilla.org/en-US/)
+- [W3Schools](https://www.w3schools.com/)
+- Rebecca and John from Code Institute Tutor Service
 
 
-## Special Thank to Hannele Kaarlejärvi who allowed me to use her paintings for the project.
+Special Thank to **Hannele Kaarlejärvi** who allowed me to use her paintings for the project.

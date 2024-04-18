@@ -14,7 +14,7 @@ class Review(models.Model):
     )
 
     user = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
-    rating = models.IntegerField(choices=RATING, default=5)
+    rating = models.IntegerField(choices=RATING, null=False, blank=False)
     display_name = models.CharField(max_length=100, null=True, blank=True)
     review_title = models.CharField(max_length=100, null=False, blank=False)
     review_body = models.TextField(max_length=500, null=True, blank=True)

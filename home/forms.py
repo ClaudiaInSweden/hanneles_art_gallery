@@ -14,5 +14,5 @@ class ReviewForm(forms.ModelForm):
         labels = {
             'display_name': 'Your name',
             'review_title': 'Review title',
-            'review_body': ''
+            'review_body': 'Your review'
         }
