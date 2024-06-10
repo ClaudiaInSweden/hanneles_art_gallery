@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = ['8000-claudiainsw-hannelesart-21k5eebgzpr.ws-eu108.gitpod.io', 'hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-v09itxc0mb1.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-v09itxc0mb1.ws-eu114.gitpod.io']
 
 # Application definition
 INSTALLED_APPS = [
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'academy',
     'crispy_forms',
     'storages',
 ]
