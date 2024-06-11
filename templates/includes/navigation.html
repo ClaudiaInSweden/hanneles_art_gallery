@@ -42,6 +42,25 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown_1" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Art Academy
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                    <a class="dropdown-item" href="{% url 'blog' %}?category=getting_started"
+                                    aria-label="Filter by category getting started">Getting Started</a>
+                                    <a class="dropdown-item" href="{% url 'blog' %}?category=how_to"
+                                    aria-label="Filter by category how to">How to...</a>
+                                    <a class="dropdown-item"
+                                        href="{% url 'blog' %}?category=color_pigment"
+                                        aria-label="Filter by category color and pigments">Color & Pigments</a>
+                                    <a class="dropdown-item" href="{% url 'blog' %}?category=light_shadow"
+                                    aria-label="Filter by category light and shadow">Light & Shadow</a>
+                                    <a class="dropdown-item" href="{% url 'blog' %}?category=tutorials"
+                                    aria-label="Filter by category tutorials">Tutorials</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown_3" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     My Account
