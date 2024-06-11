@@ -25,7 +25,6 @@ def post_list(request):
 
 
 def post_detail(request, slug):
-    model = Post
     q = Post.objects.filter(slug__iexact=slug)
 
     if q.exists():

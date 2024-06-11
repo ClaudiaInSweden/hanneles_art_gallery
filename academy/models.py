@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import pre_save 
-from art_gallery.util import random_string_generator, unique_slug_generator
+from art_gallery.utils import random_string_generator, unique_slug_generator
 
 
 STATUS_CHOICES = ((0, "Draft"), (1, "Published"))

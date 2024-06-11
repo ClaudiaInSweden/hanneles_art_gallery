@@ -31,14 +31,14 @@
                         
                             <img class="card-img rounded-0" src="{{ post.blog_image.url }}" alt="{{ post.header }}">
                         {% endif %}
-                            <a href="#" class="blog_item_date">
+                            <a href="{% url 'post_detail' post.slug %}" class="blog_item_date">
                                 <h3>{{ post.date_created | date:"d" }}</h3>
                                 <p class="text-white">{{ post.date_created | date:"M" }}</p>
                             </a>
                         </div>
 
                         <div class="blog_details">
-                            <a class="d-inline-block" href="#">
+                            <a class="d-inline-block" href="{% url 'post_detail' post.slug %}">
                                 <h2>{{ post.header }}</h2>
                             </a>
                             <p>{{ post.introtext }}</p>
