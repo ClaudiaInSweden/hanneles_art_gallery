@@ -497,3 +497,8 @@ h5 {
     display: block !important;
     max-height: 100% !important;
 }
+@media (max-width: 576px) {
+    .blog-container {
+        height: 100%;
+    }
+}

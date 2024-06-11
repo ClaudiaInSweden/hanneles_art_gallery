@@ -32,7 +32,8 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    category = models.ManyToManyField(Category)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     header = models.CharField(max_length=254)
     slug = models.SlugField(max_length=254, null=True, blank=True)
     introtext = models.TextField()
@@ -52,7 +53,8 @@ class Post(models.Model):
 
     def nr_of_likes(self):
         return self.likes.count()
-    
+
+
 @receiver(pre_save, sender=Post) 
 def pre_save_receiver(sender, instance, *args, **kwargs): 
     if not instance.slug: 

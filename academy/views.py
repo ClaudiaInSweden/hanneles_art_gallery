@@ -8,17 +8,20 @@ from .models import Post, Category
 def post_list(request):
     
     posts = Post.objects.filter(status=1).order_by("-date_created")
-    categories = None
+    categories = Category.objects.all()
+    current_category = None
 
     if request.GET:
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            posts = posts.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            current_category = request.GET['category'].split(',')
+            posts = posts.filter(category__name__in=current_category)
+            current_category = current_category[0]
+            # categories = Category.objects.filter(name__in=categories)
     
     context = {
         'posts': posts,
-        'category_selected': categories,
+        'categories': categories,
+        'current_category': current_category,
     }
 
     return render(request, 'academy/blog.html', context)
