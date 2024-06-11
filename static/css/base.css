@@ -483,3 +483,17 @@ h5 {
 .typography h5 {
     padding-left: 10px;
 }
+
+/* Blog Area */
+.blog-container {
+    height: 375px;
+    background-color: #B08EAD;
+    margin: auto;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    -ms-flex-negative: 0;
+    /* flex-shrink: 0; */
+    width: auto !important;
+    display: block !important;
+    max-height: 100% !important;
+}

@@ -9,9 +9,6 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner">
                     <h2>Hanneles Art Academy</h2>
-                    {% if post.category %}
-                    <h3>{{ post.category }}</h3>
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -43,11 +40,6 @@
                                 <h2>{{ post.header }}</h2>
                             </a>
                             <p>{{ post.introtext }}</p>
-                            <ul class="blog-info-link">
-                                {% if post.category %}
-                                <li><a href="{% url 'blog' %}?category={{ post.category.name }}"><i class="fas fa-tag"></i> {{ post.category.friendly_name }}</a></li>
-                                {% endif %}
-                            </ul>
                             <p>{{ post.bodytext }}</p>
                         </div>
                     </article>
