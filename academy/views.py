@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Post, Category
 
 
 def post_list(request):
-    
     posts = Post.objects.filter(status=1).order_by("-date_created")
     categories = Category.objects.all()
     current_category = None
@@ -18,8 +18,20 @@ def post_list(request):
             current_category = current_category[0]
             # categories = Category.objects.filter(name__in=categories)
     
+    paginator = Paginator(posts, 3) # 2 posts in each page
+    page = request.GET.get('page')
+    try:
+       posts = paginator.page(page)
+    except PageNotAnInteger:
+       # If page is not an integer deliver the first page
+       posts = paginator.page(1)
+    except EmptyPage:
+       # If page is out of range deliver last page of results
+       posts = paginator.page(paginator.num_pages)
+
     context = {
         'posts': posts,
+        'page': page,
         'categories': categories,
         'current_category': current_category,
     }

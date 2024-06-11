@@ -39,6 +39,11 @@
                             <a class="d-inline-block" href="#">
                                 <h2>{{ post.header }}</h2>
                             </a>
+                            {% if post.category %}
+                            <p><a href="{% url 'blog' %}?category={{ post.category.name }}"
+                                    aria-label="Post Category"><i class="fa-solid fa-tag pr-2"></i> {{ post.category.friendly_name }}</a>
+                            </p>
+                            {% endif %}
                             <p>{{ post.introtext }}</p>
                             <p>{{ post.bodytext }}</p>
                         </div>
