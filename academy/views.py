@@ -39,6 +39,30 @@ def post_list(request):
     return render(request, 'academy/blog.html', context)
 
 
+def blog_admin(request):
+    posts = Post.objects.all()
+    categories = Category.objects.all()
+   
+    paginator = Paginator(posts, 5) # 5 posts in each page
+    page = request.GET.get('page')
+    try:
+       posts = paginator.page(page)
+    except PageNotAnInteger:
+       # If page is not an integer deliver the first page
+       posts = paginator.page(1)
+    except EmptyPage:
+       # If page is out of range deliver last page of results
+       posts = paginator.page(paginator.num_pages)
+
+    context = {
+        'posts': posts,
+        'page': page,        
+        'categories': categories,
+    }
+
+    return render(request, 'academy/blog_admin.html', context)
+
+
 def post_detail(request, slug):
     q = Post.objects.filter(slug__iexact=slug)
 
@@ -52,70 +76,70 @@ def post_detail(request, slug):
     
 
 
-# @login_required
-# def add_product(request):
-#     """ Add a new painting to the store """
-#     if not request.user.is_superuser:
-#         messages.error(request, 'You are not authorized to perform this task.')
-#         return redirect(reverse('home'))
+@login_required
+def add_post(request):
+    """ Add a new post to the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorized to perform this task.')
+        return redirect(reverse('home'))
 
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             product = form.save()
-#             messages.success(request, 'The painting was added successfully!')
-#             return redirect(reverse('product_detail', args=[product.id]))
-#         else:
-#             messages.error(request, 'Failed to add painting! Please ensure \
-#                 that the form is valid!')
-#     else:
-#         form = ProductForm()
-#     template = 'products/add_product.html'
-#     context = {
-#         'form': form,
-#     }
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save()
+            messages.success(request, 'The blog post has been created!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, 'Failed to create blog post! Please ensure \
+                that the form is valid!')
+    else:
+        form = PostForm()
+    template = 'blog/add_post.html'
+    context = {
+        'form': form,
+    }
 
-#     return render(request, template, context)
-
-
-# @login_required
-# def edit_product(request, product_id):
-#     """ Edit a painting """
-#     if not request.user.is_superuser:
-#         messages.error(request, 'You are not authorized to perform this task.')
-#         return redirect(reverse('home'))
-
-#     product = get_object_or_404(Product, pk=product_id)
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST, request.FILES, instance=product)
-#         if form.is_valid():
-#             form.save()
-#             messages.info(request, 'The painting was updated successfully!')
-#             return redirect(reverse('product_detail', args=[product.id]))
-#         else:
-#             messages.error(request, 'Failed to update painting! Please ensure \
-#                 that the form is valid!')
-#     else:
-#         form = ProductForm(instance=product)
-#         messages.info(request, f'You are editing painting "{product.name}"')
-
-#     template = 'products/edit_product.html'
-#     context = {
-#         'form': form,
-#         'product': product,
-#     }
-
-#     return render(request, template, context)
+    return render(request, template, context)
 
 
-# @login_required
-# def delete_product(request, product_id):
-#     """ Delete a painting """
-#     if not request.user.is_superuser:
-#         messages.error(request, 'You are not authorized to perform this task.')
-#         return redirect(reverse('home'))
+@login_required
+def update_post(request, slug):
+    """ Update a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorized to perform this task.')
+        return redirect(reverse('home'))
 
-#     product = get_object_or_404(Product, pk=product_id)
-#     product.delete()
-#     messages.info(request, 'The painting has been deleted!')
-#     return redirect(reverse('products'))
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'The post was updated successfully!')
+            return redirect(reverse('post_detail', args=[product.slug]))
+        else:
+            messages.error(request, 'Failed to update post! Please ensure \
+                that the form is valid!')
+    else:
+        form = PostForm(instance=post)
+        messages.info(request, f'You are editing the post with heading "{post.header}"')
+
+    template = 'academy/update_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_post(request, slug):
+    """ Delete a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorized to perform this task.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.info(request, 'The blog post has been deleted!')
+    return redirect(reverse('blog'))
