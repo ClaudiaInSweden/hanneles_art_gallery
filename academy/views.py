@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Post, Category
+from .forms import PostForm
 
 
 def post_list(request):
@@ -42,8 +43,16 @@ def post_list(request):
 def blog_admin(request):
     posts = Post.objects.all()
     categories = Category.objects.all()
-   
-    paginator = Paginator(posts, 5) # 5 posts in each page
+    current_category = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            current_category = request.GET['category'].split(',')
+            posts = posts.filter(category__name__in=current_category)
+            current_category = current_category[0]
+            # categories = Category.objects.filter(name__in=categories)
+    
+    paginator = Paginator(posts, 5) # 2 posts in each page
     page = request.GET.get('page')
     try:
        posts = paginator.page(page)
@@ -56,8 +65,9 @@ def blog_admin(request):
 
     context = {
         'posts': posts,
-        'page': page,        
+        'page': page,
         'categories': categories,
+        'current_category': current_category,
     }
 
     return render(request, 'academy/blog_admin.html', context)
@@ -115,13 +125,12 @@ def update_post(request, slug):
         if form.is_valid():
             form.save()
             messages.info(request, 'The post was updated successfully!')
-            return redirect(reverse('post_detail', args=[product.slug]))
+            return redirect(reverse('blog_admin'))
         else:
             messages.error(request, 'Failed to update post! Please ensure \
                 that the form is valid!')
     else:
         form = PostForm(instance=post)
-        messages.info(request, f'You are editing the post with heading "{post.header}"')
 
     template = 'academy/update_post.html'
     context = {
