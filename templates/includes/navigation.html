@@ -47,18 +47,18 @@
                                     Art Academy
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="{% url 'blog' %}">All Articles</a>
+                                    <a class="dropdown-item" href="{% url 'academy' %}">All Articles</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{% url 'blog' %}?category=getting_started"
+                                    <a class="dropdown-item" href="{% url 'academy' %}?category=getting_started"
                                     aria-label="Filter by category getting started">Getting Started</a>
-                                    <a class="dropdown-item" href="{% url 'blog' %}?category=how_to"
+                                    <a class="dropdown-item" href="{% url 'academy' %}?category=how_to"
                                     aria-label="Filter by category how to">How to...</a>
                                     <a class="dropdown-item"
-                                        href="{% url 'blog' %}?category=color_pigment"
+                                        href="{% url 'academy' %}?category=color_pigment"
                                         aria-label="Filter by category color and pigments">Color & Pigments</a>
-                                    <a class="dropdown-item" href="{% url 'blog' %}?category=light_shadow"
+                                    <a class="dropdown-item" href="{% url 'academy' %}?category=light_shadow"
                                     aria-label="Filter by category light and shadow">Light & Shadow</a>
-                                    <a class="dropdown-item" href="{% url 'blog' %}?category=tutorials"
+                                    <a class="dropdown-item" href="{% url 'academy' %}?category=tutorials"
                                     aria-label="Filter by category tutorials">Tutorials</a>
                                 </div>
                             </li>
@@ -72,8 +72,8 @@
                                     <p class="dropdown-item welcome text-muted">Welcome back, {{ user.username }}!</p>
                                     <div class="dropdown-divider"></div>
                                     {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    <a href="{% url 'blog_admin' %}" class="dropdown-item">Blog Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                                    <a href="{% url 'create_post' %}" class="dropdown-item">Add Blog Post</a>
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>

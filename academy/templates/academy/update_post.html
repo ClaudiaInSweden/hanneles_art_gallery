@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <h5>Add a blog post</h5>
+            <h5>Update blog post</h5>
             <hr>          
         </div>
     </div>
@@ -29,10 +29,16 @@
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <form action="{% url 'update_post' post.slug %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                        {{ form.as_p }}
+                {% for field in form %}
+                    {% if field.name != 'blog_image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                    {% endfor %}
                 <div class="text-right">
-                    <a class="btn_1 text-white" href="{% url 'blog_admin' %}">Cancel</a>
-                    <button class="btn_1" type="submit">Add Post</button>
+                    <a class="btn_1 text-white" href="{% url 'academy' %}">Cancel</a>
+                    <button class="btn_1" type="submit">Update</button>
                 </div>
             </form>
         </div>

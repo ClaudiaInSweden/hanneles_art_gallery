@@ -35,14 +35,13 @@ class Post(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     header = models.CharField(max_length=254)
-    slug = models.SlugField(max_length=254, null=True, blank=True)
+    slug = models.SlugField(max_length=254, null=True, blank=True, unique=True)
     introtext = models.TextField()
     bodytext = models.TextField()
     link = models.CharField(max_length=254, null=True, blank=True)
     blog_image = models.ImageField(upload_to='academy_images/', null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     date_created = models.DateField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name='post_like', blank=True)
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
 
     class Meta:

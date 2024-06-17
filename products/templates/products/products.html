@@ -131,7 +131,8 @@
                                     </a>
                                 </span>
                                 <span>
-                                    <a class="btn_1 text-white small primary-border px-3 py-1 confirm-delete"
+                                    <a href="{% url 'delete_product' product.id %}"
+                                        class="btn_1 text-white small primary-border px-3 py-1"
                                         role="button" aria-label="Delete">Delete
                                     </a>
                                 </span>
@@ -157,11 +158,11 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script>
+<!-- <script>
     $(document).on('click', '.confirm-delete', function () {
         return confirm('Are you sure you want to delete the painting?');
     })
-</script>
+</script> -->
 <script>
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)

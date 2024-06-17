@@ -617,7 +617,7 @@
      margin-bottom: 70px;
  }
 
- .blog_area a {
+ .blog_area .blog_button a {
      color: #666666 !important;
      text-decoration: none;
      -webkit-transition: 0.5s;
@@ -2600,7 +2600,7 @@
 
  .trending_items {
      background-color: #F4EDF2;
-     padding: 200px 0 130px;
+     padding: 130px 0 130px;
  }
 
  @media (max-width: 991px) {

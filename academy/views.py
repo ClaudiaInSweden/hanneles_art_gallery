@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
+from django import forms
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Post, Category
-from .forms import PostForm
+from .forms import PostForm, AddPostForm
 
 
 def post_list(request):
@@ -37,76 +38,44 @@ def post_list(request):
         'current_category': current_category,
     }
 
-    return render(request, 'academy/blog.html', context)
+    return render(request, 'academy/academy.html', context)
 
-
-def blog_admin(request):
-    posts = Post.objects.all()
-    categories = Category.objects.all()
-    current_category = None
-
-    if request.GET:
-        if 'category' in request.GET:
-            current_category = request.GET['category'].split(',')
-            posts = posts.filter(category__name__in=current_category)
-            current_category = current_category[0]
-            # categories = Category.objects.filter(name__in=categories)
-    
-    paginator = Paginator(posts, 5) # 2 posts in each page
-    page = request.GET.get('page')
-    try:
-       posts = paginator.page(page)
-    except PageNotAnInteger:
-       # If page is not an integer deliver the first page
-       posts = paginator.page(1)
-    except EmptyPage:
-       # If page is out of range deliver last page of results
-       posts = paginator.page(paginator.num_pages)
-
-    context = {
-        'posts': posts,
-        'page': page,
-        'categories': categories,
-        'current_category': current_category,
-    }
-
-    return render(request, 'academy/blog_admin.html', context)
 
 
 def post_detail(request, slug):
-    q = Post.objects.filter(slug__iexact=slug)
+    post = Post.objects.filter(slug__iexact=slug)
 
-    if q.exists():
-        q = q.first()
+    if post.exists():
+        post = post.first()
     else:
-        return HttpResponse('<h1>Post Not Found</h1>')
+        return redirect(reverse('academy'))
 
-    context = {'post': q}
+    context = {'post': post}
     return render(request, 'academy/post_detail.html', context)
     
 
 
 @login_required
-def add_post(request):
+def create_post(request):
     """ Add a new post to the blog """
     if not request.user.is_superuser:
         messages.error(request, 'You are not authorized to perform this task.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
+        post_form = AddPostForm(request.POST, request.FILES)
         if form.is_valid():
-            post = form.save()
-            messages.success(request, 'The blog post has been created!')
-            return redirect(reverse('post_detail', args=[post.slug]))
+            form.save()
+            messages.success(request, 'The blog post has been added!')
+            return redirect('academy')
         else:
             messages.error(request, 'Failed to create blog post! Please ensure \
                 that the form is valid!')
-    else:
-        form = PostForm()
-    template = 'blog/add_post.html'
+            post_form = AddPostForm()
+
+    template = 'academy/create_post.html'
     context = {
-        'form': form,
+        'form': post_form,
     }
 
     return render(request, template, context)
@@ -125,7 +94,7 @@ def update_post(request, slug):
         if form.is_valid():
             form.save()
             messages.info(request, 'The post was updated successfully!')
-            return redirect(reverse('blog_admin'))
+            return redirect(reverse('academy'))
         else:
             messages.error(request, 'Failed to update post! Please ensure \
                 that the form is valid!')
@@ -149,6 +118,9 @@ def delete_post(request, slug):
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, slug=slug)
-    post.delete()
-    messages.info(request, 'The blog post has been deleted!')
-    return redirect(reverse('blog'))
+    if request.method == 'POST':
+        post.delete()
+        messages.info(request, 'The blog post has been deleted!')
+        return redirect(('academy'))
+    context = {'post': post}
+    return render(request, 'academy/delete_post.html', context)
