@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'academy',
     'crispy_forms',
     'storages',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

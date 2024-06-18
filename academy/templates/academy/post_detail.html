@@ -42,7 +42,9 @@
                             </p>
                             {% endif %}
                             <p>{{ post.introtext }}</p>
-                            <p>{{ post.bodytext }}</p>
+                            <p>{{ post.bodytext|safe }}</p>
+                            <p class="text-right"><a href="{% url 'academy' %}" class="text-muted"><i class="fa-solid fa-circle-chevron-left mr-3"></i>Back</a></p>
+                            <hr class="dropdown-divider">
                         </div>
                     </article>
                 </div>

@@ -3,17 +3,10 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import pre_save, post_save
 from art_gallery.utils import slugify_instance_title
+from ckeditor.fields import RichTextField
 
 
 STATUS_CHOICES = ((0, "Draft"), (1, "Published"))
-
-# Create your models here.
-class Membership(models.Model):
-    user = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
-    member = models.BooleanField(default=False)
-
-    def __str__(self):
-        return (f'{self.user.username} - (Member: {self.member})')
 
 
 class Category(models.Model):
@@ -37,7 +30,8 @@ class Post(models.Model):
     title = models.CharField(max_length=254)
     slug = models.SlugField(max_length=254, null=True, blank=True, unique=True)
     introtext = models.TextField()
-    bodytext = models.TextField()
+    # bodytext = models.TextField()
+    bodytext = RichTextField(blank=True, null=True)
     link = models.CharField(max_length=254, null=True, blank=True)
     blog_image = models.ImageField(upload_to='academy_images/', null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)

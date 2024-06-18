@@ -486,7 +486,7 @@ h5 {
 
 /* Blog Area */
 .blog-container {
-    height: 375px;
+    height: 250px;
     background-color: #B08EAD;
     margin: auto;
 }
@@ -496,9 +496,6 @@ h5 {
     width: auto !important;
     display: block !important;
     max-height: 100% !important;
-}
-.blog_admin_container {
-    height: 250px;
 }
 .single_product_item_thumb img {
     width: auto !important;
@@ -514,6 +511,12 @@ h5 {
     text-decoration: none;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+.introtext {
+    min-height: 100px;
+}
+.introtext p {
+    font-size: 16px !important;
 }
 input .btn_1:hover {
     color: #4B3049;

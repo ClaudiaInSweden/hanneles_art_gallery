@@ -45,21 +45,28 @@
                                     aria-label="Post Category"><i class="fa-solid fa-tag pr-2"></i> {{ post.category.friendly_name }}</a>
                             </p>
                             {% endif %}
+                            <hr class="dropdown-divider">
+                            <div class="introtext">
                             <p>{{ post.introtext }}</p>
-
+                            </div>
+                            <p class="text-right"><a href="{% url 'post_detail' post.slug %}" class="text-muted">Continue reading ...<i class="fa-solid fa-circle-chevron-right ml-2"></i></a></p>
+                            <hr class="dropdown-divider">
+                            {% if request.user.is_superuser %}
+                            <span>
+                                <a href="{% url 'update_post' slug=post.slug %}"
+                                    class="btn_1 text-white small primary-border px-3 py-1 blog_button" role="button"
+                                    aria-label="Update">Update
+                                </a>
+                            </span>
+                            <span>
+                                <a href="{% url 'delete_post' slug=post.slug %}"
+                                    class="btn_1 text-white small primary-border px-3 py-1 blog_button" role="button"
+                                    id="delete-post" aria-label="Delete">Delete
+                                </a>
+                            </span>
+                            {% endif %}
                         </div>
-                        <span>
-                            <a href="{% url 'update_post' slug=post.slug %}"
-                                class="btn_1 text-white small primary-border px-3 py-1 blog_button" role="button"
-                                aria-label="Update">Update
-                            </a>
-                        </span>
-                        <span>
-                            <a href="{% url 'delete_post' slug=post.slug %}"
-                                class="btn_1 text-white small primary-border px-3 py-1 blog_button" role="button"
-                                id="delete-post" aria-label="Delete">Delete
-                            </a>
-                        </span>
+
                     </article>
                 </div>
                 {% endfor %}
@@ -67,19 +74,26 @@
             </div>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">
+                    {% if request.user.is_superuser %}
                     <span>
                         <a href="{% url 'create_post' %}"
                             class="btn_1 text-white small primary-border px-3 py-1 mb-5 blog_button" role="button"
                             aria-label="Create post">Create new blog post
                         </a>
                     </span>
+                    {% endif %}
                     <aside class="single_sidebar_widget post_category_widget">
                         <h4 class="widget_title">Category</h4>
                         <ul class="list cat-list">
                             <li>
-                                <a href="{% url 'academy' %}?category=tutorials"
-                                    aria-label="Filter by category tutorials">Tutorials
-                                </a>
+                                <a href="{% url 'academy' %}?category=getting_started"
+                                    aria-label="Filter by category getting started">Getting Started
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'academy' %}?category=how_to"
+                                    aria-label="Filter by category how to">How to...
+                                    </a>
                             </li>
                             <li>
                                 <a href="{% url 'academy' %}?category=color_pigment"
@@ -92,13 +106,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'academy' %}?category=how_to" aria-label="Filter by category how to">How
-                                    to...
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'academy' %}?category=getting_started"
-                                    aria-label="Filter by category getting started">Getting Started
+                                <a href="{% url 'academy' %}?category=tutorials"
+                                    aria-label="Filter by category tutorials">Tutorials
                                 </a>
                             </li>
                         </ul>
