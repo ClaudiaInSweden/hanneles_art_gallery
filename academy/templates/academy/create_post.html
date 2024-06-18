@@ -27,15 +27,15 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="." method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% for field in form %}
-                    {% if field.name != 'blog_image' %}
-                    {{ field | as_crispy_field }}
-                    {% else %}
-                    {{ field }}
-                    {% endif %}
-                    {% endfor %}
+                        {% for field in form %}
+                            {% if field.name != 'blog_image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
                     <div class="text-right">
                         <a class="btn_1 text-white" href="{% url 'academy' %}">Cancel</a>
                         <button class="btn_1" type="submit">Create Post</button>

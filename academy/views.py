@@ -18,9 +18,8 @@ def post_list(request):
             current_category = request.GET['category'].split(',')
             posts = posts.filter(category__name__in=current_category)
             current_category = current_category[0]
-            # categories = Category.objects.filter(name__in=categories)
     
-    paginator = Paginator(posts, 3) # 2 posts in each page
+    paginator = Paginator(posts, 3) # display 3 posts on each page
     page = request.GET.get('page')
     try:
        posts = paginator.page(page)
@@ -63,7 +62,7 @@ def create_post(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = AddPostForm(request.POST, request.FILES)
+        form = AddPostForm(request.POST, request.FILES or None)
         if form.is_valid():
             form.save()
             messages.success(request, 'The blog post has been added!')
