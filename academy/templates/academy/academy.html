@@ -28,7 +28,7 @@
                         <div class="blog_item_img">
                             <div class="blog-container">
                                 {% if post.blog_image %}
-                                <img class="card-img rounded-0" src="{{ post.blog_image.url }}" alt="{{ post.header }}">
+                                <img class="card-img rounded-0" src="{{ post.blog_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <a href="{% url 'post_detail' post.slug %}" class="blog_item_date">
                                     <h3>{{ post.date_created | date:"d" }}</h3>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="blog_details">
                             <a class="d-inline-block" href="{% url 'post_detail' post.slug %}">
-                                <h2>{{ post.header }}</h2>
+                                <h2>{{ post.title }}</h2>
                             </a>
                             {% if post.category %}
                             <p><a href="{% url 'academy' %}?category={{ post.category.name }}"

@@ -48,7 +48,7 @@ def post_detail(request, slug):
     if post.exists():
         post = post.first()
     else:
-        return redirect(reverse('academy'))
+        return HttpResponse('Post not found')
 
     context = {'post': post}
     return render(request, 'academy/post_detail.html', context)
@@ -63,7 +63,7 @@ def create_post(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        post_form = AddPostForm(request.POST, request.FILES)
+        form = AddPostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'The blog post has been added!')
@@ -71,14 +71,17 @@ def create_post(request):
         else:
             messages.error(request, 'Failed to create blog post! Please ensure \
                 that the form is valid!')
-            post_form = AddPostForm()
+    else:
+        form = AddPostForm()
 
     template = 'academy/create_post.html'
     context = {
-        'form': post_form,
+        'form': form,
     }
 
     return render(request, template, context)
+
+
 
 
 @login_required

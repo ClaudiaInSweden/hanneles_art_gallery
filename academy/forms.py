@@ -7,11 +7,11 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('header', 'category', 'introtext', 'bodytext', 'link', 'blog_image', 'image_url', 'status',)
+        fields = ('title', 'category', 'introtext', 'bodytext', 'link', 'blog_image', 'image_url', 'status',)
 
         widgets = {
-            'header': forms.TextInput(attrs={'class': 'form-control',
-                                             'aria-label': 'Header'}),
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                             'aria-label': 'Title'}),
             'category': forms.Select(attrs={'class': 'form-control',
                                             'aria-label': 'Category'}),
             'introtext': forms.Textarea(attrs={'class': 'form-control',
@@ -44,11 +44,11 @@ class AddPostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        exclude = ('id', 'slug', 'date_created')
+        fields = ('title', 'category', 'introtext', 'bodytext', 'link', 'blog_image', 'image_url', 'status',)
 
         widgets = {
-            'header': forms.TextInput(attrs={'class': 'form-control',
-                                             'aria-label': 'Header'}),
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                             'aria-label': 'Title'}),
             'category': forms.Select(attrs={'class': 'form-control',
                                             'aria-label': 'Category'}),
             'introtext': forms.Textarea(attrs={'class': 'form-control',
@@ -65,6 +65,14 @@ class AddPostForm(forms.ModelForm):
         }
         blog_image = forms.ImageField(label='Image',
                                       widget=CustomClearableFileInput)
+
+    def clean(self):
+        data = self.cleaned_data
+        title = data.get('title')
+        qs = Post.objects.filter(title__icontains=title)
+        if qs.exists():
+            self.add_error('title', f"/'{title}\' is already in use. Please choose another title!")
+        return data
 
 
     def __init__(self, *args, **kwargs):
