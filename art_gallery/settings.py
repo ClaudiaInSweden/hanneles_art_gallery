@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-v09itxc0mb1.ws-eu114.gitpod.io']
