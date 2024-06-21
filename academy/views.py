@@ -1,11 +1,28 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy, reverse
 from django.contrib import messages
 from django import forms
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Post, Category
 from .forms import PostForm, AddPostForm
+
+
+def like_post(request, slug):
+    post = get_object_or_404(Post, slug=request.POST.get('post_id'))
+    liked = False
+
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user.id)
+        liked = False
+    else:
+        post.likes.add(request.user.id)
+        liked = True
+
+    return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
 
 
 def post_list(request):
@@ -40,16 +57,26 @@ def post_list(request):
     return render(request, 'academy/academy.html', context)
 
 
-
-def post_detail(request, slug):
+def post_detail(request, slug, *args, **kwargs):
     post = Post.objects.filter(slug__iexact=slug)
+    post_likes = get_object_or_404(post, slug=slug)
+    total_likes = post_likes.total_likes()
+
+    liked = False
+    if post_likes.likes.filter(id=request.user.id).exists():
+        liked = True
 
     if post.exists():
         post = post.first()
     else:
         return HttpResponse('Post not found')
 
-    context = {'post': post}
+    context = {
+        'post': post,
+        'post_likes': post_likes,
+        'total_likes': total_likes,
+        'liked': liked,
+        }
     return render(request, 'academy/post_detail.html', context)
     
 

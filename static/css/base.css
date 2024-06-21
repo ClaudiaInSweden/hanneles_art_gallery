@@ -487,7 +487,6 @@ h5 {
 /* Blog Area */
 .blog-container {
     height: 250px;
-    background-color: #B08EAD;
     margin: auto;
 }
 .card-img, .card-img-bottom, .card-img-top {
@@ -520,6 +519,11 @@ h5 {
 }
 input .btn_1:hover {
     color: #4B3049;
+}
+.btn-like {
+    border-radius: 10px;
+    border: 1px solid #795376;
+    color: #795376;
 }
 @media (max-width: 576px) {
     .blog-container {

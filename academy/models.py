@@ -30,16 +30,20 @@ class Post(models.Model):
     title = models.CharField(max_length=254)
     slug = models.SlugField(max_length=254, null=True, blank=True, unique=True)
     introtext = models.TextField()
-    # bodytext = models.TextField()
     bodytext = RichTextField(blank=True, null=True)
+    source = models.CharField(max_length=254, null=True, blank=True, default='© ')
     link = models.CharField(max_length=254, null=True, blank=True)
     blog_image = models.ImageField(upload_to='academy_images/', null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     date_created = models.DateField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='blog_posts')
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
 
     def __str__(self):
         return self.title
+
+    def total_likes(self):
+        return self.likes.count()
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

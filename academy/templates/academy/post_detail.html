@@ -43,7 +43,28 @@
                             {% endif %}
                             <p>{{ post.introtext }}</p>
                             <p>{{ post.bodytext|safe }}</p>
-                            <p class="text-right"><a href="{% url 'academy' %}" class="text-muted"><i class="fa-solid fa-circle-chevron-left mr-3"></i>Back</a></p>
+
+                            <div class="row justify-content-between">
+                                <div class="col-4">
+                                    <form action="{% url 'like_post' post.slug %}" method="post">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-like btn-sm">
+                                            <i class="fa-solid fa-heart"></i> Unlike </button>
+                                        {% else %}
+                                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-like btn-sm">
+                                            <i class="fa-regular fa-heart"></i> Like</button> 
+                                        {% endif %}
+                                        - {{ total_likes }} Likes
+                                    </form>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <span class="text-right">
+                                        <a href="{% url 'academy' %}" class="text-muted"><i class="fa-solid fa-circle-chevron-left mr-3"></i>Back</a>
+                                    </span>
+                                </div>
+                              </div>
+                            <div>
                             <hr class="dropdown-divider">
                         </div>
                     </article>
