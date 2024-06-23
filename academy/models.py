@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 
 
 STATUS_CHOICES = ((0, "Draft"), (1, "Published"))
+APPROVAL_STATUS = ((0, "Pending"), (1, "Approved"))
 
 
 class Category(models.Model):
@@ -47,6 +48,20 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
+
+
+class Comment(models.Model):
+    post = models.ForeignKey('Post', related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField(max_length=254)
+    commenttext = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
+
+    def __str__(self):
+        return '%s --- %s --- %s' % (self.post.title, self.name, self.date_added)
+
+    class Meta:
+        ordering = ["approval_status"]
 
 
 def post_pre_save(sender, instance, *args, **kwargs):

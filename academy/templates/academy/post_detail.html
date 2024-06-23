@@ -67,6 +67,17 @@
                             <div>
                             <hr class="dropdown-divider">
                         </div>
+                        <h3>Comments ...</h3>
+                        {% if not post.comments.all %}
+                        <p>Add first comment!</p>
+                        {% else %}
+                        {% for comment in post.comments.all %}
+                        <strong>{{ comment.name }}</strong>
+                        <p>{{ comment.date_added }}</p>
+                        <p>{{ comment.commenttext }}</p>
+                        {% endfor %}
+                        {% endif %}
+                        <button class="btn_1">Add comment</button>
                     </article>
                 </div>
             </div>
