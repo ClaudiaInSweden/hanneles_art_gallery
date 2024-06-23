@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from .models import Post, Category
-from .forms import PostForm, AddPostForm
+from .models import Post, Category, Comment
+from .forms import PostForm, AddPostForm, AddCommentForm
 
 
 def like_post(request, slug):
@@ -71,8 +71,27 @@ def post_detail(request, slug, *args, **kwargs):
     else:
         return HttpResponse('Post not found')
 
+    comments = post.comments.filter(active=True)
+    new_comment = None
+    if request.method == 'POST':
+        comment_form = AddCommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.save()
+            messages.success(request, 'Thank you for your comment! Comment awaiting approval.')
+            return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
+        else:
+            messages.error(request, 'The comment could not be added \
+                Please ensure that the form is valid!')
+    else:
+        comment_form = AddCommentForm()
+            
     context = {
         'post': post,
+        'comments': comments,
+        'new_comment': new_comment,
+        'comment_form': comment_form,
         'post_likes': post_likes,
         'total_likes': total_likes,
         'liked': liked,
@@ -106,8 +125,6 @@ def create_post(request):
     }
 
     return render(request, template, context)
-
-
 
 
 @login_required

@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Post, Category
+from .models import Post, Category, Comment
 
 
 class PostForm(forms.ModelForm):
@@ -83,3 +83,22 @@ class AddPostForm(forms.ModelForm):
         self.fields['category'].choices = friendly_name
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class AddCommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ('name', 'commenttext')
+
+        labels = {
+            'name':  'Your name:',
+            'commenttext': 'Write your comment here:',
+    }
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control',
+                                             'aria-label': 'Name'}),
+            'commenttext': forms.Textarea(attrs={'class': 'form-control',
+                                               'aria-label': 'Comment text',
+                                               'rows': 5,}),
+        }

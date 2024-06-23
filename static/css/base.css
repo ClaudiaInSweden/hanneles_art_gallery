@@ -393,6 +393,7 @@ i {
 }
 .card {
     border: 0 !important;
+    box-shadow: 0 1px 4px #4B3049 !important;
 }
 
 /* Mailchimp subscription form  */
@@ -524,6 +525,13 @@ input .btn_1:hover {
     border-radius: 10px;
     border: 1px solid #795376;
     color: #795376;
+}
+.approval-bg {
+    border-radius: 10px;
+    background-color: #B08EAD;
+    color: #fff !important;
+    font-size: 1.2rem;
+    padding: 10px;
 }
 @media (max-width: 576px) {
     .blog-container {
