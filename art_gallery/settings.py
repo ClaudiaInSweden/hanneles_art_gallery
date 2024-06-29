@@ -49,10 +49,9 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
-    'academy',
+    'newsletter',
     'crispy_forms',
     'storages',
-    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +130,7 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
 
 
 # Password validation

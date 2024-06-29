@@ -393,7 +393,10 @@ i {
 }
 .card {
     border: 0 !important;
-    box-shadow: 0 1px 4px #4B3049 !important;
+    box-shadow: none !important;
+}
+.icon-md {
+    font-size: 1.2rem;
 }
 
 /* Mailchimp subscription form  */
