@@ -16,8 +16,8 @@ class Contact(models.Model):
 
     name = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(null=True)
-    topic = models.IntegerField(choices=TOPIC, null=True, blank=True, default=1)
-    message = models.TextField(max_length=1000, null=True, blank=True)
+    topic = models.IntegerField(choices=TOPIC, null=True, blank=True)
+    message = models.TextField(max_length=500, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

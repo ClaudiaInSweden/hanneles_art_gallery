@@ -8,12 +8,25 @@ class ContactForm(forms.ModelForm):
         fields = ('name', 'email', 'topic', 'message',)
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control',
-                                           'aria-label': 'Your name'}),
+                                           'aria-label': 'Your name',
+                                           'placeholder': 'Your name *'}),
             'email': forms.EmailInput(attrs={'class': 'form-control',
-                                             'aria-label': 'E-Mail'}),
+                                             'aria-label': 'E-Mail',
+                                             'placeholder': 'Please enter a valid email address *'}),
             'topic': forms.Select(attrs={'class': 'form-control',
-                                         'aria-label': 'Topic'}),
+                                         'aria-label': 'Topic',
+                                         'placeholder': 'Please select *'}),
             'message': forms.Textarea(attrs={'class': 'form-control',
                                              'aria-label': 'Message',
-                                             'rows': 8,}),
+                                             'rows': 8,
+                                             'placeholder': 'Your message ...'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        """
+        Set autofocus on name field and remove auto-labels
+        """
+        super().__init__(*args, **kwargs)
+        self.fields['name'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            self.fields[field].label = False

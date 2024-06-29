@@ -18,14 +18,18 @@
 <section class="cart_area section_padding">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-5 order-lg-last mb-5 mx-auto">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                 <p class="text-muted">
                     <h5 id="h5-padding">Please complete the form:</h5>
                 </p>
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <div class="checkout_btn_inner float-right">
+                    <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
+                        <span id="current">0</span>
+                        <span id="maximum">/ 500</span>
+                      </div>
+                    <div class="float-right my-3">
                         <a class="btn_1 text-white" href="{% url 'home' %}">Cancel</a>
                         <button id="submit-button" class="btn_1" aria-label="Contact us">Submit</button>
                     </div>
@@ -35,4 +39,28 @@
     </div>
 </section>
 
+{% endblock %}
+{% block postloadjs %}
+<script>
+$('textarea').keyup(function() {
+    
+    var characterCount = $(this).val().length,
+        current = $('#current'),
+        maximum = $('#maximum'),
+        charCount = $('#char-count');
+      
+    current.text(characterCount);
+
+    if (characterCount >= 400) {
+        maximum.css('color', '#8f0001');
+        current.css('color', '#8f0001');
+        charCount.css('font-weight','bold');
+    } else {
+        maximum.css('color','#666');
+        theCount.css('font-weight','normal');
+    }
+  
+});
+
+</script>
 {% endblock %}
