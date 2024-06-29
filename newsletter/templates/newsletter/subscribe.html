@@ -22,12 +22,12 @@
                 <p class="text-muted">
                     <h5 id="h5-padding">Enter a valid email address:</h5>
                 </p>
-                <form action="{% url 'subscribe' %}" method="POST" id="profile-update-form">
+                <form action="{% url 'subscribe' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="checkout_btn_inner float-right">
                         <a class="btn_1 text-white" href="{% url 'home' %}">Cancel</a>
-                        <button id="submit-button" class="btn_1" aria-label="Update profile">Subscribe</button>
+                        <button id="submit-button" class="btn_1" aria-label="Subscribe to newsletter">Subscribe</button>
                     </div>
                 </form>
             </div>

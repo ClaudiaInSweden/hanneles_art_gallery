@@ -61,6 +61,19 @@
                                     {% endif %}
                                 </div>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown_3" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Newsletter
+                                </a>
+                                <div class="dropdown-menu" id="navbarDropdown_2">
+                                    <a href="{% url 'subscribe' %}" class="dropdown-item">Subscribe</a>
+                                    {% if request.user.is_superuser %}
+                                    <div class="dropdown-divider"></div>
+                                    <a href="{% url 'mail_content' %}" class="dropdown-item">Create Newsletter</a>
+                                    {% endif %}
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="search-container">

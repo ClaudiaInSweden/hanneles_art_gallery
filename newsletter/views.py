@@ -11,7 +11,7 @@ def subscribe(request):
         if form.is_valid():
             form.save()
             messages.info(request, 'You have successfully subscribed to our newsletter!')
-            return redirect('index.html')
+            return redirect('home')
     else:
         form = SubscribeForm()
 
@@ -27,7 +27,7 @@ def mail_content(request):
         if form.is_valid():
             form.save()
             messages.info(request, 'The newsletter has been sent!')
-            return redirect('index.html')
+            return redirect('home')
     else:
         form = MailContentForm()
     context = {
