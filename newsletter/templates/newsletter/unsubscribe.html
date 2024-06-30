@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!-- Breadcrumb part start -->
 <section class="breadcrumb_part">
     <div class="container">
         <div class="row">
@@ -14,25 +15,26 @@
     </div>
 </section>
 <!-- Breadcrumb part end-->
-
+<!-- Unsubscribe part start -->
 <section class="cart_area section_padding">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                 <p class="text-muted">
-                    <h5 id="h5-padding">Enter your email address:</h5>
+                <h5 id="h5-padding">Enter your email address:</h5>
                 </p>
                 <form action="{% url 'unsubscribe' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <div class="checkout_btn_inner float-right">
+                    <div class="float-right my-3">
                         <a class="btn_1 text-white" href="{% url 'home' %}">Cancel</a>
-                        <button id="submit-button" class="btn_1" aria-label="Unsubscribe from newsletter">Unsubscribe</button>
+                        <button id="submit-button" class="btn_1"
+                            aria-label="Unsubscribe from newsletter">Unsubscribe</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
-
+<!-- Unsubscribe part end -->
 {% endblock %}

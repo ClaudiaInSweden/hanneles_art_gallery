@@ -14,10 +14,10 @@ class Contact(models.Model):
         (4, 'Other'),
     )
 
-    name = models.CharField(max_length=100, null=True, blank=True)
-    email = models.EmailField(null=True)
-    topic = models.IntegerField(choices=TOPIC, null=True, blank=True)
-    message = models.TextField(max_length=500, null=True, blank=True)
+    name = models.CharField(max_length=100, null=False, blank=False)
+    email = models.EmailField(null=False)
+    topic = models.IntegerField(choices=TOPIC, null=False, blank=False)
+    message = models.TextField(max_length=500, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

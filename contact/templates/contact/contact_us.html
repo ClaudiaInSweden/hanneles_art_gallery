@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!-- Breadcrumb part start -->
 <section class="breadcrumb_part">
     <div class="container">
         <div class="row">
@@ -14,13 +15,13 @@
     </div>
 </section>
 <!-- Breadcrumb part end-->
-
+<!-- Contact us part start -->
 <section class="cart_area section_padding">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                 <p class="text-muted">
-                    <h5 id="h5-padding">Please complete the form:</h5>
+                <h5 id="h5-padding">Please complete the form:</h5>
                 </p>
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
@@ -28,7 +29,7 @@
                     <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                         <span id="current">0</span>
                         <span id="maximum">/ 500</span>
-                      </div>
+                    </div>
                     <div class="float-right my-3">
                         <a class="btn_1 text-white" href="{% url 'home' %}">Cancel</a>
                         <button id="submit-button" class="btn_1" aria-label="Contact us">Submit</button>
@@ -38,7 +39,7 @@
         </div>
     </div>
 </section>
-
+<!-- Contact us part end -->
 {% endblock %}
 {% block postloadjs %}
 <script>
