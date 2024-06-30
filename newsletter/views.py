@@ -7,19 +7,40 @@ from django_pandas.io import read_frame
 
 # Create your views here.
 def subscribe(request):
-    if request.method == 'POST':
-        form = SubscribeForm(request.POST)
-        if form.is_valid():
-            form.save()
+    form = SubscribeForm(request.POST or None)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        if Subscribers.objects.filter(email=instance.email).exists():
+            messages.info(request, 'This email already exist!')
+        else:
+            instance.save()
             messages.info(request, 'You have successfully subscribed to our newsletter!')
             return redirect('home')
-    else:
-        form = SubscribeForm()
 
     context = {
         'form': form,
     }
     return render(request, 'newsletter/subscribe.html', context)
+
+
+def unsubscribe(request):
+    form = SubscribeForm(request.POST or None)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        if Subscribers.objects.filter(email=instance.email).exists():
+            Subscribers.objects.filter(email=instance.email).delete()
+            messages.info(request, 'You have successfully unsubscribed! Sorry to see you go!')
+            return redirect('home')
+        else:
+            messages.info(request, 'Sorry, but your email address does not exist in our database!')
+            return redirect('home')
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'newsletter/unsubscribe.html', context)
 
 
 def mail_content(request):

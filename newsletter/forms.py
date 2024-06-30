@@ -7,6 +7,11 @@ class SubscribeForm(forms.ModelForm):
         model = Subscribers
         fields = ('email',)
 
+        def clean_email(self):
+            email = self.cleaned_data.get('email')
+
+            return email
+
 
 class MailContentForm(forms.ModelForm):
     class Meta:
