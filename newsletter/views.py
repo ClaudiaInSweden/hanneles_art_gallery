@@ -12,7 +12,7 @@ def subscribe(request):
     if form.is_valid():
         instance = form.save(commit=False)
         if Subscribers.objects.filter(email=instance.email).exists():
-            messages.info(request, 'This email already exist!')
+            messages.info(request, 'This email address already exists!')
         else:
             instance.save()
             messages.info(request, 'You have successfully subscribed to our newsletter!')
