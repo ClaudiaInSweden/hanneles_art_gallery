@@ -23,7 +23,7 @@
                         {% csrf_token %}
                         <p class="mb-3">Are you sure you want to delete the painting "{{ product.name }}"?</p>
                         <p></p>
-                        <a href="{% url 'academy' %}" class="btn_1 text-white">Cancel</a>
+                        <a href="{% url 'product_detail' product.id %}" class="btn_1 text-white">Cancel</a>
                         <input type="submit" class="btn_1" value="Confirm"></input>
                     </form>
                 </div>
