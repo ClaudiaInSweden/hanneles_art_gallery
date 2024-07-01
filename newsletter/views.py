@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect
 from .models import Subscribers, MailContent
 from .forms import SubscribeForm, MailContentForm
 from django.contrib import messages
-from django.core.mail import send_mail
-from django_pandas.io import read_frame
+from django.conf import settings
+from django.core.mail import EmailMessage
 
-# Create your views here.
+
 def subscribe(request):
     form = SubscribeForm(request.POST or None)
 
@@ -49,9 +49,7 @@ def mail_content(request):
     Create a dataframe for email addresses of the subscribers.
     Retrieve values of the email addresses and transform them into a list
     """
-    emails = Subscribers.objects.all()
-    df = read_frame(emails, fieldnames=['email'])
-    mail_list = df['email'].values.tolist()
+    emails = Subscribers.objects.values_list("email", flat=True)
     
     if request.method == 'POST':
         form = MailContentForm(request.POST)
@@ -59,13 +57,18 @@ def mail_content(request):
             form.save()
             subject = form.cleaned_data.get('subject')
             content = form.cleaned_data.get('content')
-            send_mail(
+            send_from = settings.DEFAULT_FROM_EMAIL
+            send_to = settings.DEFAULT_FROM_EMAIL
+            bcc_list = list(emails)
+
+            email = EmailMessage(
                 subject,
                 content,
-                '',
-                mail_list,
-                fail_silently=False,
-        )
+                send_from,
+		        (send_to,),
+                bcc=bcc_list,
+            )
+            email.send(fail_silently=False)
             messages.info(request, 'The newsletter has been sent!')
             return redirect('home')
     else:

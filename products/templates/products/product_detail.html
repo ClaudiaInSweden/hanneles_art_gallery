@@ -110,12 +110,3 @@
 </div>
 <!-- Single Product Area End -->
 {% endblock %}
-
-{% block postloadjs %}
-  {{ block.super }}
-      <script>
-      $(document).on('click', '.confirm-delete', function(){
-          return confirm('Are you sure you want to delete the painting?');
-      })
-      </script>
-{% endblock %}

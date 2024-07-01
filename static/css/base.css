@@ -62,9 +62,15 @@ a:hover {
     letter-spacing: normal;
     font-size: 1.3rem;
 }
-.dropdown-item:active {
-    background-color: #4B3049 !important;
-    color: #fff;
+.dropdown .dropdown-menu .dropdown-item:focus {
+    border-radius: 10px !important;
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    background-color: #B08EAD !important;
+}
+.dropdown .dropdown-menu .dropdown-item:active {
+    color: #fff !important;
+    background-color: #B08EAD !important;
 }
 
 @media (max-width: 991px) {
