@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
 	color: #795376 !important;
 }
 .btn_3:hover {
-	background-color: #B08EAD;
+	background-color: #795376;
 	color: #fff;
 }
 a:hover {
@@ -66,11 +66,11 @@ a:hover {
     border-radius: 10px !important;
     border: 2px solid #fff !important;
     color: #fff !important;
-    background-color: #B08EAD !important;
+    background-color: #795376 !important;
 }
 .dropdown .dropdown-menu .dropdown-item:active {
     color: #fff !important;
-    background-color: #B08EAD !important;
+    background-color: #795376 !important;
 }
 
 @media (max-width: 991px) {
@@ -127,7 +127,7 @@ a:hover {
 }
 .search-input:focus {
     outline: none !important;
-    border-color: #B08EAD;
+    border-color: #795376;
 }
 .search-form {
     background: #fff;
@@ -147,10 +147,10 @@ a:hover {
     font-size: 18px;
 }
 .search-button:hover {
-    color: #B08EAD;
+    color: #795376;
 }
 .search-input[type="text"]::placeholder {
-    color: #B08EAD;
+    color: #795376;
 }
 @media (max-width: 576px) {
     .search-container {
@@ -204,8 +204,8 @@ a:hover {
     width: 17em;
 	padding: 12px 25px;
 	border-radius: 5px;
-    background-color: #B08EAD;
-    border: 2px solid #B08EAD;
+    background-color: #795376;
+    border: 2px solid #795376;
     font-size: 15px;
     font-weight: 500;
     transition: 0.5s;
@@ -220,7 +220,7 @@ a:hover {
     margin: 30px 0 30px;
 }
 hr {
-    border: 1px solid #B08EAD;
+    border: 1px solid #795376;
 }
 .add_to_cart p {
     margin: 5px;
@@ -329,11 +329,11 @@ i {
 }
 .cart-notification-wrapper > .btn_3 {
 	background-color: transparent;
-	border: 1px solid #B08EAD;
-	color: #B08EAD;
+	border: 1px solid #795376;
+	color: #795376;
 }
 .cart-notification-wrapper > .btn_3:hover {
-	background-color: #B08EAD;
+	background-color: #795376;
 	color: #fff;
 }
 @media  (max-width: 576px) {

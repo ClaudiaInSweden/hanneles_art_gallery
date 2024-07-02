@@ -23,7 +23,7 @@ form input:not(.search-form, [type='checkbox']) {
     margin-top: 1rem;
 }
 .login_part_form_iner p > a {
-    color: #B08EAD !important;
+    color: #795376 !important;
     font-weight: 700;
     line-height: 25px;
 }

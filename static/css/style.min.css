@@ -459,8 +459,8 @@
      display: inline-block;
      padding: 17px 50px;
      border-radius: 5px;
-     background-color: #B08EAD;
-     border: 2px solid #B08EAD;
+     background-color: #795376;
+     border: 2px solid #795376;
      font-size: 15px;
      font-weight: 500;
      -webkit-transition: 0.5s;
@@ -471,7 +471,7 @@
 
  .btn_1:hover {
      background-color: #fff;
-     color: #B08EAD;
+     color: #795376;
  }
 
  @media (max-width: 991px) {
@@ -485,10 +485,10 @@
      padding: 18px 36px;
      border-radius: 5px;
      background-color: transparent;
-     border: 1px solid #B08EAD;
+     border: 1px solid #795376;
      font-size: 15px;
      font-weight: 700;
-     color: #B08EAD;
+     color: #795376;
      text-transform: uppercase;
      font-weight: 400;
      -webkit-transition: 0.5s;
@@ -496,7 +496,7 @@
  }
 
  .btn_3:hover {
-     background-color: #B08EAD;
+     background-color: #795376;
      color: #fff;
  }
 
@@ -525,7 +525,7 @@
 
  .btn_2:hover {
      color: #fff !important;
-     background-color: #B08EAD;
+     background-color: #795376;
  }
 
  @media (max-width: 991px) {
@@ -537,7 +537,7 @@
  }
 
  .btn_4 {
-     color: #B08EAD;
+     color: #795376;
      font-size: 15px;
      font-weight: 700;
      margin-top: 53px;
@@ -568,7 +568,7 @@
      color: #fff;
      border: 1px solid #edeff2;
      text-transform: uppercase;
-     background-color: #B08EAD;
+     background-color: #795376;
      cursor: pointer;
      -webkit-transition: 0.5s;
      transition: 0.5s;
@@ -626,7 +626,7 @@
 
  .blog_area a:hover,
  .blog_area a :hover {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .single-blog {
@@ -1050,7 +1050,7 @@
  }
 
  .blog_details a:hover {
-     color: #B08EAD !important;
+     color: #795376 !important;
  }
 
  .blog_details h2 {
@@ -1108,7 +1108,7 @@
      left: 10px;
      display: block;
      color: #fff;
-     background-color: #B08EAD;
+     background-color: #795376;
      padding: 8px 15px;
      border-radius: 5px;
  }
@@ -1300,7 +1300,7 @@
  }
 
  .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-     background: #B08EAD;
+     background: #795376;
      color: #fff !important;
      -webkit-text-fill-color: #fff;
      text-decoration: none;
@@ -1511,7 +1511,7 @@
  }
 
  .single-post-area .blog-author a:hover {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .single-post-area .blog-author p {
@@ -1781,8 +1781,8 @@
  }
 
  .single_sidebar_widget .btn_1:hover {
-     color: #B08EAD !important;
-     border: 1px solid #B08EAD;
+     color: #795376 !important;
+     border: 1px solid #795376;
  }
 
  .single_blog_post .desc a {
@@ -1803,7 +1803,7 @@
  }
 
  .single_blog_post .single_blog .single_appartment_content p a {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .single_blog_post .single_blog .single_appartment_content h4 {
@@ -1883,7 +1883,7 @@
      max-width: 1140px;
      z-index: 999;
      text-align: center;
-     background: #B08EAD;
+     background: #795376;
      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
  }
 
@@ -1986,7 +1986,7 @@
  .dropdown .dropdown-menu .dropdown-item {
      font-size: 12px;
      padding: 8px 20px !important;
-     color: #7b6379 !important;
+     color: #795376 !important;
      background-color: #d8c7d6 !important;
      text-transform: capitalize; */
  /* } */
@@ -2055,11 +2055,11 @@
      .dropdown:hover .show {
          transform: scale(1);
          display: block;
-         color: #B08EAD;
+         color: #795376;
      }
 
      .dropdown .dropdown-item:hover {
-         color: #B08EAD !important;
+         color: #795376 !important;
      }
 
      .navbar-brand img {
@@ -2108,7 +2108,7 @@
 
  .dropdown-menu::after {
      border: 0px solid rgba(0, 0, 0, 0.15) !important;
-     background-color: #b08ead !important;
+     background-color: #795376 !important;
  }
 
  .main-menu-item {
@@ -2151,7 +2151,7 @@
      content: "";
      left: 0;
      bottom: 0;
-     background-color: #B08EAD;
+     background-color: #795376;
      width: 196px;
      height: 618px;
  }
@@ -2226,7 +2226,7 @@
  }
 
  .banner_part .banner_text h1 span {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .banner_part .banner_text p {
@@ -2365,7 +2365,7 @@
  .single_product_list .single_product_content h5 {
      font-weight: 500;
      font-size: 20px;
-     color: #B08EAD;
+     color: #795376;
  }
 
  @media (max-width: 991px) {
@@ -2672,7 +2672,7 @@
  }
 
  .single_product_item h3 a:hover {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .single_product_item p {
@@ -2694,7 +2694,7 @@
  .client_review {
      padding: 100px 0;
      text-align: center;
-     background-color: #B08EAD;
+     background-color: #795376;
      position: relative;
  }
 
@@ -3031,7 +3031,7 @@
      line-height: 60px;
      padding: 0px 45px;
      border: 0px solid transparent;
-     background-color: #B08EAD;
+     background-color: #795376;
      color: #fff;
      font-size: 14px;
      font-weight: 500;
@@ -3070,7 +3070,7 @@
  }
 
  .best_seller .single_product_item .single_product_text a {
-     color: #B08EAD;
+     color: #795376;
      text-transform: uppercase;
      font-size: 18px;
      font-weight: 500;
@@ -3199,7 +3199,7 @@
 
  .single-product .product-img .p_icon a:hover {
      color: #fff;
-     background: #B08EAD;
+     background: #795376;
  }
 
  .single-product .product-btm {
@@ -3236,7 +3236,7 @@
  }
 
  .single-product:hover .product-btm h4 {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .new_product {
@@ -3435,8 +3435,8 @@
 
  .p_filter_widgets .list li.active a:before,
  .p_filter_widgets .list li:hover a:before {
-     background: #B08EAD;
-     border-color: #B08EAD;
+     background: #795376;
+     border-color: #795376;
  }
 
  .p_filter_widgets .list li:last-child {
@@ -3563,7 +3563,7 @@
  }
 
  .product_top_bar .single_product_menu p span {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .product_top_bar .single_product_menu h5 {
@@ -3778,7 +3778,7 @@
  .s_product_text h2 {
      font-size: 24px;
      font-weight: bold;
-     color: #B08EAD;
+     color: #795376;
      margin-bottom: 15px;
  }
 
@@ -3803,7 +3803,7 @@
  }
 
  .s_product_text .list li a.active {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .s_product_text .list li a.active span {
@@ -3947,9 +3947,9 @@
  }
 
  .product_description_area .nav.nav-tabs li a.active {
-     background: #B08EAD;
+     background: #795376;
      color: #fff;
-     border-color: #B08EAD;
+     border-color: #795376;
  }
 
  .product_description_area .tab-content {
@@ -3965,7 +3965,7 @@
  }
 
  .product_description_area .tab-content .total_rate .box_total h4 {
-     color: #B08EAD;
+     color: #795376;
      font-size: 48px;
      font-weight: bold;
  }
@@ -4091,8 +4091,8 @@
  }
 
  .review_item .media .media-body .reply_btn:hover {
-     background: #B08EAD;
-     border-color: #B08EAD;
+     background: #795376;
+     border-color: #795376;
      color: #fff;
  }
 
@@ -4359,7 +4359,7 @@
      height: 10px;
      width: 10px;
      border-radius: 50%;
-     background: #B08EAD;
+     background: #795376;
      display: inline-block;
      position: absolute;
      right: 3px;
@@ -4482,7 +4482,7 @@
  }
 
  .check_title h2 a {
-     color: #B08EAD;
+     color: #795376;
      text-decoration: underline;
  }
 
@@ -4653,9 +4653,9 @@
  }
 
  .tp_btn:hover {
-     background: #B08EAD;
+     background: #795376;
      color: #fff;
-     border-color: #B08EAD;
+     border-color: #795376;
  }
 
  .billing_details h3 {
@@ -4724,7 +4724,7 @@
  }
 
  .billing_details .contact_form .form-group .creat_account a {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .order_box {
@@ -4828,8 +4828,8 @@
  }
 
  .order_box .payment_item.active h4:before {
-     background: #B08EAD;
-     border-color: #B08EAD;
+     background: #795376;
+     border-color: #795376;
  }
 
  .order_box .creat_account {
@@ -4843,7 +4843,7 @@
  }
 
  .order_box .creat_account a {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .order_box .btn_3 {
@@ -4993,8 +4993,8 @@
  }
 
  .radion_btn input[type="radio"]:checked~.check {
-     border: 1px solid #B08EAD;
-     background: #B08EAD;
+     border: 1px solid #795376;
+     background: #795376;
  }
 
  .radion_btn input[type="radio"]:checked~.check::before {
@@ -5039,9 +5039,9 @@
  }
 
  .login_part .login_part_text {
-     background-image: -moz-linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
-     background-image: -webkit-linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
-     background-image: linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
+     background-image: -moz-linear-gradient(90deg, #795376 0%, #4B3049 64%, #795376 100%);
+     background-image: -webkit-linear-gradient(90deg, #795376 0%, #4B3049 64%, #795376 100%);
+     background-image: linear-gradient(90deg, #795376 0%, #4B3049 64%, #795376 100%);
      background-size: 200% auto;
  }
 
@@ -5068,7 +5068,7 @@
 
  .login_part .login_part_text .btn_3:hover {
      background-color: #fff;
-     color: #B08EAD !important;
+     color: #795376 !important;
  }
 
  @media (max-width: 991px) {
@@ -5192,7 +5192,7 @@
  }
 
  .s_product_text .like_us:hover {
-     background-color: #B08EAD;
+     background-color: #795376;
      color: #fff;
  }
 
@@ -5201,7 +5201,7 @@
  }
 
  .s_product_text .btn_3:hover {
-     color: #B08EAD;
+     color: #795376;
      background-color: #fff;
      box-shadow: -14.142px 14.142px 20px 0px rgba(0, 0, 0, 0.1);
      border: 1px solid #fff;
@@ -5240,7 +5240,7 @@
  }
 
  .card_area .social_icon a:hover {
-     background-color: #B08EAD;
+     background-color: #795376;
  }
 
  .card_area .social_icon .tw {
@@ -5257,7 +5257,7 @@
  }
 
  .cart_area .btn_1:hover {
-     border: 1px solid #B08EAD !important;
+     border: 1px solid #795376 !important;
  }
 
  .arrival_tittle,
@@ -5384,7 +5384,7 @@
      top: 0;
      width: 100%;
      height: 100%;
-     background-color: #B08EAD;
+     background-color: #795376;
      opacity: 0;
      -webkit-transition: 0.5s;
      transition: 0.5s;
@@ -5460,7 +5460,7 @@
  }
 
  .new_arrival .single_arrivel_item .hover_text .social_icon a:hover {
-     background-color: #B08EAD;
+     background-color: #795376;
      color: #fff;
  }
 
@@ -5488,7 +5488,7 @@
  .new_arrival .active {
      position: relative;
      z-index: 1;
-     color: #B08EAD;
+     color: #795376;
  }
 
  .new_arrival .active:after {
@@ -5498,7 +5498,7 @@
      bottom: 0;
      width: 100%;
      height: 2px;
-     background-color: #B08EAD;
+     background-color: #795376;
  }
 
  .shipping_details {
@@ -5574,7 +5574,7 @@
      height: 100%;
      left: 0;
      top: 0;
-     background-color: #B08EAD;
+     background-color: #795376;
      opacity: 0;
      visibility: hidden;
      z-index: 1;
@@ -5621,7 +5621,7 @@
  }
 
  .confirmation_part .confirmation_tittle span {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .confirmation_part .single_confirmation_details {
@@ -5718,7 +5718,7 @@
  sub,
  u,
  del {
-     color: #B08EAD;
+     color: #795376;
  }
 
  h1 {
@@ -5864,25 +5864,25 @@
 
  .genric-btn.primary {
      color: #fff;
-     background: #B08EAD;
+     background: #795376;
      border: 1px solid transparent;
  }
 
  .genric-btn.primary:hover {
-     color: #B08EAD;
-     border: 1px solid #B08EAD;
+     color: #795376;
+     border: 1px solid #795376;
      background: #fff;
  }
 
  .genric-btn.primary-border {
-     color: #B08EAD;
-     border: 1px solid #B08EAD;
+     color: #795376;
+     border: 1px solid #795376;
      background: #fff;
  }
 
  .genric-btn.primary-border:hover {
      color: #fff;
-     background: #B08EAD;
+     background: #795376;
      border: 1px solid transparent;
  }
 
@@ -6018,7 +6018,7 @@
  .generic-blockquote {
      padding: 30px 50px 30px 30px;
      background: #f9f9ff;
-     border-left: 2px solid #B08EAD;
+     border-left: 2px solid #795376;
  }
 
  .progress-table-wrap {
@@ -6148,7 +6148,7 @@
      position: absolute;
      width: 14px;
      height: 14px;
-     border: 3px solid #B08EAD;
+     border: 3px solid #795376;
      background: #fff;
      top: 4px;
      left: 0;
@@ -6161,7 +6161,7 @@
 
  .ordered-list li {
      list-style-type: decimal-leading-zero;
-     color: #B08EAD;
+     color: #795376;
      font-weight: 500;
      line-height: 1.82em !important;
  }
@@ -6174,7 +6174,7 @@
  .ordered-list-alpha li {
      margin-left: 30px;
      list-style-type: lower-alpha;
-     color: #B08EAD;
+     color: #795376;
      font-weight: 500;
      line-height: 1.82em !important;
  }
@@ -6187,7 +6187,7 @@
  .ordered-list-roman li {
      margin-left: 30px;
      list-style-type: lower-roman;
-     color: #B08EAD;
+     color: #795376;
      font-weight: 500;
      line-height: 1.82em !important;
  }
@@ -6259,7 +6259,7 @@
 
  .single-input-primary:focus {
      outline: none;
-     border: 1px solid #B08EAD;
+     border: 1px solid #795376;
  }
 
  .single-input-accent {
@@ -6320,7 +6320,7 @@
      width: 15px;
      height: 15px;
      border-radius: 50%;
-     background: #B08EAD;
+     background: #795376;
      -webkit-transition: all 0.2s;
      -moz-transition: all 0.2s;
      -o-transition: all 0.2s;
@@ -6403,7 +6403,7 @@
  }
 
  .primary-switch input:checked+label:before {
-     background: #B08EAD;
+     background: #795376;
  }
 
  .confirm-switch {
@@ -6752,12 +6752,12 @@
  }
 
  .default-select .nice-select .list .option.selected {
-     color: #B08EAD;
+     color: #795376;
      background: transparent;
  }
 
  .default-select .nice-select .list .option:hover {
-     color: #B08EAD;
+     color: #795376;
      background: transparent;
  }
 
@@ -6807,12 +6807,12 @@
  }
 
  .form-select .nice-select .list .option.selected {
-     color: #B08EAD;
+     color: #795376;
      background: transparent;
  }
 
  .form-select .nice-select .list .option:hover {
-     color: #B08EAD;
+     color: #795376;
      background: transparent;
  }
 
@@ -6962,7 +6962,7 @@
      height: 10px;
      top: 5px;
      left: 0;
-     background-color: #B08EAD;
+     background-color: #795376;
      border-radius: 50%;
  }
 
@@ -7040,7 +7040,7 @@
  .blog_part .single-home-blog .card h5:hover {
      -webkit-transition: 0.8s;
      transition: 0.8s;
-     color: #B08EAD;
+     color: #795376;
  }
 
  .blog_part .single-home-blog .card ul {
@@ -7105,7 +7105,7 @@
  }
 
  .contact-info .media-body h3 a:hover {
-     color: #B08EAD;
+     color: #795376;
  }
 
  .contact-info .media-body p {
@@ -7127,8 +7127,8 @@
  }
 
  .form-contact .form-group .button-contactForm {
-     color: #B08EAD !important;
-     border: 1px solid #B08EAD;
+     color: #795376 !important;
+     border: 1px solid #795376;
  }
 
  .form-contact .form-group .button-contactForm:hover {
@@ -7163,12 +7163,12 @@
  }
 
  .form-contact .form-group .btn_1:hover {
-     border: 1px solid #B08EAD;
-     color: #B08EAD !important;
+     border: 1px solid #795376;
+     color: #795376 !important;
  }
 
  .form-contact .form-group .btn_1:hover i {
-     color: #B08EAD;
+     color: #795376;
      color: #fff !important;
  }
 
@@ -7268,7 +7268,7 @@
 
  .about_us .about_us_content h5 {
      font-size: 20px;
-     color: #B08EAD;
+     color: #795376;
      font-weight: 400;
  }
 
@@ -7339,7 +7339,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     background-color: #B08EAD;
+     background-color: #795376;
  }
 
  .breadcrumb_part .breadcrumb_iner {

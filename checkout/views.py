@@ -60,6 +60,7 @@ def checkout(request):
             for item_id, quantity in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
+                    Product.objects.filter(id=item_id).update(sold=True)
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -135,7 +136,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
+    
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the users profile to the order

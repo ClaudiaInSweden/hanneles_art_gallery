@@ -620,7 +620,7 @@ Details for each part can be found by clicking the expand button.
 
 
 **views.py**
-![views.py](static/readme-docs/validation-python/profilesdocsdocs_views.png)
+![views.py](static/readme-docs/validation-python/profiles_views.png)
 
 </details>
 
