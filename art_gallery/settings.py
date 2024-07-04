@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = ['hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-v09itxc0mb1.ws-eu114.gitpod.io']
+ALLOWED_HOSTS = ['hanneles-art-gallery-99fb21934da8.herokuapp.com', '8000-claudiainsw-hannelesart-d7me1ddqfzz.ws.codeinstitute-ide.net']
 
 # Application definition
 INSTALLED_APPS = [
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
     'home',
     'products',
     'cart',
@@ -62,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'art_gallery.urls'
@@ -130,7 +130,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 
 
 # Password validation
