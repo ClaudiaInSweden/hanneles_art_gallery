@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .models import Subscribers, MailContent
 from .forms import SubscribeForm, MailContentForm
 from django.contrib import messages
@@ -41,10 +41,10 @@ def unsubscribe(request):
         instance = form.save(commit=False)
         if Subscribers.objects.filter(email=instance.email).exists():
             Subscribers.objects.filter(email=instance.email).delete()
-            messages.info(request, 'You have successfully unsubscribed! \nSorry, to see you go!')
+            messages.info(request, f'You have successfully unsubscribed! \nSorry, to see you go!')
             return redirect('home')
         else:
-            messages.error(request, 'It seems the email address does not exist in our database!\n Please enter a valid email address.')
+            messages.error(request, f'It seems the email address does not exist in our database!\nPlease enter a valid email address.')
             return redirect('home')
 
     context = {
@@ -62,7 +62,7 @@ def mail_content(request):
     if not request.user.is_superuser:
         messages.error(request, 'You are not authorized to perform this task.')
         return redirect(reverse('home'))
-        
+
     emails = Subscribers.objects.values_list("email", flat=True)
     
     """

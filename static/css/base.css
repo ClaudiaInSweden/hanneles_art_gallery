@@ -295,8 +295,8 @@ i {
 /* Toasts container */
 .message-container {
     position: fixed;
-    top: 110px;
-    margin-left: 20px;
+    top: 140px;
+    margin-left: 50px;
     width: 350px;
     z-index: 5000;
 }
