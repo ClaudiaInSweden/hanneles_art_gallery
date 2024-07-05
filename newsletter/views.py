@@ -4,9 +4,15 @@ from .forms import SubscribeForm, MailContentForm
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import EmailMessage
+from django.contrib.auth.decorators import login_required
 
 
 def subscribe(request):
+    """
+    If user enters an email address that already exists
+    in database a message will be displayed. If the address
+    does not yet exist, it is added to the database
+    """
     form = SubscribeForm(request.POST or None)
 
     if form.is_valid():
@@ -25,16 +31,20 @@ def subscribe(request):
 
 
 def unsubscribe(request):
+    """
+    If user enters an existing email address it is removed from the database.
+    If the email address does not exist a message will be displayed.
+    """
     form = SubscribeForm(request.POST or None)
 
     if form.is_valid():
         instance = form.save(commit=False)
         if Subscribers.objects.filter(email=instance.email).exists():
             Subscribers.objects.filter(email=instance.email).delete()
-            messages.info(request, 'You have successfully unsubscribed! Sorry to see you go!')
+            messages.info(request, 'You have successfully unsubscribed! \nSorry, to see you go!')
             return redirect('home')
         else:
-            messages.info(request, 'Sorry, but your email address does not exist in our database!')
+            messages.error(request, 'It seems the email address does not exist in our database!\n Please enter a valid email address.')
             return redirect('home')
 
     context = {
@@ -43,14 +53,25 @@ def unsubscribe(request):
     return render(request, 'newsletter/unsubscribe.html', context)
 
 
+@login_required
 def mail_content(request):
     """
-    Create a variable to get all subscribers.
-    Create a dataframe for email addresses of the subscribers.
-    Retrieve values of the email addresses and transform them into a list
+    Check if user is logged in as superuser. If not, display error message
+    and redirect to start page
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorized to perform this task.')
+        return redirect(reverse('home'))
+        
     emails = Subscribers.objects.values_list("email", flat=True)
     
+    """
+    Send email with newsletter subject and content to subsribers.
+    Use sender email as saved in settings, use to field with
+    default sender email as saved in settings.
+    The actual subscriber email addresses will be added to bcc
+    to avoid exposure to other subscribers.
+    """
     if request.method == 'POST':
         form = MailContentForm(request.POST)
         if form.is_valid():

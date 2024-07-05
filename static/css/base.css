@@ -336,6 +336,9 @@ i {
 	background-color: #795376;
 	color: #fff;
 }
+.text-info {
+    color: #795376 !important;
+}
 @media  (max-width: 576px) {
     .message-container {
         width: 280px;
