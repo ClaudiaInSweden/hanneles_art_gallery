@@ -788,11 +788,13 @@ Functionality, links, layout, and responsiveness were tested with the following 
 
 ## Bugs
 
+When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. 
+
+When sorting paintings by price the sold items are included in the result list. 
+
 Status February 2024:
 Unfortunately there is a bug concerning the number of times the user can add a painting into the shopping cart. This was working perfectly fine until the day before submission but one of the validation tools throw an error that an input element cannot have a min & max value so I removed it.... and now you can click a couple of times and it adds the painting each time to the cart. I'm afraid I won't be able to fix this problem before submission.
 **--> This was solved in the latest release (July 2024) by modifying the checkout view. **
-
-When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This needs to be solved by updating the form. 
 
 
 
