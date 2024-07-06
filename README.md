@@ -134,7 +134,7 @@ The project is open for public access and can be visited here.
 ## Relationship Diagram
 
 I have used Mermaid to auto-generate an interactive ERD for the models.
-[ERD](https://mermaid.live/edit#pako:eNqVVsFymzAQ_RWGc3JojrklNu4wceIMxu10xjOMLK3xtkIiQkrq1v[…]b3nSzDvUObDuFNZQR9asO-WpxxGi53AsaXmtl4CI0ZT122g-d5uXrP0hWyeg)
+[Live-Link to ERD](https://mermaid.live/edit#pako:eNqVVsFymzAQ_RWGc3JojrklNu4wceIMxu10xjOMLK3xtkIiQkrq1v[…]b3nSzDvUObDuFNZQR9asO-WpxxGi53AsaXmtl4CI0ZT122g-d5uXrP0hWyeg)
 
 ```mermaid
 erDiagram
@@ -228,12 +228,7 @@ erDiagram
     USERPROFILE ||--|| USER : "belongs to"
 ```
 
-OLD:
-The relationship diagram illustrates the relation between the models used in the project.
 
-NEW IMAGE
-
-![Diagram](static/readme-docs/others/Hanneles_Diagram.png)
 <hr>
 
 ## Features
@@ -405,6 +400,16 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 ![Profile](static/readme-docs/wireframes/profile.png)
 
 
+### Contact us
+
+![Profile](static/readme-docs/wireframes/contact-us.png)
+
+
+### Newsletter
+
+![Profile](static/readme-docs/wireframes/newsletter.png)
+
+
 ## Technologies used
 
 ### Languages
@@ -423,6 +428,7 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 - Storage: AWS S3 for storing media and static files
 - Deployment: Heroku
 
+
 ### Software and frameworks
 - [Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
 - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -430,6 +436,7 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 - [Favicon](https://favicon.io/)
 - [Birme](https://www.birme.net/)
 - [Snagit Editor](https://www.techsmith.com/screen-capture.html)
+- [Mermaid](https://mermaid.js.org/)
 
 
 
@@ -725,6 +732,44 @@ Details for each part can be found by clicking the expand button.
 </details>
 
 
+<details>
+
+<summary>Newsletter </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/newsletter_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/newsletter_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/newsletter_views.png)
+
+</details>
+
+
+<details>
+
+<summary>Contact us </summary>
+
+
+**model.py**
+![models.py](static/readme-docs/validation-python/contact_models.png)
+
+
+**forms.py**
+![forms.py](static/readme-docs/validation-python/contact_forms.png)
+
+
+**views.py**
+![views.py](static/readme-docs/validation-python/contact_views.png)
+
+</details>
+
+
 ## Manual Testing
 
 As the manual testing file is too extensive to add directly here in the Readme it's saved in a separate file.
@@ -743,7 +788,9 @@ Functionality, links, layout, and responsiveness were tested with the following 
 
 ## Bugs
 
+Status February 2024:
 Unfortunately there is a bug concerning the number of times the user can add a painting into the shopping cart. This was working perfectly fine until the day before submission but one of the validation tools throw an error that an input element cannot have a min & max value so I removed it.... and now you can click a couple of times and it adds the painting each time to the cart. I'm afraid I won't be able to fix this problem before submission.
+**--> This was solved in the latest release (July 2024) by modifying the checkout view. **
 
 When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This needs to be solved by updating the form. 
 
@@ -762,11 +809,18 @@ When a logged in user opens the Profile page and there is no saved data, it is p
 
 - [Icon inside Search Input Field](https://youtu.be/3Y0_DcOYPlw?si=TOaj9_GEYQpPt2So)
 - [Reviews & star rating](https://www.youtube.com/watch?v=TIDldj2BDuY&t=428s)
+- Newsletter section:
+    - [KenBro Tech](https://www.youtube.com/watch?v=hWtlskOaFNI)
+    - [Master Code Online - Subscribe](https://www.youtube.com/watch?v=Hy94jBBgvpk)
+    - [Master Code Online - Unsubscribe](https://www.youtube.com/watch?v=q2B1VpjDjMQ)
+- [Displaying character counter](https://codepen.io/patrickwestwood/pen/gPPywv)
 
-- [stack overflow](https://stackoverflow.com/)
+- [Dtack overflow](https://stackoverflow.com/)
 - [mdn web docs_](https://developer.mozilla.org/en-US/)
 - [W3Schools](https://www.w3schools.com/)
-- Rebecca and John from Code Institute Tutor Service
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+- Rebecca, John, Sarah and Alan from Code Institute Tutor Service
+- Mentor Tim Nelson for great guidance and useful tips
 
 
 Special Thank to **Hannele Kaarlejärvi** who allowed me to use her paintings for the project.
