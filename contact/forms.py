@@ -12,13 +12,13 @@ class ContactForm(forms.ModelForm):
                                            'placeholder': 'Your name *'}),
             'email': forms.EmailInput(attrs={'class': 'form-control',
                                              'aria-label': 'E-Mail',
-                                             'placeholder': 'Please enter a valid email address *'}),
+                                             'placeholder': 'E-Mail *'}),
             'topic': forms.Select(attrs={'class': 'form-control',
                                          'aria-label': 'Topic'}),
             'message': forms.Textarea(attrs={'class': 'form-control',
                                              'aria-label': 'Message',
                                              'rows': 8,
-                                             'placeholder': 'Your message ...'}),
+                                             'placeholder': 'Your message'}),
         }
 
     def __init__(self, *args, **kwargs):

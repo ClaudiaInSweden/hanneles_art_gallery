@@ -24,7 +24,7 @@
           <a href="{{ product.image.url }}" target="_blank"><img src="{{ product.image.url }}"
               alt="{{ product.name }} {{ product.technique }}" class="img-fluid painting-image"></a>
           {% else %}
-          <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
+          <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
           {% endif %}
         </div>
       </div>
@@ -82,7 +82,7 @@
       <form class="form" method="POST" action="{% url 'add_to_cart' product.id %}">
         {% csrf_token %}
         <div class="btn-group float-center">
-          <input class="form-control qty-input" type="hidden" name="quantity" value="1" min="0" max="1" data-item_id="{{ product.id }}"
+          <input class="form-control qty-input" type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}"
             id="id_qty_{{ product.id }}">
           <input type="submit" class="btn_1 m-2" aria-label="Add to shopping cart" value="Add to cart">
           <a href="{% url 'products' %}" class="btn_1 text-white m-2" role="button"

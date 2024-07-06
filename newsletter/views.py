@@ -21,7 +21,8 @@ def subscribe(request):
             messages.info(request, 'This email address already exists!')
         else:
             instance.save()
-            messages.info(request, 'You have successfully subscribed to our newsletter!')
+            messages.info(request, 'You have successfully subscribed \
+                to our newsletter!')
             return redirect('home')
 
     context = {
@@ -41,10 +42,12 @@ def unsubscribe(request):
         instance = form.save(commit=False)
         if Subscribers.objects.filter(email=instance.email).exists():
             Subscribers.objects.filter(email=instance.email).delete()
-            messages.info(request, f'You have successfully unsubscribed! \nSorry, to see you go!')
+            messages.info(request, f'You have successfully unsubscribed!\
+                 \nSorry, to see you go!')
             return redirect('home')
         else:
-            messages.error(request, f'It seems the email address does not exist in our database!\nPlease enter a valid email address.')
+            messages.error(request, f'It seems the email address does not \
+                exist in our database!\nPlease enter a valid email address.')
             return redirect('home')
 
     context = {
@@ -64,7 +67,7 @@ def mail_content(request):
         return redirect(reverse('home'))
 
     emails = Subscribers.objects.values_list("email", flat=True)
-    
+
     """
     Send email with newsletter subject and content to subsribers.
     Use sender email as saved in settings, use to field with
@@ -86,7 +89,7 @@ def mail_content(request):
                 subject,
                 content,
                 send_from,
-		        (send_to,),
+                (send_to,),
                 bcc=bcc_list,
             )
             email.send(fail_silently=False)

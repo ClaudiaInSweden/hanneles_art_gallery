@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Subscribers(models.Model):
 
     class Meta:
@@ -15,7 +15,11 @@ class Subscribers(models.Model):
 
 class MailContent(models.Model):
     subject = models.CharField(max_length=254, null=False, blank=False)
-    content = models.TextField(null=False, blank=False, default='\n \nUnsubscribe: https://hanneles-art-gallery-99fb21934da8.herokuapp.com/newsletter/unsubscribe/')
+    content = models.TextField(null=False, blank=False,
+                               default='\n \n \nUnsubscribe: ' +
+                               'https://hanneles-art-gallery-' +
+                               '99fb21934da8.herokuapp.com/' +
+                               'newsletter/unsubscribe/')
 
     def __str__(self):
         return self.subject

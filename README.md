@@ -9,8 +9,8 @@ The painting images and descriptions are used with kind permission of Hannele Ka
 
 ![Hanneles Art Gallery](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/2024-02-09_03-04-04.jpg)
 
-The webshop includes a preview of all painings with links to a larger image and more detailed information. The images can also be viewed in full size. Paintings can be added to the shopping cart but as they are unique only a quantity of 1 can be added. In the shopping cart, paintings can be removed, or the user can proceed to the checkout page. For Payment purposes the website is connected with Stripe. Test purchases can be performed with [Stripes test cards](https://stripe.com/docs/testing/).
-User can also register for an account where the order history is stored.  
+The webshop includes a preview of all painings with links to a larger image and more detailed information. Paintings can be added to the shopping cart but as they are unique only a quantity of 1 can be added. In the shopping cart, paintings can be removed, or the user can proceed to the checkout page. For Payment purposes the website is connected with Stripe. Test purchases can be performed with [Stripes test cards](https://stripe.com/docs/testing/).
+Users can also register for an account where the order history is stored.  
 
 
 
@@ -40,17 +40,19 @@ According to [Interior Design magazine](https://interiordesign.net/designwire/wo
 #### Facebook Business Page
 In the start phase of the business we will concentrate on Facebook as Marketing platform. That way the artist can create a more personal relationship with followers and keep the communication ongoing by answering comments and questions online. This allows also to test different approaches and validation.
 
-By the time of writing this ReadMe file (2024-04-18) the Facebook Page [Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
+By the time of writing this ReadMe file (2024-07-06) the Facebook Page [Hanneles Art Gallery](https://www.facebook.com/profile.php?id=61555624246656) has 5 Followers.
 ![Facebook screenshot01](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook01.jpg)
 ![Facebook screenshot02](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook02.jpg)
 ![Facebook screenshot03](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/facebook03.jpg)
 
 #### Newsletter
-A monthly newsletter will be created using Mailchimp services. The newsletter will contain information about new paintings available in the shop but also act as "appetizer" as we will tell some background stories about the making of the paintings and the inspiration behind it. 
+Users can subscribe to the newsletter that will contain information about new paintings available in the shop but also act as "appetizer" as we will tell some background stories about the making of the paintings and the inspiration behind it. 
 It will also include information about exhibitions and other events. 
 
-Users can easily find and subsribe to the newsletter on the Home Page of Hanneles Art Gallery. Only an email address is necessary to subscribe. All administration will be handled [by Mailchimps services](https://mailchimp.com/). 
+Users can easily subsribe to the newsletter via the Newsletter-link in the navigation bar. 
 
+
+NEW IMAGE
 ![Newsletter subscription](static/readme-docs/others/home_lower.png)
 
 
@@ -104,10 +106,10 @@ To comply with GDPR a Privacy Policy has been created using the [Privacy Policy 
 ### UX
 
 As the webshop only sells paintings the focus in the design was on presenting the paintings. This was achieved with an overview page that allows for a good overview of all paintings (including filtering and sorting by price) and a large image of the painting when clicking on the "Click for details" button under each image. The user than can see a large image and can "study" the painting in detail before scrolling down to see short descriptions. As users usually don't buy a lot of paintings but take their time to choose one I concluded that a good picture is more important than size, format or price. 
-The color scheme was chosen after the mostly female target group and is therefore in soft pinkish/lila colors, mixed with a darker nuance for better readability. 
+The color scheme was chosen after the mostly female target group. Viola Purple is a medium dark, medium bright shade of Magenta. It belongs to the color family Dark Pastel Magenta, and it has medium lightness and low saturation. Viola Purple is a warm color.
 Some of the images are unfortunately not well fotographed and have lopsided frame around the actual painting but as I didn't had access to the original paintings to take new pictures I left it as it is. 
 
-A free Bootstrap 4 template was used to save time but it turned out that this was a bad decision. Only when almost finished I realized that the specific design of the template interferes with both the crispy form and stripe form. Also the button design was inconsistent which resulted in countless hours of trying to fix the design.
+A free Bootstrap 4 template was used that was adapted to fit the project.
 
 
 
@@ -131,7 +133,105 @@ The project is open for public access and can be visited here.
 
 ## Relationship Diagram
 
+I have used Mermaid to auto-generate an interactive ERD for the models.
+[ERD](https://mermaid.live/edit#pako:eNqVVsFymzAQ_RWGc3JojrklNu4wceIMxu10xjOMLK3xtkIiQkrq1v[…]b3nSzDvUObDuFNZQR9asO-WpxxGi53AsaXmtl4CI0ZT122g-d5uXrP0hWyeg)
+
+```mermaid
+erDiagram
+    ORDER {
+        CharField order_number PK
+        ForeignKey user_profile FK
+        CharField full_name
+        EmailField email
+        CharField phone_number
+        CharField street_address1
+        CharField street_address2
+        CharField postcode
+        CharField town
+        CountryField country
+        DateTimeField date
+        DecimalField delivery
+        DecimalField order_total
+        DecimalField grand_total
+        TextField original_cart
+        CharField stripe_pid
+    }
+
+    ORDERLINEITEM {
+        ForeignKey order PK, FK
+        ForeignKey product FK
+        IntegerField quantity
+        DecimalField lineitem_total
+    }
+
+    CONTACT {
+        CharField name PK
+        EmailField email
+        IntegerField topic
+        TextField message
+        DateTimeField date
+    }
+
+    REVIEW {
+        ForeignKey user FK
+        IntegerField rating
+        CharField display_name
+        CharField review_title
+        TextField review_body
+        DateTimeField date_created
+    }
+
+    SUBSCRIBERS {
+        EmailField email PK
+        DateTimeField date_added
+    }
+
+    MAILCONTENT {
+        CharField subject PK
+        TextField content
+    }
+
+    CATEGORY {
+        CharField name PK
+        CharField friendly_name
+    }
+
+    PRODUCT {
+        ForeignKey category FK
+        CharField name
+        CharField artist
+        CharField size
+        CharField format
+        CharField technique
+        CharField framed
+        BooleanField sold
+        DecimalField price
+        ImageField image
+        URLField image_url
+    }
+
+    USERPROFILE {
+        OneToOneField user FK
+        CharField default_phone_number
+        CharField default_street_address1
+        CharField default_street_address2
+        CharField default_postcode
+        CharField default_town
+        CountryField default_country
+    }
+
+    ORDER ||--|| USERPROFILE : "belongs to"
+    ORDERLINEITEM ||--|| ORDER : "belongs to"
+    ORDERLINEITEM ||--|| PRODUCT : "refers to"
+    REVIEW ||--|| USER : "written by"
+    PRODUCT ||--|| CATEGORY : "classified as"
+    USERPROFILE ||--|| USER : "belongs to"
+```
+
+OLD:
 The relationship diagram illustrates the relation between the models used in the project.
+
+NEW IMAGE
 
 ![Diagram](static/readme-docs/others/Hanneles_Diagram.png)
 <hr>

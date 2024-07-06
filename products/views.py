@@ -148,4 +148,3 @@ def delete_product(request, product_id):
         return redirect('products')
     context = {'product': product}
     return render(request, 'products/delete_product.html', context)
-
