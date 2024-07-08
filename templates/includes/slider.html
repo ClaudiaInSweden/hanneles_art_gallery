@@ -8,7 +8,7 @@
             <div class="card text-center border-0">
               <div class="card-body border-0">
                 <p>{% for s in r.rating|ljust:r.rating %}<i class="fas fa-star"></i> {% endfor %}</p>
-                <h5 class="card-title">{{ r.review_title }}</h5>
+                <div class="card-title">{{ r.review_title }}</div>
                 <a href="{% url 'reviews' %}"><p class="card-text font-italic">"{{ r.review_body }}"</p></a>
                 <br>
                 <p class="card-text text-muted">- {% if r.display_name is None %}Anonymous -{% else %}{{ r.display_name }} -{% endif %}</p>
@@ -21,7 +21,7 @@
     </div>
   </div>
 </div>
-{% block carousel%}
+{% block carousel %}
 <script>
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
@@ -44,5 +44,15 @@ $(document).ready(function () {
       }
   });
 });
+</script>
+<script>
+  jQuery(function($) { 
+  jQuery('button.owl-dot.active').attr('aria-label','next'); 
+  }); 
+</script>
+<script>
+  jQuery(function($) { 
+  jQuery('button.owl-dot').attr('aria-label','previous'); 
+  }); 
 </script>
 {% endblock %}
