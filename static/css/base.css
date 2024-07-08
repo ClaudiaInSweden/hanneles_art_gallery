@@ -190,6 +190,9 @@ a:hover {
 .back-to-top i {
     font-size: 40px;
 }
+.tooltip-inner {
+    background-color: #795376 !important;
+}
 
 /* Product details page */
 .single_product_item p {

@@ -95,7 +95,7 @@
                     <div class="col-lg-4 col-sm-4">
                         <div class="single_product_item align-item-flex-end">
                             {% if product.image %}
-                            <img src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}"
+                            <img loading="lazy" src="{{ product.image.url }}" alt="{{ product.name }} {{ product.technique }}"
                                 class="img-fluid">
                             {% else %}
                             <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }} {{ product.technique }}"
@@ -145,12 +145,10 @@
             </div>
         </div>
     </div>
-    <div class="back-to-top">
-        <p>
-            <a class="btt-link h-100">
-                <i class="fa-regular fa-circle-up"></i>
-            </a>
-        </p>
+    <div class="back-to-top" data-toggle="tooltip" data-original-title="Back to Top">
+        <a class="btt-link h-100" href="{% url 'products' %}" onclick="javascript:scrollTo(0, 0)">
+            <i class="fa-regular fa-circle-up"></i>
+        </a>
     </div>
 </section>
 <!-- Product list part end-->
@@ -159,8 +157,10 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
+    $(document).ready(function () { 
+            $('[data-toggle="tooltip"]').tooltip({ 
+                placement: 'top' 
+            }); 
+        }); 
 </script>
 {% endblock %}
