@@ -11,12 +11,9 @@
     {% endif %}<br>
     {{ widget.input_text }}
 {% endif %}
-<!-- <span class="btn_3 btn-file rounded-20 mt-2">
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-</span> -->
-<span class="btn_3 btn-file rounded-20 mt-2">
-    <label for="new-image">
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+<span class="btn_1 btn-file rounded-20 mt-2">
+    <label for="id_image">
+    Select Image <input class="id_image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </label>
 </span>
-<strong><p class="text-danger" id="filename"></p></strong>
+<p class="text-danger" id="filename"><strong></strong></p>

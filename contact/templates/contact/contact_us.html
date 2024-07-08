@@ -16,13 +16,13 @@
 </section>
 <!-- Breadcrumb part end-->
 <!-- Contact us part start -->
-<section class="cart_area section_padding">
+<div class="cart_area section_padding">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
-                <p class="text-muted">
+                <div class="text-muted">
                 <h5 id="h5-padding">Please complete the form:</h5>
-                </p>
+                </div>
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Contact us part end -->
 {% endblock %}
 {% block postloadjs %}
