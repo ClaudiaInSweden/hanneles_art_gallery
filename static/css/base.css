@@ -6,7 +6,7 @@ i, p, a {
     color: #795376 !important;
 }
 h1, h2, h3, h4 {
-    color: #795376;
+    color: #795376 !important;
 }
 .btn_3 {
 	background-color: transparent;
@@ -267,6 +267,9 @@ i {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
 }
+.table thead th {
+    color: #795376;
+}
 @media (max-width: 768px) {
     .cart_inner .table tbody tr td {
         padding-top: 10px !important;
@@ -401,7 +404,8 @@ i {
 
 /* Review slider */
 .review_heading {
-    color: rgb(121, 83, 118);
+    color: #795376;
+    font-size: 1rem;
 }
 .card {
     border: 0 !important;
@@ -454,4 +458,8 @@ h5 {
 }
 .form-control {
     font-size: 1rem !important;
+}
+.form-titel-text {
+    font-size: 1rem;
+    font-weight: 500;
 }
