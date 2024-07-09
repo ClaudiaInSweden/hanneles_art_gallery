@@ -36,7 +36,7 @@
           <h3>Add your review</h3>
           <form method="POST">
             {% csrf_token %}
-            <p>{{ review_form|crispy }}</p>
+            {{ review_form|crispy }}
             <button class="btn_1" type="submit">Submit</button>
           </form>
         </div>

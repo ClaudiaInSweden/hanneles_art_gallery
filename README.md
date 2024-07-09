@@ -448,83 +448,31 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 #### HTML
 
 No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
-Details for each page can be found by clicking the expand button.
+Validation has been performed both via address and text input on 2024-07-09.
+
  
+| Page  | No Errors | Errors | Info |
+| ------------- | :-------------: | :-------------: | :-------------: | 
+| index  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |   
+| reviews  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| privace_policy  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| contact_us  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| products  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| product_details  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| add_product  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| edit_product  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| delete_product  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| cart  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |   
+| checkout  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| checkout_success  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| create_newsletter  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| subscribe  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| unsubscribe  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| profile  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
+| signup  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| login  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| logout  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
 
-<details>
-
-<summary>HTML Validation </summary>
-
-**Homepage**
-
-![Home Page](static/readme-docs/validation-html/home.png)
-
-
-**Reviews**
-
-![Reviews](static/readme-docs/validation-html/reviews.png)
-
-
-**Products**
-
-![Products](static/readme-docs/validation-html/products.png)
-
-
-**Product Details**
-
-![Product Details](static/readme-docs/validation-html/product_detail.png)
-
-
-**Edit Product**
-
-![Edit Product Form](static/readme-docs/validation-html/product_edit.png)
-
-
-**Add Product**
-
-![Add Product](static/readme-docs/validation-html/product_add.png)
-
-
-**Cart**
-
-![Cart](static/readme-docs/validation-html/cart.png)
-
-
-**Checkout**
-
-![Checkout](static/readme-docs/validation-html/checkout.png)
-
-
-**Checkout success**
-
-![Checkout success](static/readme-docs/validation-html/checkout_success.png)
-
-
-**Login**
-
-![Login](static/readme-docs/validation-html/login.png)
-
-
-**Logout**
-
-![Logout](static/readme-docs/validation-html/logout.png)
-
-
-**Signup**
-
-![Signup](static/readme-docs/validation-html/signup.png)
-
-
-**Profile**
-
-![Profile](static/readme-docs/validation-html/profile.png)
-
-
-**Privacy Policy**
-
-![Privacy Policy](static/readme-docs/validation-html/privacy.png)
-
-</details>
 
 
 
@@ -569,7 +517,7 @@ Performance details for each page can be found by clicking the expand button.
 
 **Product Details**
 
-![Product Details](static/readme-docs/performance/product_detail.png)
+![Product Details](static/readme-docs/performance/product_details.png)
 
 
 **Edit Product**
@@ -580,6 +528,11 @@ Performance details for each page can be found by clicking the expand button.
 **Add Product**
 
 ![Add Product](static/readme-docs/performance/add_product.png)
+
+
+**Delete Product**
+
+![Add Product](static/readme-docs/performance/delete_product.png)
 
 
 **Cart**
@@ -595,6 +548,26 @@ Performance details for each page can be found by clicking the expand button.
 **Checkout success**
 
 ![Checkout success](static/readme-docs/performance/checkout_success.png)
+
+
+**Contact us**
+
+![Contact us](static/readme-docs/performance/contact.png)
+
+
+**Create Newsletter**
+
+![Create Newsletter](static/readme-docs/performance/create_newsletter.png)
+
+
+**Subscribe**
+
+![Subscribe](static/readme-docs/performance/subscribe.png)
+
+
+**Unsubscribe**
+
+![Unsubscribe](static/readme-docs/performance/unsubscribe.png)
 
 
 **Login**
@@ -737,7 +710,7 @@ Details for each part can be found by clicking the expand button.
 <summary>Newsletter </summary>
 
 
-**model.py**
+**models.py**
 ![models.py](static/readme-docs/validation-python/newsletter_models.png)
 
 
@@ -756,7 +729,7 @@ Details for each part can be found by clicking the expand button.
 <summary>Contact us </summary>
 
 
-**model.py**
+**models.py**
 ![models.py](static/readme-docs/validation-python/contact_models.png)
 
 

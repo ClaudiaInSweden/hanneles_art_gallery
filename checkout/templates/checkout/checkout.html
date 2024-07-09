@@ -23,20 +23,20 @@
 
 <!-- Spinning overlay section -->
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <p class="h1 text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </p>
 </div>
 <!-- Spinning overlay end -->
 
 <!-- Checkout Area Start-->
-<section class="cart_area section_padding">
+<div class="cart_area section_padding">
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-4 order-lg-last mb-5">
-            <p class="text-muted"><h5 id="h5-padding">Order Summary:</h5></p>
+            <p class="form-titel-text pb-3">Order Summary:</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 text-muted">Title</p>
@@ -80,19 +80,19 @@
             </div>
         </div>
         <div class="col-12 col-lg-8">
-            <p class="text-muted"><h5 id="h5-padding">Please fill out the form to complete your order.</h5></p>
+            <div class="form-titel-text pb-3 pl-3">Please fill out the form to complete your order.</div>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto">
-                        <h6>Profile Details</h6>
+                        <strong>Profile Details</strong>
                     </legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto">
-                        <h6>Delivery Details</h6>
+                        <strong>Delivery Details</strong>
                     </legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
@@ -106,7 +106,7 @@
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                             checked>
                         {% else %}
-                        <label class="form-check-label" for="id-save-info">
+                        <label class="form-check-label">
                             <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create an account"><strong>Create an
                                     account</strong></a> or
                             <a class="text-info" href="{% url 'account_login' %}"><strong> login</strong></a> to save
@@ -117,7 +117,7 @@
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label px-2 w-auto">
-                        <h6>Payment Details</h6>
+                        <strong>Payment Details</strong>
                     </legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
@@ -131,7 +131,7 @@
                             <i class="fas fa-chevron-left text-white pr-1"></i>
                         </span>
                         <span> Update Cart</span></a>
-                    <button id="submit-button" class="btn_1 btn-responsive" role="button" aria-label="Complete the order"><span>Complete Order </span>
+                    <button id="submit-button" class="btn_1 btn-responsive" aria-label="Complete the order"><span>Complete Order </span>
                         <span class="icon"><i class="fas fa-lock pl-1 text-white"></i></span>
                     </button>
                 </div>
@@ -144,8 +144,7 @@
         </div>
     </div>
   </div>
-  .
-</section>
+</div>
 <!--End Checkout Area -->
 
 {% endblock %}
@@ -155,4 +154,15 @@
 {{ client_secret|json_script:"id_client_secret" }}
 <script src="{% static 'checkout/js/stripe_elements.js' %}">
 </script>
+<script>
+    jQuery(function($) { 
+    jQuery('#id_country').attr('aria-label','Select country'); 
+    }); 
+</script>
+<script>
+jQuery(function($) { 
+jQuery('#card-element').attr('aria-label','Credit Card Details'); 
+}); 
+</script>
+
 {% endblock %}

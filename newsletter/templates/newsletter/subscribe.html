@@ -16,12 +16,12 @@
 </section>
 <!-- Breadcrumb part end-->
 <!-- Subscribe part start -->
-<section class="cart_area section_padding">
+<div class="cart_area section_padding">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                 <div class="text-muted">
-                <div class="form-titel-text">Enter a valid email address:</div>
+                <p class="h5">Enter a valid email address:</p>
                 </div>
                 <form action="{% url 'subscribe' %}" method="POST">
                     {% csrf_token %}
@@ -34,6 +34,6 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Subscribe part end -->
 {% endblock %}

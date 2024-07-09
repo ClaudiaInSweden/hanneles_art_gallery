@@ -421,11 +421,11 @@ i {
 
 /* Privacy Policy */
 .btn-link {
-    color: #795376;
-    font-size: 14px;
+    color: #4B3049 !important;
+    font-size: 1.1rem;
 }
 .btn-link:focus, .btn-link:hover {
-    color: #828bb2;
+    color: #795376;
 }
 .accordion + i {
     color: #795376;
@@ -440,14 +440,19 @@ h5 {
     margin-top: 0.5rem;
 }
 .typography strong {
-    color: #828bb2;
+    color: #795376;
 }
 .typography a {
-    color: #707070;
+    color: #795376;
     text-decoration: underline;
 }
 .typography h5 {
     padding-left: 10px;
+}
+.card-header {
+    border: 1px solid #795376 !important;
+    border-radius: 10px !important;
+    background-color: #faf9fa !important;
 }
 
 /* Contact form */
@@ -462,4 +467,5 @@ h5 {
 .form-titel-text {
     font-size: 1rem;
     font-weight: 500;
+    color: #795376;
 }

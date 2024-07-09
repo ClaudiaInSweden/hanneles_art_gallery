@@ -9,7 +9,7 @@
               <div class="card-body border-0">
                 <p>{% for s in r.rating|ljust:r.rating %}<i class="fas fa-star"></i> {% endfor %}</p>
                 <div class="card-title">{{ r.review_title }}</div>
-                <a href="{% url 'reviews' %}"><p class="card-text font-italic">"{{ r.review_body }}"</p></a>
+                <a href="{% url 'reviews' %}"><p class="card-text font-italic">"{{ r.review_body|linebreaksbr }}"</p></a>
                 <br>
                 <p class="card-text text-muted">- {% if r.display_name is None %}Anonymous -{% else %}{{ r.display_name }} -{% endif %}</p>
               </div>

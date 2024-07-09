@@ -86,3 +86,11 @@ select option[value=""] {
 .fas fa-chevron-left {
   color: #fff !important;
 }
+.form-titel-text {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #795376 !important;
+}
+.confirmation_part .single_confirmation_details {
+  background-color: #ede5ed70 !important;
+}

@@ -15,19 +15,19 @@
     </div>
 </section>
 <!-- Breadcrumb part end-->
-    <section class="pt-2">
-        <div class="container mt-5">
-            <div class="row mt-5">
-                <div col-md-8 offset-md-2>
-                    <form action="{% url 'delete_product' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <p class="mb-3">Are you sure you want to delete the painting "{{ product.name }}"?</p>
-                        <p></p>
-                        <a href="{% url 'product_detail' product.id %}" class="btn_1 text-white">Cancel</a>
-                        <input type="submit" class="btn_1" value="Confirm"></input>
-                    </form>
-                </div>
+<div class="pt-2">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-md-8 offset-md-2">
+                <form action="{% url 'delete_product' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <p class="mb-3">Are you sure you want to delete the painting "{{ product.name }}"?</p>
+                    <p></p>
+                    <a href="{% url 'product_detail' product.id %}" class="btn_1 text-white">Cancel</a>
+                    <input type="submit" class="btn_1" value="Confirm">
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 {% endblock %}

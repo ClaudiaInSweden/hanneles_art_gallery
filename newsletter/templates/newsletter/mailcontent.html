@@ -16,10 +16,10 @@
 </section>
 <!-- Breadcrumb part end-->
 <!-- Create Newsletter part start -->
-<section class="cart_area section_padding">
+<div class="cart_area section_padding">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-5 order-lg-last mb-5 mx-auto">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
                 <form action="{% url 'mail_content' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -31,6 +31,6 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Create Newsletter Part End -->
 {% endblock %}

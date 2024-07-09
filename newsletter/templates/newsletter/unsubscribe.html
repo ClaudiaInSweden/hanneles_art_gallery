@@ -16,13 +16,11 @@
 </section>
 <!-- Breadcrumb part end-->
 <!-- Unsubscribe part start -->
-<section class="cart_area section_padding">
+<div class="cart_area section_padding">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5 mx-auto">
-                <div class="text-muted">
-                <div class="form-titel-text">Enter your email address:</div>
-                </div>
+                <p class="h5">Enter your email address:</p>
                 <form action="{% url 'unsubscribe' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -35,6 +33,6 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Unsubscribe part end -->
 {% endblock %}
