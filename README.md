@@ -478,7 +478,8 @@ Validation has been performed both via address and text input on 2024-07-09.
 
 #### CSS
 
-No errors were found when passing through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator
+No errors were found when passing the css stylesheet that were created by myself through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator.
+However, there were 
 
 **base.css**
 

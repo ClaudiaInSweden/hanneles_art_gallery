@@ -48,7 +48,6 @@ def unsubscribe(request):
         else:
             messages.error(request, f'It seems the email address does not \
                 exist in our database!\nPlease enter a valid email address.')
-            return redirect('home')
 
     context = {
         'form': form,
