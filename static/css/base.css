@@ -330,6 +330,12 @@ i {
 .toast-body {
     color: #4B3049;
 }
+.toast-icon:hover {
+    color: #4B3049;
+}
+.toast-icon:active {
+    color: #4B3049;
+}
 .cart_area section_padding {
     padding: 50px 0px;
 }

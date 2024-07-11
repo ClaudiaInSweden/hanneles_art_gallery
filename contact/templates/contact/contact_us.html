@@ -52,16 +52,17 @@ $('textarea').keyup(function() {
       
     current.text(characterCount);
 
-    if (characterCount >= 400) {
+
+    if (characterCount >= 401) {
         maximum.css('color', '#8f0001');
         current.css('color', '#8f0001');
         charCount.css('font-weight','bold');
     } else {
         maximum.css('color','#666');
-        theCount.css('font-weight','normal');
+        current.css('color', '#666');
+        charCount.css('font-weight','normal');
     }
   
 });
-
 </script>
 {% endblock %}
