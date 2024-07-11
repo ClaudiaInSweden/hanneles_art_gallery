@@ -479,7 +479,7 @@ Validation has been performed both via address and text input on 2024-07-09.
 #### CSS
 
 No errors were found when passing the css stylesheet that were created by myself through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator.
-However, there were 
+However, there were 3 errors and 1450 warning found in the third party resources.
 
 **base.css**
 
@@ -489,6 +489,11 @@ However, there were
 **checkout.css**
 
 ![checkout.css](static/readme-docs/validation-css/checkout_css.png)
+
+
+**3rd party resources.css**
+
+![3rd party.css](static/readme-docs/validation-css/thirdparty_css.png)
 
 
 #### Google Chrome Lighthouse Reports
