@@ -62,7 +62,9 @@
         </div>
         <hr>
         {% if product.sold is True %}
-        <p class="text-uppercase">sold</p>
+        <p class="text-uppercase h4">sold</p>
+        <a href="{% url 'products' %}" class="btn_1 text-white m-2" role="button"
+            aria-label="Back to Gallery">Back to Gallery</a>
         {% else %}
         <div class="add_to_cart">
           <h4>Price:</h4>
