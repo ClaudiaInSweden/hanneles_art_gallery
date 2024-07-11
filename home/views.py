@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.db.models import Avg
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 from .models import Review
 from .forms import ReviewForm
