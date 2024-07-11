@@ -42,7 +42,6 @@ select option[value=""] {
   color: #795376!important;
 }
 
-
 /* Loading overlay */
 #loading-overlay {
 	display: none;
@@ -61,6 +60,7 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
 /* Form */
 #id_country {
   padding: 10px 12px;
