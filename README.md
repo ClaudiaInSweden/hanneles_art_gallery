@@ -539,7 +539,7 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 
 #### HTML
 
-No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+One error was returned when passing through the [W3C Markup validator](https://validator.w3.org/). The error is on the Django-Allauth Sign-up Page and documented in the [Bugs section](https://github.com/ClaudiaInSweden/hanneles_art_gallery#bugs) of this file.
 Validation has been performed both via address and text input on 2024-07-09.
 
  
@@ -561,7 +561,7 @@ Validation has been performed both via address and text input on 2024-07-09.
 | subscribe  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
 | unsubscribe  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
 | profile  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | 
-| signup  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
+| signup<br> see [Bugs](https://github.com/ClaudiaInSweden/hanneles_art_gallery#bugs)  | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
 | login  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
 | logout  | ![](static/readme-docs/others/check_25x25.png) | ![](static/readme-docs/others/close_25x25.png) | ![](static/readme-docs/others/close_25x25.png) |  
 
@@ -923,12 +923,18 @@ Please note: For Copyright questions/requests please contact the artist!
 
 - When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all are visible in the "send to" field which of course is impossible to use due to GDPR. But when I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
 
-- When Code Institute moved to GitHub Enterprise I was recommended by Code Institute Tutor Support to update to a newer version (0.57.0) of django-allauth as the older version couldn¨t be re-installed. 
+- When Code Institute moved to GitHub Enterprise I was recommended by Code Institute Tutor Support to update to a newer version (0.57.0) of django-allauth as the older version couldn't be re-installed. 
 However, this version seems to have a major bug:
 When using the crispy form tag in the sign up template, a html error is returned when using the HTML validator. 
-This resulted in an error on the sign-up page when using the W3C Markup Validator. I solved this by extracting the html code, correcting the code that causes the error and use this instead of the crispy form tag.
 
-- When a user signs up and repeats this step before the email address is verified, 
+
+![Sign-up HTML Error](static/readme-docs/others/signup.png)
+
+
+I solved this by extracting the html code from the Google devtool, correcting the html code that causes the error and use this instead of the crispy form tag. Unfortunately, when doing so, all validation of the form is lost besides the check if all required fields are filled in. The form was not submitted either. That means, when the user submits the form, nothing happens. 
+From a user perspective a non-functioning sign-up form definitely is a very bad experience whereas the user doesn't notice the html error. So, I changed the form back to a crispy form. For the next release a working and error-free version of django-allauth should be installed.
+
+
 
 
 
