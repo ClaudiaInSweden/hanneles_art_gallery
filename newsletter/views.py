@@ -62,7 +62,7 @@ def mail_content(request):
     and redirect to start page
     """
     if not request.user.is_superuser:
-        messages.error(request, 'You are not authorized to perform this task.')
+        messages.error(request, f'You are not authorized to perform this task.')
         return redirect(reverse('home'))
 
     emails = Subscribers.objects.values_list("email", flat=True)
