@@ -411,6 +411,9 @@ Once the transaction is completed successfully, an order confirmation page is di
 ![Order confirmation](static/readme-docs/others/checkout_success.png)
 
 
+![Email confirmation](static/readme-docs/others/thankyou_email.png)
+
+
 ### My Account
 
 Under the My Account menu tab in the navigation the user will see different options depending on the log-in status:
@@ -431,30 +434,49 @@ As simple form is used to write a newsletter including a subject and the newslet
 ![Newsletter](static/readme-docs/others/newsletter_form.png)
 
 
-## Typography and color scheme
+![Newsletter Email](static/readme-docs/others/newsletter_email.png)
 
 
-### Font
-I tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
+
+## Future Features
+
+- Add a rich text editor to the newsletter form to enable nice looking newsletter emails including images
+- Enable both text and html email transfer for all emails from Hanneles Art Gallery
+- Connect the subscribe function with the user profile and enable newsletter subscription from profile and checkout page
+- Add a membership area with tutorials and "How to"-instructions
+
+
+
+## Typography
+
+I tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. 
+
+The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
 
 Rubik is a sans serif font family with slightly rounded corners designed by Philipp Hubert and Sebastian Fischer at Hubert & Fischer as part of the Chrome Cube Lab project.
 
 Rubik is a 5 weight family with Roman and Italic styles, that accompanies Rubik Mono One, a monospaced variation of the Black roman design.
 
 
-### Color
-The original more pinkish color of the bootstrap template resultad in a lower accessibility score in the Google Lighthouse tool. So I decided to use a darker color but still in the same color family. 
+## Color Schema
+The original more pinkish color of the bootstrap template resultad in a low accessibility score in the Google Lighthouse tool. So I decided to use a darker color but still in the same color family. 
 
 Viola Purple is a medium dark, medium bright shade of Magenta. It belongs to the color family Dark Pastel Magenta, and it has medium lightness and low saturation. Viola Purple is a warm color. It harmonizes very well with the paintings and does not distract when used as background color on the product details page. 
 
-Changing to Viola Purple, improved the accessibility score to 100 on almost all pages. 
+Changing to Viola Purple improved the accessibility score to 100 on almost all pages. 
 
 ![Color Schema](static/readme-docs/others/color_schema.png)
 
 
 ## Wireframes
 
-Wireframes for desktop and smartphone have been created with [Balsamiq](https://balsamiq.com/wireframes/)
+Wireframes for desktop and smartphone have been created using [Balsamiq](https://balsamiq.com/wireframes/)
+
+
+<details>
+
+<summary>Balsamiq Wireframes </summary>
+
 
 ### Homepage
 
@@ -500,6 +522,8 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 
 ![Profile](static/readme-docs/wireframes/newsletter.png)
 
+</details>
+
 
 ## Technologies used
 
@@ -509,7 +533,7 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 - JavaScript
 - jQuery
 - Python
-- Django
+
 
 ### Technologies and programs
 - IDE: Gitpod/VS Code
@@ -523,11 +547,14 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 ### Software and frameworks
 - [Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
 - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Django 3.2.24](https://django.readthedocs.io/en/3.2.x/)
+- [Google Fonts](https://fonts.google.com/)
 - [Fontawsome Icons](https://fontawesome.com/icons)
 - [Favicon](https://favicon.io/)
 - [Birme](https://www.birme.net/)
 - [Snagit Editor](https://www.techsmith.com/screen-capture.html)
 - [Color Scheme](https://coolors.co/?home)
+- [Temp Mail](https://temp-mail.org/en/)
 - [Mermaid](https://mermaid.js.org/)
 
 
@@ -539,8 +566,10 @@ Wireframes for desktop and smartphone have been created with [Balsamiq](https://
 
 #### HTML
 
-One error was returned when passing through the [W3C Markup validator](https://validator.w3.org/). The error is on the Django-Allauth Sign-up Page and documented in the [Bugs section](https://github.com/ClaudiaInSweden/hanneles_art_gallery#bugs) of this file.
-Validation has been performed both via address and text input on 2024-07-09.
+One error was returned when passing through the [W3C Markup validator](https://validator.w3.org/). 
+
+The error is on the Django-Allauth Sign-up Page and documented in the [Bugs section](https://github.com/ClaudiaInSweden/hanneles_art_gallery#bugs) of this file.
+Validation has been performed both via address and text input on 2024-07-09 respective 2024-07-11.
 
  
 | Page  | No Errors | Errors | Info |
@@ -571,7 +600,8 @@ Validation has been performed both via address and text input on 2024-07-09.
 #### CSS
 
 No errors were found when passing the css stylesheet that were created by myself through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator.
-However, there were 3 errors and 1450 warning found in the third party resources.
+However, there were 3 errors and 1450 warnings found in the third party resources.
+
 
 **base.css**
 
@@ -592,11 +622,15 @@ However, there were 3 errors and 1450 warning found in the third party resources
 
 These reports present the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of Hanneles Art Gallery.
 
-The tests were executed using the Google Chrome browser's DevTools.
+
+The tests were executed using the Google Chrome DevTools.
 Performance details for each page can be found by clicking the expand button.
+
+
 <details>
 
 <summary>Lighthouse Performance </summary>
+
 
 **Homepage**
 
@@ -698,7 +732,9 @@ Performance details for each page can be found by clicking the expand button.
 
 #### Python validation
 No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
-Details for each part can be found by clicking the expand button.
+Details for each part can be found by clicking the expand button. 
+
+Test were performed on 2024-07-06
  
 
 <details>
@@ -845,16 +881,17 @@ Details for each part can be found by clicking the expand button.
 
 As the manual testing file is too extensive to add directly here in the Readme it's saved in a separate file.
 
-[Manual Testing](static/readme-docs/others/manual-testing.pdf)
+[Manual Testing](static/readme-docs/others/manual_testing_20240711.pdf)
+
 
 ## Browser Testing
 
 Functionality, links, layout, and responsiveness were tested with the following browsers without any major issues:
 
-- Microsoft Edge Version 117.0.2045.47
-- Firefox Version 118.0.1
-- Brave Version 1.58.135
-- Google Chrome Version 116.0.5845.188
+- Microsoft Edge Version 126.0.2592.87
+- Firefox Version 127.0.2
+- Brave Version 1.67.123
+- Google Chrome Version 126.0.6478.126
 
 
 ## Deployment
@@ -905,6 +942,7 @@ You're welcome to do so.
 Please refer to the official GitHub documentation on how to fork my repository.
 [Link to the GitHub Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository)
 [Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
+
 Please note: For Copyright questions/requests please contact the artist!
 
 
@@ -914,6 +952,7 @@ You're welcome to do so.
 Please refer to the official GitHub documentation on how to clone my repository.
 [Link to the GitHub Documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 [Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
+
 Please note: For Copyright questions/requests please contact the artist!
   
 
@@ -921,19 +960,21 @@ Please note: For Copyright questions/requests please contact the artist!
 
 - When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This is because the fields in the profile form are not mandatory.
 
-- When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all are visible in the "send to" field which of course is impossible to use due to GDPR. But when I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
+- When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all were visible in the "send to" field which of course is impossible to use due to GDPR. When I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
 
-- When Code Institute moved to GitHub Enterprise I was recommended by Code Institute Tutor Support to update to a newer version (0.57.0) of django-allauth as the older version couldn't be re-installed. 
+- When Code Institute moved to GitHub Enterprise I was recommended by Code Institute Tutor Support to update to version 0.57.0 of django-allauth as the older version couldn't be re-installed. 
 However, this version seems to have a major bug:
+
 When using the crispy form tag in the sign up template, a html error is returned when using the HTML validator. 
 
 
 ![Sign-up HTML Error](static/readme-docs/others/signup.png)
 
 
-I solved this by extracting the html code from the Google devtool, correcting the html code that causes the error and use this instead of the crispy form tag. Unfortunately, when doing so, all validation of the form is lost besides the check if all required fields are filled in. The form was not submitted either. That means, when the user submits the form, nothing happens. 
-From a user perspective a non-functioning sign-up form definitely is a very bad experience whereas the user doesn't notice the html error. So, I changed the form back to a crispy form. For the next release a working and error-free version of django-allauth should be installed.
+I solved this at one point by extracting the html code from the source code in the browser, correcting the html code that causes the error and used this instead of the crispy form tag. Unfortunately, when doing so, all validation of the form was lost besides the check if all required fields are filled in. The form was not submitted either. That means, when the user submits the form, nothing happens. 
+From a user perspective a non-functioning sign-up form is an extremely bad experience whereas the user doesn't notice the html error. So, I changed the form back to a crispy form. 
 
+For the next release a working and error-free version of django-allauth should be installed.
 
 
 
@@ -954,16 +995,22 @@ From a user perspective a non-functioning sign-up form definitely is a very bad 
     - [KenBro Tech](https://www.youtube.com/watch?v=hWtlskOaFNI)
     - [Master Code Online - Subscribe](https://www.youtube.com/watch?v=Hy94jBBgvpk)
     - [Master Code Online - Unsubscribe](https://www.youtube.com/watch?v=q2B1VpjDjMQ)
-- [Displaying character counter](https://codepen.io/patrickwestwood/pen/gPPywv)
+- [Display character counter](https://codepen.io/patrickwestwood/pen/gPPywv)
+
 
 - [Stack overflow](https://stackoverflow.com/)
 - [mdn web docs_](https://developer.mozilla.org/en-US/)
 - [W3Schools](https://www.w3schools.com/)
 - [Django Documentation](https://docs.djangoproject.com/en/3.2/)
 - Code Institut Slack Channel
+
+
+## Special Thanks to
+
 - Rebecca, John, Sarah and Alan from Code Institute Tutor Service
 - Kristyna Wach from Code Institute for support during tough times
 - Mentor Tim Nelson from Code Institute for great guidance and useful tips
 
 
-Special Thank to **Hannele Kaarlejärvi** who allowed me to use her paintings for the project.
+and first and foremost
+**A huge THANK YOU to Hannele Kaarlejärvi** who allowed me to use her fantastic paintings for the project. :yellow_heart:
