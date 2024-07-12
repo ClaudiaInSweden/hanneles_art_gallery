@@ -57,7 +57,7 @@ Only logged-in administrators will see the "Create Newsletter"-link.
 
 
 ### SEO - Search Engine Optimization
-Prior to project start some brainstorming resultad in a number of short and long-tail keywords. Using three different browsers and a mobile, resulted in a couple of keyword volume and competition analysis results from [Wordtracker](https://www.wordtracker.com/).
+Prior to project start some brainstorming resulted in a number of short and long-tail keywords. Using three different browsers and a mobile, resulted in a couple of keyword volume and competition analysis results from [Wordtracker](https://www.wordtracker.com/).
 Also Google search with suggested search phrases as well as related searches was used. However, original paintings seem to be a niche product and Googles suggestions were not comprehensive. 
 
 The selected keywords and long-tail phrases where included in meta description and keywords as well as in the headings and button texts. 
@@ -112,6 +112,11 @@ The color scheme was chosen after the mostly female target group.
 Viola Purple is a medium dark, medium bright shade of Magenta. It belongs to the color family Dark Pastel Magenta, and it has medium lightness and low saturation. Viola Purple is a warm color.
 
 A free Bootstrap 4 template was used that was adapted to fit the project.
+
+
+An individual 404 Error page was created to increase the user experience.
+
+![404 Error](static/readme-docs/others/error.png)
 
 
 
@@ -264,7 +269,8 @@ The responsive navigation bar on top of the page includes the following links:
 
 
 
-Also available is a search bar and the shopping cart that shows the total sum of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
+
+Also available is a search bar and the shopping cart that shows the total sum of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable bars icon, to allow a reasonable size of the search field.
 The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and also contains a link back to the overview page.
 
 
@@ -287,7 +293,7 @@ The Home page is the starting point for users. It displays one of the paintings 
 
 The lower part of the page shows reviews that have been given from users. Both the heading and the review text are linked to the review page.
 
-Below the review part contact details are available.
+Below the review part, contact details are available.
 
 The section is split into three parts:
 
@@ -306,7 +312,7 @@ On bottom of the page I had to put a link to the template origin as requested in
 ### Contact us
 
 
-The contact form includes a dropdown list to select a topic and a message box that allows for 500 characters. Wenn the text reaches 401 characters the character counter in the bottom left corner of the form will change to a red color.
+The contact form includes a dropdown list to select a topic and a message box that allows for 500 characters. Wenn the text reaches 401 characters the character counter in the bottom right corner of the form will change to red.
 
 
 ![Contact us](static/readme-docs/others/contact.png)
@@ -322,7 +328,7 @@ The reviews page displays given reviews including star rating. Also the average 
 
 
 
-Depending on the log in status, a user will be prompted to log in to write a review or will see a personalized notification that a review has already been given.  
+Depending on the log in status, a user will be prompted to log in to write a review, or will see a personalized notification that a review has already been given.  
 
 
 #### User not logged in
@@ -371,13 +377,13 @@ The status will be updated automatically to "sold" when an order has been succes
 ### Shopping cart
 
 On the shopping cart page the user can see an overview of the paintings in the shopping cart as well as total costs including a delivery flat rate. As the paintings don't differ a lot in sizes and can easily be packaged I decided to use a flat rate for delivery. 
-Here the user also has the possibility to remove a painting from the cart or go back to the paintings overview page. 
+Here, the user also has the possibility to remove a painting from the cart or go back to the paintings overview page. 
 
 ![Shopping cart](static/readme-docs/others/shopping_cart.png)
 
 If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button directing to the paintings overview page. 
 
-If the user clicks the "Proceed to Checkout"-button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
+If the user clicks the "Proceed to Checkout"-button the user will be directed to the checkout form. Also here, the user can see which paintings are in the shopping cart and the total sum. 
 
 
 ### Checkout
@@ -390,7 +396,7 @@ On the bottom of the page you can find the Stripe credit card section for the us
 As only a Stripe test account is used, an error will be displayed when a credit card number other than the test card number 4242 ... is entered.
 
 
-Also here the user can still choose to interrupt the checkout process and go back to the shopping cart. 
+The user can still choose to interrupt the checkout process and go back to the shopping cart. 
 
 
 ![Checkout Page](static/readme-docs/others/checkout.png)
@@ -411,6 +417,9 @@ Once the transaction is completed successfully, an order confirmation page is di
 ![Order confirmation](static/readme-docs/others/checkout_success.png)
 
 
+
+**Order confirmation email**
+
 ![Email confirmation](static/readme-docs/others/thankyou_email.png)
 
 
@@ -428,12 +437,17 @@ Users have the possibility to subscribe to the newsletter. They just need to ent
 
 Only a logged-in administrator can see the link to the Create Newsletter form in the navigation. 
 
-As simple form is used to write a newsletter including a subject and the newsletter content. The form is pre-populated with an unsubscribe-link that leads to the unsubscribe page. 
+A simple form is used to write a newsletter including a subject and the newsletter content. The form is pre-populated with an unsubscribe-link that leads to the unsubscribe page so that a user may easily and fast unsubscribe. 
 
+
+**The newsletter form**
 
 ![Newsletter](static/readme-docs/others/newsletter_form.png)
 
 
+
+
+**A newsletter in the subscribers' mailbox**
 ![Newsletter Email](static/readme-docs/others/newsletter_email.png)
 
 
@@ -546,8 +560,6 @@ Wireframes for desktop and smartphone have been created using [Balsamiq](https:/
 
 ### Software and frameworks
 - [Colorlib template "Pillowmate"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
-- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Django 3.2.24](https://django.readthedocs.io/en/3.2.x/)
 - [Google Fonts](https://fonts.google.com/)
 - [Fontawsome Icons](https://fontawesome.com/icons)
 - [Favicon](https://favicon.io/)
@@ -897,32 +909,32 @@ Functionality, links, layout, and responsiveness were tested with the following 
 ## Deployment
 A Repository was created in Github, and apps and templates were developed using VS Code. At an early stage a database on ElephantSQL was connected to the project as well als an AWS S3 Bucket to store static and media files. The following packages were installed in VS Code and added to the requirements.txt:
 
-asgiref==3.8.1
-boto3==1.34.37
-botocore==1.34.73
-dj-database-url==0.5.0
-Django==3.2.24
-django-allauth==0.57.0
-django-countries==7.2.1
-django-crispy-forms==1.14.0
-django-js-asset==2.2.0
-django-storages==1.14.2
-gunicorn==21.2.0
-jmespath==1.0.1
-numpy==2.0.0
-oauthlib==3.2.2
-pandas==2.2.2
-pillow==10.2.0
-psycopg2==2.9.9
-PyJWT==2.8.0
-python3-openid==3.2.0
-pytz==2024.1
-requests-oauthlib==2.0.0
-s3transfer==0.10.0
-sqlparse==0.4.4
-stripe==8.1.0
-tzdata==2024.1
-urllib3==1.26.18
+- asgiref==3.8.1
+- boto3==1.34.37
+- botocore==1.34.73
+- dj-database-url==0.5.0
+- Django==3.2.24
+- django-allauth==0.57.0
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- django-js-asset==2.2.0
+- django-storages==1.14.2
+- gunicorn==21.2.0
+- jmespath==1.0.1
+- numpy==2.0.0
+- oauthlib==3.2.2
+- pandas==2.2.2
+- pillow==10.2.0
+- psycopg2==2.9.9
+- PyJWT==2.8.0
+- python3-openid==3.2.0
+- pytz==2024.1
+- requests-oauthlib==2.0.0
+- s3transfer==0.10.0
+- sqlparse==0.4.4
+- stripe==8.1.0
+- tzdata==2024.1
+- urllib3==1.26.18
 
 
 ### The following steps were taken to deploy the app to Heroku:
@@ -938,9 +950,13 @@ urllib3==1.26.18
 
 ### Forkning
 A fork is a new repository that shares code and visibility settings with the original repository.
+
 You're welcome to do so.
+
 Please refer to the official GitHub documentation on how to fork my repository.
+
 [Link to the GitHub Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository)
+
 [Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
 
 Please note: For Copyright questions/requests please contact the artist!
@@ -948,9 +964,13 @@ Please note: For Copyright questions/requests please contact the artist!
 
 ### Cloning
 Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project.
+
 You're welcome to do so.
+
 Please refer to the official GitHub documentation on how to clone my repository.
+
 [Link to the GitHub Documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 [Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
 
 Please note: For Copyright questions/requests please contact the artist!
@@ -958,7 +978,7 @@ Please note: For Copyright questions/requests please contact the artist!
 
 ## Bugs
 
-- When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This is because the fields in the profile form are not mandatory.
+- When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on the Update Profile-button. This is because the fields in the profile form are not mandatory.
 
 - When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all were visible in the "send to" field which of course is impossible to use due to GDPR. When I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
 
@@ -971,7 +991,7 @@ When using the crispy form tag in the sign up template, a html error is returned
 ![Sign-up HTML Error](static/readme-docs/others/signup.png)
 
 
-I solved this at one point by extracting the html code from the source code in the browser, correcting the html code that causes the error and used this instead of the crispy form tag. Unfortunately, when doing so, all validation of the form was lost besides the check if all required fields are filled in. The form was not submitted either. That means, when the user submits the form, nothing happens. 
+I solved this at one point by extracting the html code from the source code in the browser, correcting the html code that causes the error and used this instead of the crispy form tag. Unfortunately, when doing so, all validation of the form was lost. The only thing that was checked, was if all required fields are filled in. The form was not submitted either. That means, when the user submits the form, nothing happens. 
 From a user perspective a non-functioning sign-up form is an extremely bad experience whereas the user doesn't notice the html error. So, I changed the form back to a crispy form. 
 
 For the next release a working and error-free version of django-allauth should be installed.
@@ -981,9 +1001,9 @@ For the next release a working and error-free version of django-allauth should b
 
 ## Credits
 
-- [404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
-- [Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
-- [Paintings](https://artportable.com/profile/@hansu) - For Copyright questions/requests please contact the artist!
+- [404 Error Image: Vecteezy](https://www.vecteezy.com/free-vector/painting-stand)
+- [Bootstrap Template "Pillow Mart": Themewagon](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+- [All Paintings: Hannele Kaarlejärvi](https://artportable.com/profile/@hansu) - For Copyright questions/requests please contact the artist!
 
 
 
