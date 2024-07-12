@@ -105,7 +105,7 @@ To comply with GDPR a Privacy Policy has been created using the [Privacy Policy 
 
 ### UX
 
-As the webshop only sells paintings the focus in the design was on presenting the paintings. This was achieved with an overview page that allows for a good overview of all paintings (including filtering and sorting by price) and a large image of the painting when clicking on the "Details" button under each image. The user tean can see a large image and can "study" the painting in detail before scrolling down to see short descriptions. As users usually don't buy a lot of paintings but take their time to choose one I concluded that a good picture is more important than size, format or price. 
+As the webshop only sells paintings the focus in the design was on presenting the paintings. This was achieved with an overview page that allows for a good overview of all paintings (including filtering and sorting by price) and a large image of the painting when clicking on the "Details" button under each image. The user then can see a large image and can "study" the painting in detail before scrolling down to see a short description. As users usually don't buy a lot of paintings but take their time to choose one I concluded that a good picture is more important than size, format or price. 
 
 The color scheme was chosen after the mostly female target group. 
 
@@ -239,7 +239,7 @@ erDiagram
 
 The responsive navigation bar on top of the page includes the following links: 
 
-- Home Page
+- Logotype/Home Page
 - Art Gallery - a dropdown list to select either all paintings or filtered by category 
 - My Account - shows different options depending on the login status. 
   - User is not logged in:
@@ -259,29 +259,37 @@ The responsive navigation bar on top of the page includes the following links:
   Users will only see the option "Subscribe" while logged-in administrator also has access to "Create Newsletter"
 
 
+
 ![Navbar categories](static/readme-docs/others/navigation.png)
 
 
-Also available is a search bar and the shopping cart that shows the total amount of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
-The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and a link back to the overview page.
+
+Also available is a search bar and the shopping cart that shows the total sum of the items in the shopping cart in Euro. On small screens the amount is hidden and the logotype switches to a clickable icon, to allow a reasonable size of the search field.
+The search field searches through title, painting technique, size and the category field and search results are displayed on the paintings overview page. An information text informs the user about the number of matches and also contains a link back to the overview page.
+
 
 ![Search results](static/readme-docs/others/all_paintings.png)
 
 
-The navigation bar is identical on each page (includes method is used) to enable easy navigation. It allows users to navigate between pages on all devices without the need to use the "back" button.
+
+The responsive navigation bar is identical on each page to enable easy navigation on all devices. It allows users to navigate between pages on all devices without the need to use the "back" button.
+
 
 
 ### Home Page
 
 The Home page is the starting point for users. It displays one of the paintings and informs the user about the purpose of the website. Keywords and phrases are used in the short intro text and the button for improved SEO. 
 
+
 ![Home Page](static/readme-docs/others/amiresponsive.png)
+
 
 
 The lower part of the page shows reviews that have been given from users. Both the heading and the review text are linked to the review page.
 
 Below the review part contact details are available.
-The section is splitted into three parts:
+
+The section is split into three parts:
 
 - address
 - contact detail
@@ -291,14 +299,27 @@ The contact part includes a "Contact us" icon & text that links to the contact u
 
 On bottom of the page I had to put a link to the template origin as requested in the template license agreement. On the right side of the page the user can find a link to the Privacy Policy page that opens in a new tab.
 
+
 ![Contact](static/readme-docs/others/middle_part.png)
+
+
+### Contact us
+
+
+The contact form includes a dropdown list to select a topic and a message box that allows for 500 characters. Wenn the text reaches 401 characters the character counter in the bottom left corner of the form will change to a red color.
+
+
+![Contact us](static/readme-docs/others/contact.png)
+
 
 
 ### Reviews
 
 The reviews page displays given reviews including star rating. Also the average customer rating is visible. 
 
+
 ![Reviews](static/readme-docs/others/reviews.png)
+
 
 
 Depending on the log in status, a user will be prompted to log in to write a review or will see a personalized notification that a review has already been given.  
@@ -321,16 +342,18 @@ Depending on the log in status, a user will be prompted to log in to write a rev
 
 ### All Paintings
 
-The All Paintings / Products page lists all paintings with an image and short information. The details button leads to a product detail page with a large image of the painting and some information about the size and the used technique. 
+The All Paintings / Products page lists all paintings with an image and short information. The details button leads to a product detail page with a large image of the painting and some information about the size and the technique used. 
 
 A button in the bottom right corner enables a fast return to the top of the page at any moment.
 
 ![All Paintings page](static/readme-docs/others/all_paintings.png)
 
 
+
 The buttons "Update" and "Delete" are only visible for logged in administrators of the page. 
 
 ![All Paintings page](static/readme-docs/others/all_paintings_update_delete.png)
+
 
 
 ### Painting details
@@ -354,15 +377,21 @@ Here the user also has the possibility to remove a painting from the cart or go 
 
 If the user deletes all items in the shopping cart some info text will be displayed, telling the user that the shopping cart is empty; and a button directing to the paintings overview page. 
 
-If the user clicks the Complete checkout button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
+If the user clicks the "Proceed to Checkout"-button the user will be directed to the checkout form. Also here the user can see what paintings are in the shopping cart and the total sum. 
+
 
 ### Checkout
 
 On the checkout page the user can see a short summary of the order on the right side and a form on the left side. 
 The form asks for name, email and the delivery address. When the user is already registered and logged in, the address will be pre-populated. As the location for the webshop is in Sweden, it was decided to use only the address fields that are common in Sweden, so state/county has not been used. 
+
+
 On the bottom of the page you can find the Stripe credit card section for the user to fill in credit card number, valid date, CVV and zip code.
 As only a Stripe test account is used, an error will be displayed when a credit card number other than the test card number 4242 ... is entered.
+
+
 Also here the user can still choose to interrupt the checkout process and go back to the shopping cart. 
+
 
 ![Checkout Page](static/readme-docs/others/checkout.png)
 
@@ -375,7 +404,9 @@ While the payment transfer is ongoing a spinning overlay is displayed to inform 
 
 ![Checkout overlay](https://hanneles-art-gallery.s3.eu-north-1.amazonaws.com/readme-docs/checkout_overlay.jpg)
 
-Once the transaction is completed successfully an order confirmation page is displayed informing the user that a confirmation email has been sent to the provided email address. Also an order summary with the delivery address is visible as well as a button back to the paintings page. 
+
+Once the transaction is completed successfully, an order confirmation page is displayed informing the user that a confirmation email has been sent to the provided email address. Also an order summary with the delivery address is visible as well as a button back to the paintings page. 
+
 
 ![Order confirmation](static/readme-docs/others/checkout_success.png)
 
@@ -383,22 +414,40 @@ Once the transaction is completed successfully an order confirmation page is dis
 ### My Account
 
 Under the My Account menu tab in the navigation the user will see different options depending on the log-in status:
-- When the user is not logged in a Registration and a Log-in Option are available. They open Allauth templates which are Bootstrap-styled to match the rest of the website. The log-in page offers also the possibility to restore the password in case it's been forgotten.
+- When the user is not logged in a Registration and a Log-in Option are available. They open Django-Allauth templates which are Bootstrap-styled to match the rest of the website. The log-in page offers also the possibility to restore the password in case it's been forgotten.
 - When the user is already logged in, a Log-out option will be visible instead as well as the Profile page. 
 - When a user is logged in as a superuser, the Add Product link is available that leads to a page that enables to add another painting. 
 
 
+### Newsletter
+
+Users have the possibility to subscribe to the newsletter. They just need to enter a valid email address. A confirmation message will be displayed when the subscription was successful.
+
+Only a logged-in administrator can see the link to the Create Newsletter form in the navigation. 
+
+As simple form is used to write a newsletter including a subject and the newsletter content. The form is pre-populated with an unsubscribe-link that leads to the unsubscribe page. 
+
+
+![Newsletter](static/readme-docs/others/newsletter_form.png)
 
 
 ## Typography and color scheme
 
-As already mentioned in the UX section, the color scheme was selected to meet the taste of a mostly female target group. I also tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
 
-The original more pinkish color of the bootstrap template resultad in a lower accessibility score in the Google Lighthouse toll. So I decided to use a darker color but still in the same color family. 
+### Font
+I tried not to overload the pages but keep them clean and spacious. Main focus was on presenting the paintings. The Bootstrap template used the font "Rubik" which I liked very much and used in the project. It harmonizes very well with the layout and is good readable even in small sizes.
 
-Viola Purple is a medium dark, medium bright shade of Magenta. It belongs to the color family Dark Pastel Magenta, and it has medium lightness and low saturation. Viola Purple is a warm color. It harmonizes very well with the painting and does not distract when used as background color on the product details page. 
+Rubik is a sans serif font family with slightly rounded corners designed by Philipp Hubert and Sebastian Fischer at Hubert & Fischer as part of the Chrome Cube Lab project.
 
-Changing to Viola Purple, improved the accessiibility score to 100 on almost all pages. 
+Rubik is a 5 weight family with Roman and Italic styles, that accompanies Rubik Mono One, a monospaced variation of the Black roman design.
+
+
+### Color
+The original more pinkish color of the bootstrap template resultad in a lower accessibility score in the Google Lighthouse tool. So I decided to use a darker color but still in the same color family. 
+
+Viola Purple is a medium dark, medium bright shade of Magenta. It belongs to the color family Dark Pastel Magenta, and it has medium lightness and low saturation. Viola Purple is a warm color. It harmonizes very well with the paintings and does not distract when used as background color on the product details page. 
+
+Changing to Viola Purple, improved the accessibility score to 100 on almost all pages. 
 
 ![Color Schema](static/readme-docs/others/color_schema.png)
 
@@ -806,13 +855,75 @@ Functionality, links, layout, and responsiveness were tested with the following 
 - Firefox Version 118.0.1
 - Brave Version 1.58.135
 - Google Chrome Version 116.0.5845.188
+
+
+## Deployment
+A Repository was created in Github, and apps and templates were developed using VS Code. At an early stage a database on ElephantSQL was connected to the project as well als an AWS S3 Bucket to store static and media files. The following packages were installed in VS Code and added to the requirements.txt:
+
+asgiref==3.8.1
+boto3==1.34.37
+botocore==1.34.73
+dj-database-url==0.5.0
+Django==3.2.24
+django-allauth==0.57.0
+django-countries==7.2.1
+django-crispy-forms==1.14.0
+django-js-asset==2.2.0
+django-storages==1.14.2
+gunicorn==21.2.0
+jmespath==1.0.1
+numpy==2.0.0
+oauthlib==3.2.2
+pandas==2.2.2
+pillow==10.2.0
+psycopg2==2.9.9
+PyJWT==2.8.0
+python3-openid==3.2.0
+pytz==2024.1
+requests-oauthlib==2.0.0
+s3transfer==0.10.0
+sqlparse==0.4.4
+stripe==8.1.0
+tzdata==2024.1
+urllib3==1.26.18
+
+
+### The following steps were taken to deploy the app to Heroku:
+- Create a new app on Heroku
+- Choose an unique name for the app and select your region
+- Click on Create App
+- When ready, add config vars in the respective hidden field in the Settings tab.
+- Add the buildpack "Heroku/Python"
+- Select the Deploy tab and add connect to Github under Deployment method, select the repository that shall be deployed
+- Finally, choose if you want to enable automatic or manual deployment.
+- Wait until the app is loaded and open your website.
+
+
+### Forkning
+A fork is a new repository that shares code and visibility settings with the original repository.
+You're welcome to do so.
+Please refer to the official GitHub documentation on how to fork my repository.
+[Link to the GitHub Documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository)
+[Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
+Please note: For Copyright questions/requests please contact the artist!
+
+
+### Cloning
+Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project.
+You're welcome to do so.
+Please refer to the official GitHub documentation on how to clone my repository.
+[Link to the GitHub Documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+[Link to the Repository](https://github.com/ClaudiaInSweden/hanneles_art_gallery)
+Please note: For Copyright questions/requests please contact the artist!
   
 
 ## Bugs
 
-When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This is because the fields in the profile form are not mandatory.
+- When a logged in user opens the Profile page and there is no saved data, it is possible to save the empty form by clicking on Update Profile. This is because the fields in the profile form are not mandatory.
 
-When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all are visible in the "send to" field which of course is impossible to use due to GDPR. But when I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
+- When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all are visible in the "send to" field which of course is impossible to use due to GDPR. But when I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
+
+- When Code Institute moved to GitHub Enterprise I had to update to a newer version of django-allauth as the older version couldn¨t be re-installed. This resulted in an error on the sign-up page when using the W3C Markup Validator. I solved this by extracting the html code, correcting the code that causes the error and use this instead of the crispy form tag. 
 
 
 
@@ -820,6 +931,7 @@ When creating the newsletter function I originally used the Django send_email() 
 
 - [404 Error Image](https://www.vecteezy.com/free-vector/painting-stand)
 - [Bootstrap Template "Pillow Mart"](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/)
+- [Paintings](https://artportable.com/profile/@hansu) - For Copyright questions/requests please contact the artist!
 
 
 

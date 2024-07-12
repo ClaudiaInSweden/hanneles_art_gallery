@@ -315,7 +315,7 @@ i {
     font-family: "Rubik", sans-serif;
     font-size: 14px;
     color: #4B3049;
-    background-color: #fff;
+    background-color: #ede5ed !important;
 }
 .toast-border {
     border-radius: 20px;

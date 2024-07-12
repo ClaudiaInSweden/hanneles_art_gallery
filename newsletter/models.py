@@ -16,7 +16,7 @@ class Subscribers(models.Model):
 class MailContent(models.Model):
     subject = models.CharField(max_length=254, null=False, blank=False)
     content = models.TextField(null=False, blank=False,
-                               default='\n \n \nUnsubscribe: ' +
+                               default='\n \n \n \n \n \nUnsubscribe: ' +
                                'https://hanneles-art-gallery-' +
                                '99fb21934da8.herokuapp.com/' +
                                'newsletter/unsubscribe/')
