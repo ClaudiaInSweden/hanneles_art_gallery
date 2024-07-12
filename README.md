@@ -923,7 +923,9 @@ Please note: For Copyright questions/requests please contact the artist!
 
 - When creating the newsletter function I originally used the Django send_email() method but realized after the first tests that the email addresses all are visible in the "send to" field which of course is impossible to use due to GDPR. But when I checked the Django Documentation I found the EmailMessage class and with just a few changes in the code, that issue was solved.
 
-- When Code Institute moved to GitHub Enterprise I had to update to a newer version of django-allauth as the older version couldn¨t be re-installed. This resulted in an error on the sign-up page when using the W3C Markup Validator. I solved this by extracting the html code, correcting the code that causes the error and use this instead of the crispy form tag. 
+- When Code Institute moved to GitHub Enterprise I had to update to a newer version of django-allauth as the older version couldn¨t be re-installed. This resulted in an error on the sign-up page when using the W3C Markup Validator. I solved this by extracting the html code, correcting the code that causes the error and use this instead of the crispy form tag.
+
+- When a user signs up and repeats this step before the email address is verified, 
 
 
 
